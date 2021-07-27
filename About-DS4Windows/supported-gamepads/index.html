@@ -16,7 +16,7 @@
     
     
       
-        <title>Supported controllers - DS4Windows</title>
+        <title>Supported gamepads - DS4Windows</title>
       
     
     
@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#supported-controllers" class="md-skip">
+        <a href="#supported-gamepads" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Supported controllers
+              Supported gamepads
             
           </span>
         </div>
@@ -405,9 +405,46 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Supported gamepads
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
-        Supported controllers
+        Supported gamepads
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#current-list" class="md-nav__link">
+    Current list
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-new-controllers-to-the-list" class="md-nav__link">
+    Adding new controllers to the list
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -616,8 +653,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../troubleshooting/latency-bt/" class="md-nav__link">
-        Latency on Bluetooth
+      <a href="../../troubleshooting/input-delay-bt/" class="md-nav__link">
+        Input delay on Bluetooth
       </a>
     </li>
   
@@ -660,6 +697,28 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#current-list" class="md-nav__link">
+    Current list
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-new-controllers-to-the-list" class="md-nav__link">
+    Adding new controllers to the list
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -670,15 +729,59 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/Kanuan/DS4W_Website.github.io/edit/master/docs/About-DS4Windows/supported-controllers.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/Kanuan/DS4W_Website.github.io/edit/master/docs/About-DS4Windows/supported-gamepads.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="supported-controllers">Supported controllers</h1>
-<div class="admonition important">
-<p class="admonition-title">Under construction ⚒️</p>
-</div>
+                <h1 id="supported-gamepads">Supported gamepads</h1>
+<h2 id="current-list">Current list</h2>
+<p>The full list can be seen <a href="https://github.com/Ryochan7/DS4Windows/wiki/Gamepad-support">here</a>.</p>
+<p>The short version is:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Gamepad</th>
+<th align="center">Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Sony's DualShock 3</td>
+<td align="center">Needs to be running under the <a href="https://github.com/ViGEm/DsHidMini">DsHidMini driver</a> and in <code>DS4Windows Mode</code></td>
+</tr>
+<tr>
+<td align="center">Sony's DualShock 4</td>
+<td align="center">All features supported except integrated mic and headphone jack. Those require the use of the official <code>Sony's Wireless Adapter</code> which is also supported by DS4W</td>
+</tr>
+<tr>
+<td align="center">DualShock 4 copy-cats</td>
+<td align="center">Not all of them are supported, check the full list</td>
+</tr>
+<tr>
+<td align="center">Sony's DualSense</td>
+<td align="center">All features supported except integrated mic and headphone jack. Adaptative triggers and haptic feedback are mostly unused by DS4W</td>
+</tr>
+<tr>
+<td align="center">Nintendo's Joy-Cons</td>
+<td align="center">Can be used in split or joined mode. IR camera not used</td>
+</tr>
+<tr>
+<td align="center">Joy-Cons copy-cats</td>
+<td align="center">Only supported if they act as an exactly replica of the original. HD Rumble and NFC not supported</td>
+</tr>
+<tr>
+<td align="center">Nintendo's Pro Controller</td>
+<td align="center">HD Rumble and NFC not supported</td>
+</tr>
+<tr>
+<td align="center">Pro Controller's copy-cat</td>
+<td align="center">Only supported if they act as an exactly replica of the original. HD Rumble and NFC not supported</td>
+</tr>
+</tbody>
+</table>
+<h2 id="adding-new-controllers-to-the-list">Adding new controllers to the list</h2>
+<p>If you have a copy-cat version of a officially supported controller on the list it <strong><em>may</em></strong> be possible to add it to the supported controller list. But keep something in mind: some of those behave differently then the original ones when connected to a PC, which can make things harder </p>
                 
               
               

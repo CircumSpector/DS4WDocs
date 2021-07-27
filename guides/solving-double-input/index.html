@@ -394,8 +394,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../About-DS4Windows/supported-controllers/" class="md-nav__link">
-        Supported controllers
+      <a href="../../About-DS4Windows/supported-gamepads/" class="md-nav__link">
+        Supported gamepads
       </a>
     </li>
   
@@ -483,9 +483,73 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Solving double input issues in games
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Solving double input issues in games
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#about-the-issue" class="md-nav__link">
+    About the issue
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#methods-to-prevent-the-issue" class="md-nav__link">
+    Methods to prevent the issue
+  </a>
+  
+    <nav class="md-nav" aria-label="Methods to prevent the issue">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hidhide-recommended" class="md-nav__link">
+    HidHide (recommended)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hide-ds4-controllers-option-legacy" class="md-nav__link">
+    Hide DS4 Controllers option (legacy)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-links" class="md-nav__link">
+    Other links
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -616,8 +680,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../troubleshooting/latency-bt/" class="md-nav__link">
-        Latency on Bluetooth
+      <a href="../../troubleshooting/input-delay-bt/" class="md-nav__link">
+        Input delay on Bluetooth
       </a>
     </li>
   
@@ -660,6 +724,55 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#about-the-issue" class="md-nav__link">
+    About the issue
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#methods-to-prevent-the-issue" class="md-nav__link">
+    Methods to prevent the issue
+  </a>
+  
+    <nav class="md-nav" aria-label="Methods to prevent the issue">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hidhide-recommended" class="md-nav__link">
+    HidHide (recommended)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hide-ds4-controllers-option-legacy" class="md-nav__link">
+    Hide DS4 Controllers option (legacy)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-links" class="md-nav__link">
+    Other links
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -676,14 +789,53 @@
                 
                 
                 <h1 id="solving-double-input-issues-in-games">Solving double input issues in games</h1>
+<h2 id="about-the-issue">About the issue</h2>
+<p>DS4Windows does not magically transform your controller from one type to another (e.g.: convert a DS4 into a Xbox controller). It creates a <strong><em>virtual</em></strong> controller that is associated to your real controller. This means that if you have 1 real controller connected then windows will actually detect 2 controllers. If 2 real then 4.</p>
+<p>If a game can detect both the real and the virtual controller at the same time then it will detect 2 different controllers responding to button presses everytime, which can lead to the infamous double-input issue. Depending on the game, this can make the game unplayable.</p>
+<p>The fix to this is to prevent games/the system from recognizing your real controller, leaving only the virtual one associated to it visible. This can be done in two ways:</p>
+<ul>
+<li>HidHide (recommended)</li>
+<li>DS4Windows' <code>Hide DS4 controllers</code> option (mostly, not recommended)</li>
+</ul>
+<h2 id="methods-to-prevent-the-issue">Methods to prevent the issue</h2>
+<h3 id="hidhide-recommended">HidHide (recommended)</h3>
+<p>HidHide is a driver that acts as a barrier between Windows and every HID Device connected (physical peripherals). It allows the user to selectively hide controllers and only allow specific software to see them. This is the recommended method because once it has been properly setup you are good to go.</p>
+<p>In DS4W case, the user needs to set HidHide to:</p>
+<ol>
+<li>Hide the used controllers from the system, both from USB and Bluetooth</li>
+<li>Allow DS4Windows to see them, otherwise it would think there are no supported controllers connected</li>
+</ol>
+<p><strong>Connected controller needs to be hidden individually . Also, the same controller needs to be hidden one time when used by USB and another when used by Bluetooth!</strong></p>
+<p>HidHide has its own <a href="https://vigem.org/projects/HidHide/Simple-Setup-Guide/">dedicated setup page</a>. Users who know more or less what they are doing can follow the quick setup section and for the ones having trouble there is also the step-by-step section.</p>
 <div class="admonition important">
-<p class="admonition-title">Under construction ⚒️</p>
+<p class="admonition-title">After installing the HidHide driver you <strong>MUST</strong> reboot your system before using it</p>
 </div>
-<div class="admonition important">
-<p class="admonition-title">Important information!</p>
-<p>The double-input issue is <strong>very likely</strong> to happen to you if you play modern games and it's recommended for you to understand what causes it and how to solve it. READ!</p>
+<h3 id="hide-ds4-controllers-option-legacy"><code>Hide DS4 Controllers</code> option (legacy)</h3>
+<div class="admonition note">
+<p class="admonition-title">Note to users of HidHide</p>
+<p>If you have HidHide installed and correctly setup it's recommended to leave this option disabled except in some <a href="">edge case</a></p>
 </div>
-<p><img alt="joycpl.png" src="../images/joycpl.png" /></p>
+<p>This option exists on DS4Windows <code>Settings</code> tab. When it is active, DS4Windows will <em>kindly</em> ask windows for exclusive access to the controller, meaning Windows would only allow DS4Windows to detect it, preventing then the double input issue.</p>
+<p>The problem with this method is that Windows can deny the exclusive access request when another process already has a open connection to the controller. Common reasons for it to fail are:</p>
+<ul>
+<li>A game already is running</li>
+<li>Google chrome is running (why does it have a connection to the controller you ask? no one knows)</li>
+<li>Nvidia Geforce experience process having a hold of the controller</li>
+<li>Random non-obvious process having a hold of the controller</li>
+<li>etc</li>
+</ul>
+<p>Even if it works, if your controller disconnects in the middle of a game chances are that you'll lose exclusive access upon reconnection, requiring you to close the game to try again.</p>
+<p>For the reasons explained above, the <code>Hide DS4 Controllers</code> option is <strong>NOT RECOMMENDED</strong>, though it remains available to users that need to use it for whatever reason. For those who can use it, HidHide is the better option all around.</p>
+<div class="admonition note">
+<p class="admonition-title">Dedicated troubleshooting page</p>
+<p>In case you really need to use this option, there is a <a href="">dedicated troubleshooting article</a> on it to verify why windows is failing to accept the exclusive access request</p>
+</div>
+<h2 id="other-links">Other links</h2>
+<ul>
+<li><a href="">Examples of games that suffer from the double input issue</a></li>
+<li><a href="">Troubleshooting double input issues</a></li>
+<li><a href="">Troubleshooting controller dettection issues</a></li>
+</ul>
                 
               
               

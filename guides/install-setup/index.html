@@ -394,8 +394,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../About-DS4Windows/supported-controllers/" class="md-nav__link">
-        Supported controllers
+      <a href="../../About-DS4Windows/supported-gamepads/" class="md-nav__link">
+        Supported gamepads
       </a>
     </li>
   
@@ -681,8 +681,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../troubleshooting/latency-bt/" class="md-nav__link">
-        Latency on Bluetooth
+      <a href="../../troubleshooting/input-delay-bt/" class="md-nav__link">
+        Input delay on Bluetooth
       </a>
     </li>
   
@@ -798,10 +798,10 @@
 <h2 id="prerequisites">Prerequisites</h2>
 <ul>
 <li>Windows 10 or 11. <strong>Windows versions from 8.1 and below are NOT supported anymore and support will not be given to users running older builds</strong></li>
-<li>One or more supported controllers (<a href="">check the list</a>) </li>
+<li>One or more supported controllers (<a href="../../About-DS4Windows/supported-gamepads/">check the list</a>) </li>
 <li>(<strong>Optional</strong>) Bluetooth dongle for connecting supported controllers wirelessly</li>
 <li>Download and install the <a href="https://dotnet.microsoft.com/download/dotnet/5.0/runtime">.NET 5.0 Runtime</a> <strong>FOR DESKTOP APPS</strong> accordingly to your system architecture
-<img alt="dotnet5runtimeF.png" src="../images/dotnet5runtime.png" /></li>
+<img alt="dotnet5runtimeF.png" class="glightbox" src="../images/dotnet5runtime.png" />  </li>
 </ul>
 <h2 id="downloading-and-starting-ds4windows">Downloading and starting DS4Windows</h2>
 <ul>
@@ -827,7 +827,7 @@
 <li><strong>(Recommended) HidHide</strong>: used to "<em>hide</em>" your real controller in order to prevent games from recognizing both your real controller and the virtual controller created by DS4Windows, a situation that can lead to the famous <a href="">Double controller input issue</a></li>
 <li><strong>(Optional) FakerInput</strong>: useful for users who want to use their controllers as keyboard and mouse. Though DS4Windows can do so by itself, the FakerInput has better performance and can work in more games and situations where Windows might prevent of DS4Windows' normal keyboard/mouse handler  </li>
 </ul>
-<p><img alt="DS4WDriversSetup.png" src="../images/DS4WDriversSetup.png" /></p>
+<p><img alt="DS4WDriversSetup.png" class="glightbox" src="../images/DS4WDriversSetup.png" />  </p>
 <p>Select the <code>Finished</code> button at the bottom after installing the drivers you need.</p>
 <h2 id="final-steps-and-test-drive">Final steps and test drive</h2>
 <ul>
@@ -841,13 +841,13 @@
 </ul>
 </li>
 </ul>
-<p><img alt="DS4WEnd.png" src="../images/DS4WEnd.png" /></p>
+<p><img alt="DS4WEnd.png" class="glightbox" src="../images/DS4WEnd.png" />  </p>
 <p>If your controller appears on the list then Xbox Controller emulation should already be working! In order to verify:</p>
 <ul>
 <li>Press on your keyboard <span class="keys"><kbd class="key-windows">Win</kbd><span>+</span><kbd class="key-r">R</kbd></span>, type <code>joy.cpl</code> then select Ok. Windows' <code>Game Controllers</code> window should appear</li>
 <li>On the list there should be (probably) 2 controllers: your real controller and the emulated <code>Xbox 360 Controller</code></li>
 </ul>
-<p><img alt="joycpl.png" src="../images/joycpl.png" /></p>
+<p><img alt="joycpl.png" class="glightbox" src="../images/joycpl.png" />  </p>
 <h2 id="what-now">What now?</h2>
 <ul>
 <li><strong>It's strongly recommended that you read the <a href="#preventing-the-double-input-issue"><em>Preventing the double-input issue</em> section</a>!</strong></li>
