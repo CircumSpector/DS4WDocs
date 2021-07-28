@@ -541,8 +541,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#other-links" class="md-nav__link">
-    Other links
+  <a href="#related-links" class="md-nav__link">
+    Related links
   </a>
   
 </li>
@@ -680,6 +680,18 @@
   
   
     <li class="md-nav__item">
+      <a href="../../troubleshooting/hide-ds4-option/" class="md-nav__link">
+        Hide DS4 Controllers option not working
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../troubleshooting/input-delay-bt/" class="md-nav__link">
         Input delay on Bluetooth
       </a>
@@ -765,8 +777,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#other-links" class="md-nav__link">
-    Other links
+  <a href="#related-links" class="md-nav__link">
+    Related links
   </a>
   
 </li>
@@ -790,51 +802,58 @@
                 
                 <h1 id="solving-double-input-issues-in-games">Solving double input issues in games</h1>
 <h2 id="about-the-issue">About the issue</h2>
-<p>DS4Windows does not magically transform your controller from one type to another (e.g.: convert a DS4 into a Xbox controller). It creates a <strong><em>virtual</em></strong> controller that is associated to your real controller. This means that if you have 1 real controller connected then windows will actually detect 2 controllers. If 2 real then 4.</p>
-<p>If a game can detect both the real and the virtual controller at the same time then it will detect 2 different controllers responding to button presses everytime, which can lead to the infamous double-input issue. Depending on the game, this can make the game unplayable.</p>
-<p>The fix to this is to prevent games/the system from recognizing your real controller, leaving only the virtual one associated to it visible. This can be done in two ways:</p>
+<p>DS4Windows does not magically transform your gamepad from one type to another. It creates a <strong><em>virtual</em></strong> gamepad that is associated to your real one, with Windows detects both as normal controllers.  This means that if you have 1 real gamepad connected then windows will actually detect 2 gamepads. If 2 real then 4 etc.</p>
+<p>The image below shows how Windows behaves when a DS4v2 (Wireless Controller) is connected to the system while DS4Windows is emulating a Xbox gamepad: </p>
+<p><img alt="SharedJoycpl" class="glightbox" src="../images/SharedJoycpl.png" /> </p>
+<p>If the game detects both the real and the virtual gamepad at the same time then it will receive commands from 2 different devices at every button press and stick movement, which can lead to the infamous double-input issue that can make games unplayable.</p>
+<p>The fix to this is to prevent games/the system from detecting your real gamepad, leaving visible only the virtual one associated to it. This can be done in two ways:</p>
 <ul>
 <li>HidHide (recommended)</li>
-<li>DS4Windows' <code>Hide DS4 controllers</code> option (mostly, not recommended)</li>
+<li>DS4Windows' <code>Hide DS4 Controllers</code> option (legacy option)</li>
 </ul>
 <h2 id="methods-to-prevent-the-issue">Methods to prevent the issue</h2>
 <h3 id="hidhide-recommended">HidHide (recommended)</h3>
-<p>HidHide is a driver that acts as a barrier between Windows and every HID Device connected (physical peripherals). It allows the user to selectively hide controllers and only allow specific software to see them. This is the recommended method because once it has been properly setup you are good to go.</p>
-<p>In DS4W case, the user needs to set HidHide to:</p>
-<ol>
-<li>Hide the used controllers from the system, both from USB and Bluetooth</li>
-<li>Allow DS4Windows to see them, otherwise it would think there are no supported controllers connected</li>
-</ol>
-<p><strong>Connected controller needs to be hidden individually . Also, the same controller needs to be hidden one time when used by USB and another when used by Bluetooth!</strong></p>
-<p>HidHide has its own <a href="https://vigem.org/projects/HidHide/Simple-Setup-Guide/">dedicated setup page</a>. Users who know more or less what they are doing can follow the quick setup section and for the ones having trouble there is also the step-by-step section.</p>
 <div class="admonition important">
 <p class="admonition-title">After installing the HidHide driver you <strong>MUST</strong> reboot your system before using it</p>
 </div>
+<p>HidHide is a driver that acts as a barrier between Windows and every HID Device connected (physical peripherals). It allows the user to selectively hide gamepads and only allow specific software to see them. This is the recommended method because once it has been properly setup you are good to go.</p>
+<p>In DS4W case, the user needs to set HidHide to:</p>
+<ol>
+<li>Hide the used gamepads from the system, both from USB and Bluetooth</li>
+<li>Allow DS4Windows to see all hidden devices, otherwise it would think there are no supported gamepads connected</li>
+</ol>
+<p><img alt="HidHideAccess" class="glightbox" src="../images/HidHideAccess.png" /> </p>
+<p><strong>Connected gamepad needs to be hidden individually . Also, the same gamepad needs to be hidden one time when used by USB and another when used by Bluetooth!</strong></p>
+<p>HidHide has its own <a href="https://vigem.org/projects/HidHide/Simple-Setup-Guide/">dedicated setup page</a>. Users who know more or less what they are doing can follow the quick setup section and for the ones having trouble there is also the step-by-step section.</p>
 <h3 id="hide-ds4-controllers-option-legacy"><code>Hide DS4 Controllers</code> option (legacy)</h3>
+<div class="admonition important">
+<p class="admonition-title">Though it is written "DS4 Controllers" it applies to any real controller detected by DS4Windows</p>
+</div>
 <div class="admonition note">
 <p class="admonition-title">Note to users of HidHide</p>
-<p>If you have HidHide installed and correctly setup it's recommended to leave this option disabled except in some <a href="">edge case</a></p>
+<p>If you have HidHide installed and correctly setup it's recommended to leave this option disabled except in some <a href="">really specific games</a></p>
 </div>
-<p>This option exists on DS4Windows <code>Settings</code> tab. When it is active, DS4Windows will <em>kindly</em> ask windows for exclusive access to the controller, meaning Windows would only allow DS4Windows to detect it, preventing then the double input issue.</p>
-<p>The problem with this method is that Windows can deny the exclusive access request when another process already has a open connection to the controller. Common reasons for it to fail are:</p>
+<p>This option exists on DS4Windows' <code>Settings</code> tab. When enabled, DS4Windows will <em>kindly</em> ask Windows for exclusive access to detected devices, meaning the later would only allow DS4Windows to detect the gamepads and preventing the double input issue.</p>
+<p><img alt="ExclusiveAccess" class="glightbox" src="../images/ExclusiveAccess.png" /> </p>
+<p>The problem with this method is that Windows can deny the exclusive access request when another process already has a open connection to the gamepad. Common reasons for this request to fail are:</p>
 <ul>
 <li>A game already is running</li>
-<li>Google chrome is running (why does it have a connection to the controller you ask? no one knows)</li>
-<li>Nvidia Geforce experience process having a hold of the controller</li>
-<li>Random non-obvious process having a hold of the controller</li>
+<li>Google chrome/Opera is running (why does it have a connection to the gamepad you ask? A mystery)</li>
+<li>Nvidia Geforce experience process having a hold of the gamepad</li>
+<li>Random non-obvious process having a hold of the gamepad</li>
 <li>etc</li>
 </ul>
-<p>Even if it works, if your controller disconnects in the middle of a game chances are that you'll lose exclusive access upon reconnection, requiring you to close the game to try again.</p>
-<p>For the reasons explained above, the <code>Hide DS4 Controllers</code> option is <strong>NOT RECOMMENDED</strong>, though it remains available to users that need to use it for whatever reason. For those who can use it, HidHide is the better option all around.</p>
+<p>Even if it works initially, if your gamepad disconnects in the middle of a game chances are that you'll lose exclusive access upon reconnection, requiring you to close the game to try again.</p>
+<p>For the reasons explained above, the <code>Hide DS4 Controllers</code> option is <strong>NOT RECOMMENDED</strong>, though it remains available to users that need to use it for whatever reason. HidHide is the better option all around for those who can use it.</p>
 <div class="admonition note">
 <p class="admonition-title">Dedicated troubleshooting page</p>
-<p>In case you really need to use this option, there is a <a href="">dedicated troubleshooting article</a> on it to verify why windows is failing to accept the exclusive access request</p>
+<p>In case you really need to use this option, there is a <a href="">dedicated troubleshooting article</a> on it to verify why windows is failing to grant exclusive access to the controller</p>
 </div>
-<h2 id="other-links">Other links</h2>
+<h2 id="related-links">Related links</h2>
 <ul>
 <li><a href="">Examples of games that suffer from the double input issue</a></li>
 <li><a href="">Troubleshooting double input issues</a></li>
-<li><a href="">Troubleshooting controller dettection issues</a></li>
+<li><a href="">Troubleshooting gamepad detection issues</a></li>
 </ul>
                 
               
