@@ -16,7 +16,7 @@
     
     
       
-        <title>Input delay on Bluetooth - DS4Windows</title>
+        <title>Input delay on Bluetooth - R7's DS4Windows Website (Unofficial)</title>
       
     
     
@@ -77,7 +77,7 @@
         <aside class="md-announce">
           <div class="md-announce__inner md-grid md-typeset">
             
-  Site in constructions! Some articles are live but there are lots of empty pages too
+  Site under constructions! Some articles are live but there are lots of empty pages too
 
           </div>
         </aside>
@@ -86,7 +86,7 @@
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="DS4Windows" class="md-header__button md-logo" aria-label="DS4Windows" data-md-component="logo">
+    <a href="../.." title="R7&#39;s DS4Windows Website (Unofficial)" class="md-header__button md-logo" aria-label="R7's DS4Windows Website (Unofficial)" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -99,7 +99,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            DS4Windows
+            R7's DS4Windows Website (Unofficial)
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -314,13 +314,13 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="DS4Windows" class="md-nav__button md-logo" aria-label="DS4Windows" data-md-component="logo">
+    <a href="../.." title="R7&#39;s DS4Windows Website (Unofficial)" class="md-nav__button md-logo" aria-label="R7's DS4Windows Website (Unofficial)" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
 
     </a>
-    DS4Windows
+    R7's DS4Windows Website (Unofficial)
   </label>
   
     <div class="md-nav__source">
@@ -624,8 +624,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../controller-detection/" class="md-nav__link">
-        Controller detection issues
+      <a href="../bt-connection-issues/" class="md-nav__link">
+        Bluetooth connection issues
       </a>
     </li>
   
@@ -650,6 +650,18 @@
     <li class="md-nav__item">
       <a href="../double-input/" class="md-nav__link">
         Double Input issue
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ds4w-controller-detection/" class="md-nav__link">
+        DS4W not detecting controllers
       </a>
     </li>
   
@@ -774,11 +786,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#suggestion-on-lowering-bt-latency" class="md-nav__link">
-    Suggestion on lowering BT latency
+  <a href="#suggestion-on-fix-latency-issues" class="md-nav__link">
+    Suggestion on fix latency issues
   </a>
   
-    <nav class="md-nav" aria-label="Suggestion on lowering BT latency">
+    <nav class="md-nav" aria-label="Suggestion on fix latency issues">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -949,11 +961,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#suggestion-on-lowering-bt-latency" class="md-nav__link">
-    Suggestion on lowering BT latency
+  <a href="#suggestion-on-fix-latency-issues" class="md-nav__link">
+    Suggestion on fix latency issues
   </a>
   
-    <nav class="md-nav" aria-label="Suggestion on lowering BT latency">
+    <nav class="md-nav" aria-label="Suggestion on fix latency issues">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1033,6 +1045,7 @@
 <tr>
 <th align="center">Controller</th>
 <th align="center">Usual input delay</th>
+<th align="center">Minimum input delay</th>
 <th align="center">Notes</th>
 </tr>
 </thead>
@@ -1040,26 +1053,31 @@
 <tr>
 <td align="center">DualShock 3</td>
 <td align="center">~5ms</td>
+<td align="center">same</td>
 <td align="center">Connected through <code>BthPS3</code> + <code>DsHidMini (DS4Windows Mode)</code></td>
 </tr>
 <tr>
 <td align="center">DualShock 4</td>
 <td align="center">~4ms</td>
+<td align="center">~1ms</td>
 <td align="center">v1 and v2 don't have major latency differences</td>
 </tr>
 <tr>
 <td align="center">DualSense</td>
 <td align="center">~3ms</td>
+<td align="center">~1ms?</td>
 <td align="center"></td>
 </tr>
 <tr>
 <td align="center">Switch Pro controllers</td>
 <td align="center">~16ms</td>
+<td align="center">~16ms</td>
 <td align="center">16ms is the lowest latency the official controller can achieve</td>
 </tr>
 <tr>
 <td align="center">Joy-cons</td>
-<td align="center">?</td>
+<td align="center">~16ms?</td>
+<td align="center">~16ms</td>
 <td align="center"></td>
 </tr>
 </tbody>
@@ -1080,7 +1098,7 @@
 <p>If you are having latency issues then installing/uninstalling drivers won't fix them unless they are directly related to your dongle's driver. For this reason, messing with DS4Windows' <a href="">related drivers</a> will probably be a waste of time. </p>
 <p>Latency issues always boils down to:</p>
 <ul>
-<li>Bad, cheap or integrated Bluetooth adapters</li>
+<li>Low quality Bluetooth adapters (most integrated ones)</li>
 <li>High radio interference near the adapter</li>
 <li>Too many devices connected to the adapter</li>
 <li>Not using the correct/updated BT adapter's driver</li>
@@ -1105,9 +1123,9 @@
 <h3 id="ds4windows-settings">DS4Windows settings</h3>
 <p>Some general info on DS4Windows and mainly DualShock 4 and DualSense controllers.</p>
 <p>When a DS4 or DualSense is first connected to it, they present themselves in a limited form. They don't send the data related to rumble, motion sensors, lightbar etc. Meaning they are sending just basic buttons and axis states info and Windows is basically not sending anything back.</p>
-<p>After DS4Windows first detects the controller it sends a request for it to change to full feature mode, where the missing info starts being sent. DS4Windows also starts then sending rumble, lightbar and triggers (DualSense only) data back to it. Mind you, Steam sends the same request when the <code>Playstation Configuration Support</code> option is enabled.</p>
+<p>After DS4Windows first detects the controller a special request is sent for it to change into full feature mode, where the missing info starts being sent. DS4Windows also starts then sending rumble, lightbar and triggers (DualSense only) data back to it. Mind you, Steam sends the same request when the <code>Playstation Configuration Support</code> option is enabled.</p>
 <p>This change from limited to full feature mode results in a increase of data rate between the controller and the system and sometimes the adapter can't keep up with it. So, if your never had latency problems when using your DS4/DualSense in games with generic controller support but then start having them after start using DS4Windows or Steam, this is the cause.</p>
-<h2 id="suggestion-on-lowering-bt-latency">Suggestion on lowering BT latency</h2>
+<h2 id="suggestion-on-fix-latency-issues">Suggestion on fix latency issues</h2>
 <h3 id="test-with-wifi-fully-disabled">Test with WiFi fully disabled</h3>
 <div class="admonition note">
 <p class="admonition-title">Mostly recommended for testing with integrated cards that double as both BT and WiFi adapters</p>
@@ -1123,12 +1141,15 @@
 <p class="admonition-title">Recommended for users of integrated BT adapter users</p>
 </div>
 <p>A dedicated, good quality BT USB Adapter should offer better performance than a integrated one. Because its antenna is located outside of the laptop/desktop's shell, it also suffers less from signal loss caused by physical obstacles.</p>
+<p>Because Windows can only use 1 BT adapter, when using a USB adapter in a PC that also has a integrated one the later must be disabled in Windows' <code>Device Manager</code> in order for the USB BT adapter one to be used.</p>
+<p><img alt="DisablingIntegratedAdapter" class="glightbox" src="images/DisablingIntegratedAdapter.png" />  </p>
 <h3 id="moving-the-adapter-to-another-usb-port">Moving the adapter to another USB port</h3>
 <p>Moving the dongle to a better located USB port may offer a better quality signal. Also, USB ports (specially 3.0 and above) can be a source of radio noise. Test the dongle in different ports to verify which offer you a better signal.</p>
 <h3 id="connect-usb-bt-dongle-through-a-usb-extension-cable">Connect USB BT Dongle through a USB extension cable</h3>
 <p>A laptop/desktop's shell is a source of radio noise, specially near high powered, high data transfer ports like USB 3.0 and above. This noise may worsen your BT's adapter performance. Connecting your BT adapter through a cable extension so it stays located at some distance from the computers shell is known to be useful in these cases.</p>
 <h3 id="disable-output-data-to-the-controller">Disable output data to the controller</h3>
 <p>Your adapter may not be up to the task to both receive <em>and</em> send data to the controller. In this case, you can set a profile with the <code>Enable output data to DS4</code> option disabled. Keep in mind that <code>Output Data</code> means data that DS4Windows sends back to the controller like rumble and lightbar states, with both also be disabled in this case.  </p>
+<p><img alt="DisableOutputDataDS4" class="glightbox" src="../images/DisableOutputDataDS4.png" />  </p>
                 
               
               
