@@ -25,10 +25,6 @@
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.ef6f36e2.min.css">
         
-          
-          
-          <meta name="theme-color" content="#2094f3">
-        
       
     
     
@@ -53,13 +49,17 @@
   
     
     
+      
     
     
     
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="blue" data-md-color-accent="">
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="">
   
     
     <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+      <script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -73,6 +73,14 @@
       
     </div>
     <div data-md-component="announce">
+      
+        <aside class="md-announce">
+          <div class="md-announce__inner md-grid md-typeset">
+            
+  Site in constructions! Some articles are live but there are lots of empty pages too
+
+          </div>
+        </aside>
       
     </div>
     
@@ -103,6 +111,28 @@
         </div>
       </div>
     </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="" type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="" type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31z"/></svg>
+            </label>
+          
+        
+      </form>
     
     
     
@@ -448,6 +478,18 @@
             
   
   
+  
+    <li class="md-nav__item">
+      <a href="../connecting-controllers/" class="md-nav__link">
+        Connecting your controllers to the PC
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
     
   
   
@@ -658,7 +700,19 @@
   
     <li class="md-nav__item">
       <a href="../../troubleshooting/controller-detection/" class="md-nav__link">
-        Controller detection
+        Controller detection issues
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../troubleshooting/controllers-check/" class="md-nav__link">
+        Ways to check if a controller has been detected by Windows
       </a>
     </li>
   
@@ -682,7 +736,7 @@
   
     <li class="md-nav__item">
       <a href="../../troubleshooting/hide-ds4-option/" class="md-nav__link">
-        Hide DS4 Controllers option not working
+        "Could not open (controller) exclusively" / Hide DS4 controllers option not working
       </a>
     </li>
   
@@ -805,39 +859,39 @@
                 <h1 id="installation-and-setup">Installation and Setup</h1>
 <div class="admonition important">
 <p class="admonition-title">Know your system architecture</p>
-<p>Everytime you need to choose between a x86 (32 bits) or x64 (64 bits) software/program do so accordingly to your <a href="../../other/how-to-check-architecture/">system architecture</a>. Keep this in mind before going forward.</p>
+<p>Most users have a x64 (64 bits) system and this guide was built around this fact. If you are using a <a href="../../other/how-to-check-architecture/">x86 (32 bits) system</a> then use the x86 equivalents of drivers, packages etc</p>
 </div>
 <h2 id="prerequisites">Prerequisites</h2>
 <ul>
 <li>Windows 10 or 11. <strong>Windows versions from 8.1 and below are NOT supported anymore and support will not be given to users running older builds</strong></li>
 <li>One or more supported controllers (<a href="../../About-DS4Windows/supported-gamepads/">check the list</a>) </li>
-<li>(<strong>Optional</strong>) Bluetooth dongle for connecting supported controllers wirelessly</li>
-<li>Download and install the <a href="https://dotnet.microsoft.com/download/dotnet/5.0/runtime">.NET 5.0 Runtime</a> <strong>FOR DESKTOP APPS</strong> accordingly to your system architecture
+<li>(<strong>Optional</strong>) Bluetooth dongle for connecting wirelessly</li>
+<li>Download and install the <a href="https://dotnet.microsoft.com/download/dotnet/5.0/runtime">x64 .NET 5.0 Runtime</a> <strong>FOR DESKTOP APPS</strong>
 <img alt="dotnet5runtimeF.png" class="glightbox" src="../images/dotnet5runtime.png" />  </li>
 </ul>
 <h2 id="downloading-and-starting-ds4windows">Downloading and starting DS4Windows</h2>
 <ul>
-<li>Download the latest DS4Windows package from <a href="https://github.com/Ryochan7/DS4Windows">here</a><ul>
+<li>Download the latest DS4Windows ------&gt; <strong>x64</strong> &lt;------ package from <a href="https://github.com/Ryochan7/DS4Windows/releases">here</a><ul>
 <li>The .7zip package is recommended over the .zip, though you need to have <a href="https://www.7-zip.org/">7zip</a> installed in order to open it</li>
 </ul>
 </li>
 <li>Extract the package in a easily accessible folder (e.g.: Desktop, Documents, Download etc)<ul>
-<li>It's <strong>NOT</strong> recommended to extract it inside a folder the requires elevated privilegies (e.g.: Program Files, Windows)</li>
+<li><strong>DO NOT</strong> extract it inside a folder the requires elevated privilegies (e.g.: Program Files, Windows)</li>
 </ul>
 </li>
 <li>Execute the <code>DS4Windows.exe</code> file to run DS4Windows</li>
-<li>On first launch DS4Windows may ask you where to save its settings and profiles. Choose one of the 2:<ul>
-<li><strong>Program folder</strong>: settings/profiles are stored inside the folder where <code>DS4Windows.exe</code> is located (make easy to keep track of all DS4Windows related files since they are all in one place, but also means that if you accidantly deletes the program folder you will lose everything)</li>
-<li><strong>AppData folder</strong>: settings/profiles are stored outside of the program folder, inside a special folder reserved to your Windows user (harder to delete your settings, but needs to remember to back up this other folder when formatting/changing computers)</li>
+<li>On first launch DS4Windows may ask you where to save its user data (settings and profiles):<ul>
+<li><strong>AppData folder (recommended)</strong>: user data is stored outside of the program folder, inside a special folder reserved to your Windows user</li>
+<li><strong>Program folder</strong>: user data is stored inside the same folder <code>DS4Windows.exe</code> is located</li>
 </ul>
 </li>
 </ul>
 <h2 id="drivers-setup">Drivers setup</h2>
 <p>When running DS4Windows for the first time it may prompt you to install some drivers, with the first one being essential. Install them accordingly to your needs:</p>
 <ul>
-<li><strong>(Required) ViGEmBUS</strong>: allows DS4Windows to create virtual Xbox/DS4 controllers</li>
-<li><strong>(Recommended) HidHide</strong>: used to "<em>hide</em>" your real controller in order to prevent games from recognizing both your real controller and the virtual controller created by DS4Windows, a situation that can lead to the famous <a href="../solving-double-input">double controller input issue</a></li>
-<li><strong>(Optional) FakerInput</strong>: useful for users who want to use their controllers as keyboard and mouse. Though DS4Windows can do so by itself, the FakerInput has better performance and can work in more games and situations where Windows might prevent of DS4Windows' normal keyboard/mouse handler  </li>
+<li><strong>ViGEmBUS (Required)</strong>: allows DS4Windows to create virtual Xbox/DS4 controllers</li>
+<li><strong>HidHide (Recommended)</strong>: used to "<em>hide</em>" your real controller in order to prevent games from recognizing both your real controller and the virtual controller created by DS4Windows, a situation that can lead to the famous <a href="../solving-double-input">double controller input issue</a></li>
+<li><strong>FakerInput (Optional)</strong>: useful for users who want to use their controllers as keyboard and mouse. Though DS4Windows can do so by itself, the FakerInput has better performance and can work in more games and situations where Windows might prevent the normal DS4Windows' keyboard/mouse handler  </li>
 </ul>
 <p><img alt="DS4WDriversSetup.png" class="glightbox" src="../images/DS4WDriversSetup.png" />  </p>
 <p>Select the <code>Finished</code> button at the bottom after installing the drivers you need.</p>
@@ -848,8 +902,8 @@
 </ul>
 </li>
 <li>If everything is <em>ok</em> then your controller will appear on the main <code>controllers</code> tab with the <code>Default</code> profile selected<ul>
-<li>Check <a href="">here</a> if DS4Windows has not detected your controller</li>
 <li>Make sure DS4Windows is not stopped</li>
+<li>Check <a href="">here</a> if DS4Windows has not detected your controller</li>
 </ul>
 </li>
 </ul>
@@ -885,6 +939,10 @@
           </div>
         </div>
         
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+          </a>
+        
       </main>
       
         
@@ -892,7 +950,7 @@
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
-        <a href="../" class="md-footer__link md-footer__link--prev" rel="prev">
+        <a href="../connecting-controllers/" class="md-footer__link md-footer__link--prev" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -901,7 +959,7 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              About guides
+              Connecting your controllers to the PC
             </div>
           </div>
         </a>
@@ -973,7 +1031,7 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.fe42c31b.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.top"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.fe42c31b.min.js", "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.4ea5477f.min.js"></script>

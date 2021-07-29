@@ -25,10 +25,6 @@
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.ef6f36e2.min.css">
         
-          
-          
-          <meta name="theme-color" content="#2094f3">
-        
       
     
     
@@ -53,13 +49,17 @@
   
     
     
+      
     
     
     
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="blue" data-md-color-accent="">
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="">
   
     
     <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+      <script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -73,6 +73,14 @@
       
     </div>
     <div data-md-component="announce">
+      
+        <aside class="md-announce">
+          <div class="md-announce__inner md-grid md-typeset">
+            
+  Site in constructions! Some articles are live but there are lots of empty pages too
+
+          </div>
+        </aside>
       
     </div>
     
@@ -103,6 +111,28 @@
         </div>
       </div>
     </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="" type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="" type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31z"/></svg>
+            </label>
+          
+        
+      </form>
     
     
     
@@ -565,6 +595,18 @@
   
   
     <li class="md-nav__item">
+      <a href="../../guides/connecting-controllers/" class="md-nav__link">
+        Connecting your controllers to the PC
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../guides/install-setup/" class="md-nav__link">
         Installation and Setup
       </a>
@@ -698,7 +740,19 @@
   
     <li class="md-nav__item">
       <a href="../../troubleshooting/controller-detection/" class="md-nav__link">
-        Controller detection
+        Controller detection issues
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../troubleshooting/controllers-check/" class="md-nav__link">
+        Ways to check if a controller has been detected by Windows
       </a>
     </li>
   
@@ -722,7 +776,7 @@
   
     <li class="md-nav__item">
       <a href="../../troubleshooting/hide-ds4-option/" class="md-nav__link">
-        Hide DS4 Controllers option not working
+        "Could not open (controller) exclusively" / Hide DS4 controllers option not working
       </a>
     </li>
   
@@ -889,116 +943,116 @@
 <table>
 <thead>
 <tr>
-<th align="center">Gamepad</th>
-<th align="center">Supported since DS4Window version...</th>
-<th align="center">Comment</th>
+<th align="left">Gamepad</th>
+<th align="left">Supported since DS4Window version...</th>
+<th align="left">Comment</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center">DS4 v.1</td>
-<td align="center">1.4.53</td>
-<td align="center">First forked release</td>
+<td align="left">DS4 v.1</td>
+<td align="left">1.4.53</td>
+<td align="left">First forked release</td>
 </tr>
 <tr>
-<td align="center">DS4 v.2</td>
-<td align="center">1.4.53</td>
-<td align="center">The support was added in the original ds4win by Jay2Kings</td>
+<td align="left">DS4 v.2</td>
+<td align="left">1.4.53</td>
+<td align="left">The support was added in the original ds4win by Jay2Kings</td>
 </tr>
 <tr>
-<td align="center">Sony Wireless Adapter</td>
-<td align="center">1.4.53</td>
-<td align="center">The support was added in the original ds4win by Jay2Kings</td>
+<td align="left">Sony Wireless Adapter</td>
+<td align="left">1.4.53</td>
+<td align="left">The support was added in the original ds4win by Jay2Kings</td>
 </tr>
 <tr>
-<td align="center">Razer Raiju</td>
-<td align="center">1.4.99</td>
-<td align="center"></td>
+<td align="left">Razer Raiju</td>
+<td align="left">1.4.99</td>
+<td align="left"></td>
 </tr>
 <tr>
-<td align="center">Hori PS4 Mini controller</td>
-<td align="center">1.4.119</td>
-<td align="center"></td>
+<td align="left">Hori PS4 Mini controller</td>
+<td align="left">1.4.119</td>
+<td align="left"></td>
 </tr>
 <tr>
-<td align="center">PS4 Fun Controller</td>
-<td align="center">1.7.4</td>
-<td align="center"></td>
+<td align="left">PS4 Fun Controller</td>
+<td align="left">1.7.4</td>
+<td align="left"></td>
 </tr>
 <tr>
-<td align="center">Razer Raiju Tournament Edition</td>
-<td align="center">1.7.8</td>
-<td align="center"></td>
+<td align="left">Razer Raiju Tournament Edition</td>
+<td align="left">1.7.8</td>
+<td align="left"></td>
 </tr>
 <tr>
-<td align="center">Razer Raiju Ultimate</td>
-<td align="center">1.7.9</td>
-<td align="center"></td>
+<td align="left">Razer Raiju Ultimate</td>
+<td align="left">1.7.9</td>
+<td align="left"></td>
 </tr>
 <tr>
-<td align="center">Steel Play Metaltech P4 gamepad (wired)</td>
-<td align="center">1.7.17</td>
-<td align="center"></td>
+<td align="left">Steel Play Metaltech P4 gamepad (wired)</td>
+<td align="left">1.7.17</td>
+<td align="left"></td>
 </tr>
 <tr>
-<td align="center">Hori Fighting Commander</td>
-<td align="center">1.7.20</td>
-<td align="center"></td>
+<td align="left">Hori Fighting Commander</td>
+<td align="left">1.7.20</td>
+<td align="left"></td>
 </tr>
 <tr>
-<td align="center">Nacon Revolution Unlimited Pro</td>
-<td align="center">1.7.20</td>
-<td align="center"></td>
+<td align="left">Nacon Revolution Unlimited Pro</td>
+<td align="left">1.7.20</td>
+<td align="left"></td>
 </tr>
 <tr>
-<td align="center">Nacon Revolution Pro v3</td>
-<td align="center">1.7.23</td>
-<td align="center"></td>
+<td align="left">Nacon Revolution Pro v3</td>
+<td align="left">1.7.23</td>
+<td align="left"></td>
 </tr>
 <tr>
-<td align="center">Nacon Revolution Infinite</td>
-<td align="center">1.7.26</td>
-<td align="center"></td>
+<td align="left">Nacon Revolution Infinite</td>
+<td align="left">1.7.26</td>
+<td align="left"></td>
 </tr>
 <tr>
-<td align="center">Astro C40</td>
-<td align="center">2.1.4</td>
-<td align="center"></td>
+<td align="left">Astro C40</td>
+<td align="left">2.1.4</td>
+<td align="left"></td>
 </tr>
 <tr>
-<td align="center">Specialist PS4 controllers</td>
-<td align="center">2.1.6</td>
-<td align="center">Three Specialist controllers without identification were added in this version</td>
+<td align="left">Specialist PS4 controllers</td>
+<td align="left">2.1.6</td>
+<td align="left">Three Specialist controllers without identification were added in this version</td>
 </tr>
 <tr>
-<td align="center">SnakeByte Game:Pad</td>
-<td align="center">2.1.8</td>
-<td align="center"></td>
+<td align="left">SnakeByte Game:Pad</td>
+<td align="left">2.1.8</td>
+<td align="left"></td>
 </tr>
 <tr>
-<td align="center">Switch Pro</td>
-<td align="center">2.1.16</td>
-<td align="center"></td>
+<td align="left">Switch Pro</td>
+<td align="left">2.1.16</td>
+<td align="left"></td>
 </tr>
 <tr>
-<td align="center">Switch JoyCon</td>
-<td align="center">2.1.17</td>
-<td align="center"></td>
+<td align="left">Switch JoyCon</td>
+<td align="left">2.1.17</td>
+<td align="left"></td>
 </tr>
 <tr>
-<td align="center">DualSense</td>
-<td align="center">2.1.17</td>
-<td align="center">Initial support</td>
+<td align="left">DualSense</td>
+<td align="left">2.1.17</td>
+<td align="left">Initial support</td>
 </tr>
 <tr>
-<td align="center">Gioteck VX4</td>
-<td align="center">2.2.2</td>
-<td align="center"></td>
+<td align="left">Gioteck VX4</td>
+<td align="left">2.2.2</td>
+<td align="left"></td>
 </tr>
 <tr>
-<td align="center">DS3</td>
-<td align="center">2.2.10</td>
-<td align="center">Needs to be running under <a href="https://github.com/ViGEm/DsHidMini">DsHidMini driver</a> and in <code>DS4Windows Mode</code></td>
+<td align="left">DS3</td>
+<td align="left">2.2.10</td>
+<td align="left">Needs to be running under <a href="https://github.com/ViGEm/DsHidMini">DsHidMini driver</a> and in <code>DS4Windows Mode</code></td>
 </tr>
 </tbody>
 </table>
@@ -1020,7 +1074,8 @@
 </div>
 <ul>
 <li>All controller features are supported except the integrated headphone jack and speaker</li>
-<li>The headphone jack can only be used with a DS4v2 and only when used via USB (native gamepad function, unrelated to DS4Windows)</li>
+<li>The headphone jack can only be used via USB and only with a DS4v2 (native gamepad function, unrelated to DS4Windows)</li>
+<li>The headphone jack can only be used wirelessly if the controller is connected via <a href="../../accessory">Sony's DualShock 4 Wireless USB adapter</a></li>
 <li>Bluetooth 2.1 + EDR or higher required for wireless connection</li>
 </ul>
 <h3 id="dualsense">DualSense</h3>
@@ -1072,6 +1127,10 @@
             </article>
           </div>
         </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+          </a>
         
       </main>
       
@@ -1161,7 +1220,7 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.fe42c31b.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.top"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.fe42c31b.min.js", "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.4ea5477f.min.js"></script>
