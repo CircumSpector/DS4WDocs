@@ -546,8 +546,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#final-steps-and-test-drive" class="md-nav__link">
-    Final steps and test drive
+  <a href="#final-steps" class="md-nav__link">
+    Final steps
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-drive" class="md-nav__link">
+    Test drive
   </a>
   
 </li>
@@ -795,8 +802,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../troubleshooting/problematic-games/" class="md-nav__link">
-        Problematic games
+      <a href="../../troubleshooting/steam-related/" class="md-nav__link">
+        Steam related information and issues
       </a>
     </li>
   
@@ -855,8 +862,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#final-steps-and-test-drive" class="md-nav__link">
-    Final steps and test drive
+  <a href="#final-steps" class="md-nav__link">
+    Final steps
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-drive" class="md-nav__link">
+    Test drive
   </a>
   
 </li>
@@ -924,14 +938,35 @@
 </ul>
 <h2 id="drivers-setup">Drivers setup</h2>
 <p>When running DS4Windows for the first time it may prompt you to install some drivers, with the first one being essential. Install them accordingly to your needs:</p>
-<ul>
-<li><strong>ViGEmBUS (Required)</strong>: allows DS4Windows to create virtual Xbox/DS4 controllers</li>
-<li><strong>HidHide (Recommended)</strong>: used to "<em>hide</em>" your real controller in order to prevent games from recognizing both your real controller and the virtual controller created by DS4Windows, a situation that can lead to the famous <a href="../solving-double-input">double controller input issue</a></li>
-<li><strong>FakerInput (Optional)</strong>: useful for users who want to use their controllers as keyboard and mouse. Though DS4Windows can do so by itself, the FakerInput has better performance and can work in more games and situations where Windows might prevent the normal DS4Windows' keyboard/mouse handler  </li>
-</ul>
+<table>
+<thead>
+<tr>
+<th align="left">Driver</th>
+<th align="left">Recommended?</th>
+<th align="left">Driver function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><strong>ViGEmBUS</strong></td>
+<td align="left"><strong>REQUIRED</strong></td>
+<td align="left">Allows DS4Windows to create virtual Xbox/DS4 controllers</td>
+</tr>
+<tr>
+<td align="left"><strong>HidHide</strong></td>
+<td align="left"><strong>Strongly recommended</strong></td>
+<td align="left">Used to "<em>hide</em>" your real controller in order to prevent games from recognizing both your real controller and the virtual controller created by DS4Windows, a situation that can lead to the famous <a href="../solving-double-input">double controller input issue</a></td>
+</tr>
+<tr>
+<td align="left"><strong>FakerInput</strong></td>
+<td align="left">Optional</td>
+<td align="left">Useful for users who want to use their controllers as keyboard and mouse. Though DS4Windows can do so by itself, the FakerInput has better performance and can work in more games and situations where Windows might prevent the normal DS4Windows' keyboard/mouse handler</td>
+</tr>
+</tbody>
+</table>
 <p><img alt="DS4WDriversSetup.png" class="glightbox" src="../images/DS4WDriversSetup.png" />  </p>
 <p>Select the <code>Finished</code> button at the bottom after installing the drivers you need.</p>
-<h2 id="final-steps-and-test-drive">Final steps and test drive</h2>
+<h2 id="final-steps">Final steps</h2>
 <ul>
 <li>If your controller is not connected yet, do so now<ul>
 <li>Check <a href="">here</a> if you are having trouble connecting them via bluetooth</li>
@@ -944,8 +979,10 @@
 </li>
 </ul>
 <p><img alt="DS4WStopped" class="glightbox" src="../images/DS4WStopped.png" />  </p>
-<p><img alt="DS4WEnd.png" class="glightbox" src="../images/DS4WEnd.png" />  </p>
-<p>If your controller appears on the list then Xbox Controller emulation should already be working! In order to verify:</p>
+<p><img alt="DS4WEnd.png" class="glightbox" src="../images/DS4WEnd.png" /> </p>
+<p>Assuming your controller has been detected then Xbox Controller emulation should already be working!</p>
+<h2 id="test-drive">Test drive</h2>
+<p>To verify if Windows has correctly  recognized the emulated Xbox controller:</p>
 <ul>
 <li>Press on your keyboard <span class="keys"><kbd class="key-windows">Win</kbd><span>+</span><kbd class="key-r">R</kbd></span>, type <code>joy.cpl</code> then select Ok. Windows' <code>Game Controllers</code> window should appear</li>
 <li>On the list there should be (probably) 2 controllers: your real controller and the emulated <code>Xbox 360 Controller</code></li>
@@ -954,10 +991,9 @@
 <h2 id="what-now">What now?</h2>
 <ul>
 <li><strong>It's strongly recommended that you check the <a href="#preventing-the-double-input-issue"><em>Preventing the double-input issue</em> section</a>!</strong></li>
+<li>Check out our [<code>Frequently asked questions</code> page]</li>
 <li>It's better to not change anything in the <code>Output Slots</code> tab unless you really know what you are doing. Just let everything as Dynamic as it is on default </li>
 <li>You may want to configure your DS4Windows to <a href="">start with Windows</a></li>
-<li>...Deadzones? Profiles?</li>
-<li>...Steam related info?</li>
 </ul>
 <h2 id="preventing-the-double-input-issue">Preventing the double input issue</h2>
 <div class="admonition important">

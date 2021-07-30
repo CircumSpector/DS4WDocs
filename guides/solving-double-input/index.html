@@ -549,18 +549,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#about-the-issue" class="md-nav__link">
-    About the issue
+  <a href="#about-the-double-input-issue" class="md-nav__link">
+    About the double input issue
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#methods-to-prevent-the-issue" class="md-nav__link">
-    Methods to prevent the issue
+  <a href="#methods-to-prevent-it" class="md-nav__link">
+    Methods to prevent it
   </a>
   
-    <nav class="md-nav" aria-label="Methods to prevent the issue">
+    <nav class="md-nav" aria-label="Methods to prevent it">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -794,8 +794,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../troubleshooting/problematic-games/" class="md-nav__link">
-        Problematic games
+      <a href="../../troubleshooting/steam-related/" class="md-nav__link">
+        Steam related information and issues
       </a>
     </li>
   
@@ -833,18 +833,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#about-the-issue" class="md-nav__link">
-    About the issue
+  <a href="#about-the-double-input-issue" class="md-nav__link">
+    About the double input issue
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#methods-to-prevent-the-issue" class="md-nav__link">
-    Methods to prevent the issue
+  <a href="#methods-to-prevent-it" class="md-nav__link">
+    Methods to prevent it
   </a>
   
-    <nav class="md-nav" aria-label="Methods to prevent the issue">
+    <nav class="md-nav" aria-label="Methods to prevent it">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -891,7 +891,7 @@
                 
                 
                 <h1 id="solving-double-input-issues-in-games">Solving double input issues in games</h1>
-<h2 id="about-the-issue">About the issue</h2>
+<h2 id="about-the-double-input-issue">About the double input issue</h2>
 <p>DS4Windows does not magically transform your gamepad from one type to another. It creates a <strong><em>virtual</em></strong> gamepad that is associated to your real one. This means that if you have 1 real gamepad connected then windows will actually detect 2 gamepads. If 2 real then 4 etc.</p>
 <p>The image below shows how Windows behaves when a DS4v2 (Wireless Controller) is connected to the system while DS4Windows is emulating a Xbox gamepad: </p>
 <p><img alt="SharedJoycpl" class="glightbox" src="../images/SharedJoycpl.png" /> </p>
@@ -901,19 +901,22 @@
 <li>HidHide (recommended)</li>
 <li>DS4Windows' <code>Hide DS4 Controllers</code> option (legacy option)</li>
 </ul>
-<h2 id="methods-to-prevent-the-issue">Methods to prevent the issue</h2>
+<h2 id="methods-to-prevent-it">Methods to prevent it</h2>
 <h3 id="hidhide-recommended">HidHide (recommended)</h3>
 <div class="admonition important">
-<p class="admonition-title">After installing the HidHide driver you <strong>MUST</strong> reboot your system before using it</p>
+<p class="admonition-title">Important</p>
+<ul>
+<li>After installing the HidHide driver you <strong>MUST</strong> reboot your system before using it</li>
+<li>If HidHide is properly configured then the <code>Hide DS4 controllers</code> on DS4Windows' <code>Settings</code> is not required anymore and should be left disabled</li>
+</ul>
 </div>
 <p>HidHide is a driver that acts as a barrier between Windows and every HID Device connected (physical peripherals). It allows the user to selectively hide gamepads and only allow specific software to see them. This is the recommended method because once it has been properly setup you are good to go.</p>
 <p>In DS4W case, the user needs to set HidHide to:</p>
 <ol>
-<li>Hide the used gamepads from the system, both from USB and Bluetooth</li>
+<li>Hide the used gamepads from the system, once when connect via USB and once when via Bluetooth</li>
 <li>Allow DS4Windows to see all hidden devices, otherwise it would think there are no supported gamepads connected</li>
 </ol>
 <p><img alt="HidHideAccess" class="glightbox" src="../images/HidHideAccess.png" /> </p>
-<p><strong>Connected gamepad needs to be hidden individually. Also, the same gamepad needs to be hidden one time when used by USB and another when used by Bluetooth!</strong></p>
 <p>HidHide has its own <a href="https://vigem.org/projects/HidHide/Simple-Setup-Guide/">dedicated setup page</a>. Users who know more or less what they are doing can follow the quick setup section and for the ones having trouble there is also the step-by-step section.</p>
 <h3 id="hide-ds4-controllers-option-legacy"><code>Hide DS4 Controllers</code> option (legacy)</h3>
 <div class="admonition important">
@@ -937,7 +940,7 @@
 <p>For the reasons explained above, the <code>Hide DS4 Controllers</code> option is <strong>NOT RECOMMENDED</strong>, though it remains available to users that need to use it for whatever reason. HidHide is the better option all around for those who can use it.</p>
 <div class="admonition note">
 <p class="admonition-title">Dedicated troubleshooting page</p>
-<p>In case you really need to use this option, there is a <a href="">dedicated troubleshooting article</a> on it to verify why windows is failing to grant exclusive access to the controller</p>
+<p>In case you really need to use this option, there is a <a href="../../troubleshooting/hide-ds4-option/">dedicated troubleshooting article</a> on it to verify why windows is failing to grant exclusive access to the controller</p>
 </div>
 <h2 id="related-links">Related links</h2>
 <ul>
