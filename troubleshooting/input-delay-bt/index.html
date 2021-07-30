@@ -575,6 +575,18 @@
   
 
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/under-construction/" class="md-nav__link">
+        Under construction
+      </a>
+    </li>
+  
+
+          
         </ul>
       </nav>
     </li>
@@ -613,7 +625,7 @@
   
     <li class="md-nav__item">
       <a href="../" class="md-nav__link">
-        About Projects
+        About Troubleshooting
       </a>
     </li>
   
@@ -662,6 +674,18 @@
     <li class="md-nav__item">
       <a href="../ds4w-controller-detection/" class="md-nav__link">
         DS4W not detecting controllers
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../games-controller-detection/" class="md-nav__link">
+        Games not recognizing the controller / controller issues in-game
       </a>
     </li>
   
@@ -786,11 +810,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#suggestion-on-fix-latency-issues" class="md-nav__link">
-    Suggestion on fix latency issues
+  <a href="#potential-fixes-to-latency-issues" class="md-nav__link">
+    Potential fixes to latency issues
   </a>
   
-    <nav class="md-nav" aria-label="Suggestion on fix latency issues">
+    <nav class="md-nav" aria-label="Potential fixes to latency issues">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -824,6 +848,13 @@
           <li class="md-nav__item">
   <a href="#connect-usb-bt-dongle-through-a-usb-extension-cable" class="md-nav__link">
     Connect USB BT Dongle through a USB extension cable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#decrease-the-bt-polling-rate-on-profile-settings" class="md-nav__link">
+    Decrease the BT polling rate on profile settings
   </a>
   
 </li>
@@ -961,11 +992,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#suggestion-on-fix-latency-issues" class="md-nav__link">
-    Suggestion on fix latency issues
+  <a href="#potential-fixes-to-latency-issues" class="md-nav__link">
+    Potential fixes to latency issues
   </a>
   
-    <nav class="md-nav" aria-label="Suggestion on fix latency issues">
+    <nav class="md-nav" aria-label="Potential fixes to latency issues">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -999,6 +1030,13 @@
           <li class="md-nav__item">
   <a href="#connect-usb-bt-dongle-through-a-usb-extension-cable" class="md-nav__link">
     Connect USB BT Dongle through a USB extension cable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#decrease-the-bt-polling-rate-on-profile-settings" class="md-nav__link">
+    Decrease the BT polling rate on profile settings
   </a>
   
 </li>
@@ -1039,7 +1077,11 @@
 <p>A high but stable input delay will make your character feel slow to respond, while a low input delay with high delay spikes may make you prone to errors since your character may suddenly be slow to respond when you are not expecting it to.</p>
 <p>It's often considered that a really bad high latency is one where the input delay is above 20ms, though the ideal is to keep it bellow 10ms.</p>
 <h2 id="usual-controller-latency">Usual controller latency</h2>
-<p>The following table can be used as reference for comparison on what input delay to expect with a supported controller and a good Bluetooth Adapter. Keep in mind it was made by checking the usual input delay values DS4Windows informs when comparing the time between commands sent by the controller. As such, no major technical experiments were done to obtain these values and they should be taken with a grain of salt.</p>
+<p>The following table can be used as reference for comparison on what input delay to expect with a supported controller and a good Bluetooth adapter: </p>
+<div class="admonition important">
+<p class="admonition-title">Take these values with a grain of salt</p>
+<p>No major technical experiments were done to obtain these values besides checking what DS4Windows usually informs when those controllers are used at maximum BT polling rate</p>
+</div>
 <table>
 <thead>
 <tr>
@@ -1052,32 +1094,32 @@
 <tbody>
 <tr>
 <td align="center">DualShock 3</td>
-<td align="center">~5ms</td>
-<td align="center">same</td>
+<td align="center">5ms</td>
+<td align="center">5ms</td>
 <td align="center">Connected through <code>BthPS3</code> + <code>DsHidMini (DS4Windows Mode)</code></td>
 </tr>
 <tr>
 <td align="center">DualShock 4</td>
-<td align="center">~4ms</td>
-<td align="center">~1ms</td>
+<td align="center">4ms - <code>DS4W Default settings</code></td>
+<td align="center">1,5ms - <code>polling rate set to maximum</code></td>
 <td align="center">v1 and v2 don't have major latency differences</td>
 </tr>
 <tr>
 <td align="center">DualSense</td>
-<td align="center">~3ms</td>
-<td align="center">~1ms?</td>
+<td align="center">3ms</td>
+<td align="center">1ms</td>
 <td align="center"></td>
 </tr>
 <tr>
 <td align="center">Switch Pro controllers</td>
-<td align="center">~16ms</td>
-<td align="center">~16ms</td>
+<td align="center">16ms</td>
+<td align="center">16ms</td>
 <td align="center">16ms is the lowest latency the official controller can achieve</td>
 </tr>
 <tr>
 <td align="center">Joy-cons</td>
-<td align="center">~16ms?</td>
-<td align="center">~16ms</td>
+<td align="center">16ms?</td>
+<td align="center">16ms?</td>
 <td align="center"></td>
 </tr>
 </tbody>
@@ -1125,10 +1167,10 @@
 <p>When a DS4 or DualSense is first connected to it, they present themselves in a limited form. They don't send the data related to rumble, motion sensors, lightbar etc. Meaning they are sending just basic buttons and axis states info and Windows is basically not sending anything back.</p>
 <p>After DS4Windows first detects the controller a special request is sent for it to change into full feature mode, where the missing info starts being sent. DS4Windows also starts then sending rumble, lightbar and triggers (DualSense only) data back to it. Mind you, Steam sends the same request when the <code>Playstation Configuration Support</code> option is enabled.</p>
 <p>This change from limited to full feature mode results in a increase of data rate between the controller and the system and sometimes the adapter can't keep up with it. So, if your never had latency problems when using your DS4/DualSense in games with generic controller support but then start having them after start using DS4Windows or Steam, this is the cause.</p>
-<h2 id="suggestion-on-fix-latency-issues">Suggestion on fix latency issues</h2>
+<h2 id="potential-fixes-to-latency-issues">Potential fixes to latency issues</h2>
 <h3 id="test-with-wifi-fully-disabled">Test with WiFi fully disabled</h3>
 <div class="admonition note">
-<p class="admonition-title">Mostly recommended for testing with integrated cards that double as both BT and WiFi adapters</p>
+<p class="admonition-title">This test is recommended for those with integrated cards that work as both BT and WiFi adapters</p>
 </div>
 <p>By disabling the WiFi signal you have one less source of radio interference so you can then verify your BT adapter performance in a environment with less signal noise. Keep wifi enabled devices far from the PC too.</p>
 <h3 id="settings-windows-power-plan-to-high-performance">Settings Windows' Power Plan to High Performance</h3>
@@ -1147,6 +1189,12 @@
 <p>Moving the dongle to a better located USB port may offer a better quality signal. Also, USB ports (specially 3.0 and above) can be a source of radio noise. Test the dongle in different ports to verify which offer you a better signal.</p>
 <h3 id="connect-usb-bt-dongle-through-a-usb-extension-cable">Connect USB BT Dongle through a USB extension cable</h3>
 <p>A laptop/desktop's shell is a source of radio noise, specially near high powered, high data transfer ports like USB 3.0 and above. This noise may worsen your BT's adapter performance. Connecting your BT adapter through a cable extension so it stays located at some distance from the computers shell is known to be useful in these cases.</p>
+<h3 id="decrease-the-bt-polling-rate-on-profile-settings">Decrease the BT polling rate on profile settings</h3>
+<div class="admonition note">
+<p class="admonition-title">Only works with DS4 gamepads. The BT polling rates of other types cannot be controlled</p>
+</div>
+<p>On <code>Profile Editor</code> -&gt; <code>Other</code> tab you it's possible to set the <code>BT Poll Rate</code> used for DS4 and DualSense controllers on Bluetooth. If you are having latency issues, specially with multiple controllers connected, try setting this value to 10ms or more. For most games, a controller input delay is only noticeable above 16ms.</p>
+<p><img alt="ProfilePollingRate" class="glightbox" src="../images/ProfilePollingRate.png" />  </p>
 <h3 id="disable-output-data-to-the-controller">Disable output data to the controller</h3>
 <p>Your adapter may not be up to the task to both receive <em>and</em> send data to the controller. In this case, you can set a profile with the <code>Enable output data to DS4</code> option disabled. Keep in mind that <code>Output Data</code> means data that DS4Windows sends back to the controller like rumble and lightbar states, with both also be disabled in this case.  </p>
 <p><img alt="DisableOutputDataDS4" class="glightbox" src="../images/DisableOutputDataDS4.png" />  </p>
