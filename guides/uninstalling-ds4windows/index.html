@@ -517,7 +517,7 @@
   
     <li class="md-nav__item">
       <a href="../saving-and-moving-your-settings/" class="md-nav__link">
-        Saving and moving your settings
+        Saving and moving your settings  (under construction)
       </a>
     </li>
   
@@ -592,59 +592,12 @@
     Related drivers
   </a>
   
-    <nav class="md-nav" aria-label="Related drivers">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#virtual-gamepad-emulation-bus-vigembus" class="md-nav__link">
-    Virtual Gamepad Emulation Bus (ViGEmBus)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#hidhide" class="md-nav__link">
-    HidHide
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#fakerinput" class="md-nav__link">
-    FakerInput
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
   <a href="#legacy-drivers" class="md-nav__link">
     Legacy drivers
   </a>
-  
-    <nav class="md-nav" aria-label="Legacy drivers">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#hidguardian" class="md-nav__link">
-    HidGuardian
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#virtual-emulation-bus-scpvbus" class="md-nav__link">
-    Virtual Emulation Bus (ScpVBus)
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -692,7 +645,7 @@
   
     <li class="md-nav__item">
       <a href="../../troubleshooting/" class="md-nav__link">
-        About Troubleshooting
+        Troubleshooting tips and general instructions  (under construction)
       </a>
     </li>
   
@@ -752,7 +705,7 @@
   
     <li class="md-nav__item">
       <a href="../../troubleshooting/double-input/" class="md-nav__link">
-        Double Input issue
+        Double Input issue  (under construction)
       </a>
     </li>
   
@@ -764,7 +717,7 @@
   
     <li class="md-nav__item">
       <a href="../../troubleshooting/games-controller-detection/" class="md-nav__link">
-        Games not recognizing the controller / controller issues in-game
+        Games not recognizing the controller / controller issues in-game (under construction)
       </a>
     </li>
   
@@ -923,59 +876,12 @@
     Related drivers
   </a>
   
-    <nav class="md-nav" aria-label="Related drivers">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#virtual-gamepad-emulation-bus-vigembus" class="md-nav__link">
-    Virtual Gamepad Emulation Bus (ViGEmBus)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#hidhide" class="md-nav__link">
-    HidHide
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#fakerinput" class="md-nav__link">
-    FakerInput
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
   <a href="#legacy-drivers" class="md-nav__link">
     Legacy drivers
   </a>
-  
-    <nav class="md-nav" aria-label="Legacy drivers">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#hidguardian" class="md-nav__link">
-    HidGuardian
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#virtual-emulation-bus-scpvbus" class="md-nav__link">
-    Virtual Emulation Bus (ScpVBus)
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1009,16 +915,15 @@
 </ul>
 <p><img alt="DS4WRoaming.png" class="glightbox" src="../images/DS4WRoaming.png" />  </p>
 <h2 id="related-drivers">Related drivers</h2>
-<h3 id="virtual-gamepad-emulation-bus-vigembus">Virtual Gamepad Emulation Bus (ViGEmBus)</h3>
-<p>The ViGEmBus driver is the most important driver used by DS4Windows. It can create virtual/fake/emulated controllers, which DS4Windows uses to spawn virtual Xbox and DS4 controllers.</p>
-<p>Keep in mind that it's a somewhat popular driver and used by a good number of <a href="https://github.com/ViGEm/ViGEmBus#known-users-of-vigem">other applications</a>, with the most known one being Parsec. If you have other programs that make use of the ViGEmBUS, then uninstalling it may break their functionality though the program might just prompt you to install it again. </p>
-<div class="admonition note">
+<div class="admonition info">
 <p class="admonition-title">Uninstalling ViGEmBus</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Keep in mind that the Nefarius' ViGEmBus is used by a good number of <a href="https://github.com/ViGEm/ViGEmBus#known-users-of-vigem">other applications</a>, with the most known one being Parsec. If you have other programs that make use of the ViGEmBUS, then uninstalling it may break their functionality, though the program might just prompt you to install it again</p>
+</div>
 <p>Check <a href="https://vigem.org/projects/ViGEm/How-to-Install/#removal">ViGEmBus's removal section</a> on the original ViGEmBus' documentation</p>
 </div>
-<h3 id="hidhide">HidHide</h3>
-<p>The HidHide driver allows the user to "hide" gamepads from the system and make them detectable to only chosen programs in order to prevent the infamous <a href="../../guides/solving-double-input/">double input issue</a>.</p>
-<div class="admonition note">
+<div class="admonition info">
 <p class="admonition-title">Uninstalling HidHide</p>
 <ul>
 <li>Open Windows' <code>Apps &amp; Features</code> (search for it on the start menu)</li>
@@ -1027,9 +932,7 @@
 <img alt="HidHideUninstall.png" class="glightbox" src="../images/HidHideUninstall.png" /> </li>
 </ul>
 </div>
-<h3 id="fakerinput">FakerInput</h3>
-<p>DS4Windows uses the FakerInput driver to expose system-wide virtual keyboard, relative mouse and absolute mouse. Allows Keyboard + Mouses events/commands to be usable in some situations where the usual way DS4Windows sends those commands (via "SendInput) fails. Examples of those situations are elevated processes and games, UAC prompts and anti-cheat systems that block SentInput events. Use of FakerInput is necessary to allow DS4Windows to work with some games with anti-cheat protection like valorant.</p>
-<div class="admonition note">
+<div class="admonition info">
 <p class="admonition-title">Uninstalling FakerInput</p>
 <ul>
 <li>Open Windows' <code>Apps &amp; Features</code> (search for it on the start menu)</li>
@@ -1038,22 +941,19 @@
 </ul>
 </div>
 <h2 id="legacy-drivers">Legacy drivers</h2>
-<h3 id="hidguardian">HidGuardian</h3>
-<p>HidGuardian is a driver that can hide controllers from the system and allow only chosen processes to detect them. It was previously used by DS4Windows to solve the double input issue, but was made obsolete by the release of its successor, HidHide, a similar driver that works better and is easier to use.</p>
-<p>DS4Windows removed support for HidGuardian in version 3.0.8 in favor of HidHide. As such, users who used and still have HidGuardian installed can be in a state where their controllers are hidden and undetectable to Windows and DS4Windows, though the controllers should still appear on Windows' Devices and Printers.</p>
-<p>To verify if you have HidGuardian installed and to uninstall it if present, follow  <a href="https://kanuan.github.io/DS4WSite/troubleshooting/ds4w-controller-detection/">HidGuardian's section on HidHide's guide</a>. If you use HidGuardian with other softwares then know that HidHide does not require that a software adds specific support to it and thus it can be used in HidGuardian's place to achieve the same results.</p>
-<h3 id="virtual-emulation-bus-scpvbus">Virtual Emulation Bus (ScpVBus)</h3>
-<div class="admonition note">
-<p class="admonition-title">Necessary to confirm the information here</p>
+<div class="admonition info">
+<p class="admonition-title">Verifying if HidGuardian is installed and uninstalling it if present</p>
+<ul>
+<li>Follow  <a href="https://kanuan.github.io/DS4WSite/troubleshooting/ds4w-controller-detection/">HidGuardian's section on HidHide's guide</a></li>
+</ul>
 </div>
-<p>The ScpVBus driver is used to create fake/virtual/emulated Xbox 360 controllers. It was made obsolete by the release of its successor, the ViGEmBus driver.</p>
-<p>Usually, users accidentaly install this driver when they search for "DS4Windows" on google and end-up clicking on the first result that appears, which leads to the original (but now obsolete) version of DS4Windows from the developer Jays2kings. </p>
-<p>ScpVBus is not used anymore by DS4Windows besides for experimenting purposes on special testing builds. Therefore, this driver has no use for the average user and it's better if it were to be uninstalled if it's present, since it has a minor chance of causing issues with Windows.</p>
-<p>To uninstall it:</p>
+<div class="admonition info">
+<p class="admonition-title">Uninstalling ScpVBus</p>
 <div class="admonition note">
 <p class="admonition-title">To Do: include pictures</p>
+</div>
 <ul>
-<li>Locate the <code>Virtual Gamepad Emulation Bus</code> on device manager</li>
+<li>Locate the <code>Virtual Gamepad Emulation Bus</code> on device manager (do not confuse it with the <code>Nefarius' Virtual Gamepad Emulation Bus</code>)</li>
 <li>Uninstall it while also ticking the <code>Delete the driver for this device</code> checkbox</li>
 <li>Check with <code>Driver Store Explorer</code> if it's still present on the system and remove it if true</li>
 </ul>
@@ -1089,7 +989,7 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Saving and moving your settings
+              Saving and moving your settings  (under construction)
             </div>
           </div>
         </a>
@@ -1101,7 +1001,7 @@
               <span class="md-footer__direction">
                 Next
               </span>
-              About Troubleshooting
+              Troubleshooting tips and general instructions  (under construction)
             </div>
           </div>
           <div class="md-footer__button md-icon">

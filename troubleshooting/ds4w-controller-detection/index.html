@@ -515,7 +515,7 @@
   
     <li class="md-nav__item">
       <a href="../../guides/saving-and-moving-your-settings/" class="md-nav__link">
-        Saving and moving your settings
+        Saving and moving your settings  (under construction)
       </a>
     </li>
   
@@ -571,7 +571,7 @@
   
     <li class="md-nav__item">
       <a href="../" class="md-nav__link">
-        About Troubleshooting
+        Troubleshooting tips and general instructions  (under construction)
       </a>
     </li>
   
@@ -646,6 +646,13 @@
           <li class="md-nav__item">
   <a href="#controller-is-not-properly-connected-does-not-appear-on-windows-devices-and-printers" class="md-nav__link">
     Controller is not properly connected / does not appear on Windows' Devices and Printers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#controller-was-connected-to-the-pc-via-bluetooth-but-was-paired-using-the-wrong-method" class="md-nav__link">
+    Controller was connected to the PC via Bluetooth but was paired using the wrong method
   </a>
   
 </li>
@@ -753,7 +760,7 @@
   
     <li class="md-nav__item">
       <a href="../double-input/" class="md-nav__link">
-        Double Input issue
+        Double Input issue  (under construction)
       </a>
     </li>
   
@@ -765,7 +772,7 @@
   
     <li class="md-nav__item">
       <a href="../games-controller-detection/" class="md-nav__link">
-        Games not recognizing the controller / controller issues in-game
+        Games not recognizing the controller / controller issues in-game (under construction)
       </a>
     </li>
   
@@ -929,6 +936,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#controller-was-connected-to-the-pc-via-bluetooth-but-was-paired-using-the-wrong-method" class="md-nav__link">
+    Controller was connected to the PC via Bluetooth but was paired using the wrong method
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#controller-has-been-accidentally-disabled" class="md-nav__link">
     Controller has been accidentally disabled
   </a>
@@ -1030,10 +1044,23 @@
 <p><img alt="DevicesNPrintersToo.png" class="glightbox" src="../images/DevicesNPrintersToo.png" />  </p>
 </li>
 </ul>
+<h3 id="controller-was-connected-to-the-pc-via-bluetooth-but-was-paired-using-the-wrong-method">Controller was connected to the PC via Bluetooth but was paired using the wrong method</h3>
+<p><a href="">There is a correct and a incorrect method</a> of connecting a controller to the PC via Bluetooth. The correct method involves the user intentionally setting the controller in their special <code>pairing mode</code> and making Windows manually look for it under <code>Settings -&gt; Devices</code> menu. In the incorrect method the user just turns on the controller and a Windows' displays a <code>Add a device</code> notification.</p>
+<p>If the controller has been connected in the wrong method it will 100% not work. In doubt, make Windows remove the controller from its Device list and re-pair it again.</p>
+<div class="admonition important">
+<p class="admonition-title">Pairing a controller to Windows</p>
+<div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Correct method</label><div class="tabbed-content">
+<p><img alt="AddBluetoothDevice.png" class="glightbox" src="../images/AddBluetoothDevice.png" /> </p>
+</div>
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">Incorrect method</label><div class="tabbed-content">
+<p><img alt="TapToSetController.png" class="glightbox" src="../images/TapToSetController.png" /> </p>
+</div>
+</div>
+</div>
 <h3 id="controller-has-been-accidentally-disabled">Controller has been accidentally disabled</h3>
-<div class="admonition note">
+<div class="admonition info">
 <p class="admonition-title">Happens mostly to users of the <code>Hide DS4 controllers</code> option</p>
-<p>Although this problem mainly affected older versions of DS4Windows (text written after version 1.5.15) for various reasons, other mapping programs can cause the same problem to occur"</p>
+<p>Although this problem mainly affected older versions of DS4Windows (text written after version 1.5.15) for various reasons, other mapping programs can cause the same problem to occur</p>
 </div>
 <p>There is a chance that DS4W has permanently disabled your controller in a previous attempt of gaining Exclusive Access when using the <code>Hide DS4 controllers</code> option. Although this problem mainly affected older versions of DS4Windows (text written after version 1.5.15) for various reasons, other mapping programs can cause the same problem to occur.</p>
 <p>Though this can happen via any connection method, on Bluetooth removing and re-pairing the controller will fix the issue.</p>
@@ -1052,6 +1079,10 @@
 <p><img alt="EnabledButHidden" class="glightbox" src="../images/EnabledButHidden.png" />  </p>
 <p>If you found out that:</p>
 <ol>
+<li>Your controller is properly connected<ul>
+<li></li>
+</ul>
+</li>
 <li>Your controller is <strong>NOT disabled</strong> in the previous sections</li>
 <li>Still does not appear on Windows' <code>Game Controllers</code> list</li>
 <li>And is not detected by DS4Windows</li>
@@ -1115,7 +1146,7 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              About Troubleshooting
+              Troubleshooting tips and general instructions  (under construction)
             </div>
           </div>
         </a>
