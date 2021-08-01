@@ -395,7 +395,7 @@
   
     <li class="md-nav__item">
       <a href="../../about-ds4windows/companion-drivers/" class="md-nav__link">
-        DS4Windows companion drivers
+        Companion drivers
       </a>
     </li>
   
@@ -780,6 +780,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#game-not-recognizing-the-virtual-xbox-controller-or-stops-recognizing-it-upon-controller-reconnection" class="md-nav__link">
+    Game not recognizing the virtual Xbox controller or stops recognizing it upon controller reconnection
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#common-reasons-for-games-to-not-detect-virtual-emulated-dualshock-4-controllers" class="md-nav__link">
     Common reasons for games to not detect virtual (emulated) DualShock 4 controllers
   </a>
@@ -803,13 +810,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#game-not-recognizing-the-virtual-xbox-controller-or-stops-recognizing-it-upon-controller-reconnection" class="md-nav__link">
-    Game not recognizing the virtual Xbox controller or stops recognizing it upon controller reconnection
-  </a>
   
 </li>
       
@@ -975,6 +975,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#game-not-recognizing-the-virtual-xbox-controller-or-stops-recognizing-it-upon-controller-reconnection" class="md-nav__link">
+    Game not recognizing the virtual Xbox controller or stops recognizing it upon controller reconnection
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#common-reasons-for-games-to-not-detect-virtual-emulated-dualshock-4-controllers" class="md-nav__link">
     Common reasons for games to not detect virtual (emulated) DualShock 4 controllers
   </a>
@@ -998,13 +1005,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#game-not-recognizing-the-virtual-xbox-controller-or-stops-recognizing-it-upon-controller-reconnection" class="md-nav__link">
-    Game not recognizing the virtual Xbox controller or stops recognizing it upon controller reconnection
-  </a>
   
 </li>
       
@@ -1039,6 +1039,10 @@
 <li>If the virtual gamepad is not acting as expected, maybe your profile is misconfigured. To test, create a new profile under DS4Windows' <code>Profiles</code> tab using one of the recommended gamepad presets, save and then select it for your controller in the <code>Controllers</code> tab</li>
 <li>If the virtual controller does not respond in anyway double-check the currently selected profile in the <code>Controllers</code> tab and its configuration. Make sure the buttons bindings are actually mapped to something and a blank profile is not being used</li>
 </ul>
+<h2 id="game-not-recognizing-the-virtual-xbox-controller-or-stops-recognizing-it-upon-controller-reconnection">Game not recognizing the virtual Xbox controller or stops recognizing it upon controller reconnection</h2>
+<p>This <strong>may</strong> be related to a somewhat known Windows issue where it has, hidden from view, associated the connected Xbox controller to a incorrect/not-expected "XInput Slot".  </p>
+<p>Check the dedicated <a href="../../troubleshooting/xinput-slots-order/"><em>XInput slots order issues</em> page</a> for more info on how to check and solve this issue.</p>
+<p><img alt="XInputSlot1Disconnected" class="glightbox" src="../images/XInputSlot1Disconnected.png" />  </p>
 <h2 id="common-reasons-for-games-to-not-detect-virtual-emulated-dualshock-4-controllers">Common reasons for games to not detect virtual (emulated) DualShock 4 controllers</h2>
 <h3 id="game-supports-only-xbox-controllers">Game supports only Xbox controllers</h3>
 <p>Most games support only Xbox controller because of how easy it is to add complete support to it. Even games that were released for Playstation consoles sometimes don't have native DS4 support on the PC, and there is nothing that can be done besides switching to Xbox controller emulation.</p>
@@ -1048,14 +1052,10 @@
 <div class="admonition info">
 <p class="admonition-title">Want to know more info on this? Check out dedicated <a href="../../unders-construction"><strong>General info regarding DS4 controller on PC games</strong> page</a>!</p>
 </div>
-<p>Though it's quite uncommon, some games have DS4 controller support only when launched through Steam and using its <code>Playstation Configuration Support</code> option.</p>
-<p>Keep in mind that for using your virtual DS4 controller with Steam you'll have to <a href="../steam-related">run DS4Windows under a custom name for Steam to not ignore it</a> (thanks for not giving us the option on this and making our lives harder, Steam).  </p>
-<h2 id="game-not-recognizing-the-virtual-xbox-controller-or-stops-recognizing-it-upon-controller-reconnection">Game not recognizing the virtual Xbox controller or stops recognizing it upon controller reconnection</h2>
-<p>This <strong>may</strong> be related to a somewhat known Windows issue. Windows associates Xbox controllers to XInput slots from 1 to 4. Some games require the main controller to be in XInput Slot 1, otherwise they just don't detect them. </p>
-<p>To check which slot your virtual Xbox controller is into, go into DS4Windows' <code>Settings</code> tab, open the <code>XInput Checker</code> tool and check if the status of slot #1 is connected and if it's actually your controller by testing it. If slot #1 is disconnected, verify all the other slots.</p>
-<p>If your controller is not in slot #1 then that may be the reason the game is ignoring the controller. This is solvable but it's mostly outside of DS4Windows control and is more of a Windows issue. Check the dedicated <a href="../../other/under-construction"><em>Xinput Slots issues</em> page</a> for more info on this and how to solve it. </p>
+<p>Though it's quite uncommon, some games absolutely require using your DS4 through Steam Input by enabling the <code>Playstation Configuration Support</code> option and launching the game through Steam to have working DS4 support or to support rumble/lightbar features.</p>
+<p>Keep in mind that for using your virtual DS4 controller through Steam Input you'll have to <a href="../../guides/ds4w-custom-name/">run DS4Windows under a custom name for Steam to not ignore it</a> (thanks for not giving us the option on this and making our lives harder, Steam).  </p>
 <h2 id="game-intentionally-ignore-virtual-controllers">Game intentionally ignore virtual controllers</h2>
-<p>No known cases. Most users who claimed some game had this behavior were actually having other unrelated issue.</p>
+<p>No known cases. Most users who claimed some game had this behavior were actually having other unrelated issue. Example: Shovel Knight ignores DS4 controllers if it detects DS4Windows is running, but it shouldn't matter if the user is using is using a Xbox controller.</p>
 <p>Not saying it's not possible, just that it's not known.</p>
                 
               

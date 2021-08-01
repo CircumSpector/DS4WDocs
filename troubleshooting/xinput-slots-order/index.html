@@ -395,7 +395,7 @@
   
     <li class="md-nav__item">
       <a href="../../about-ds4windows/companion-drivers/" class="md-nav__link">
-        DS4Windows companion drivers
+        Companion drivers
       </a>
     </li>
   
@@ -1093,6 +1093,7 @@
 <h2 id="general-info">General info</h2>
 <p>Upon connection, Xbox controllers are associated by Windows to hidden Xinput Slots that range from 1 to 4. After being associated they remain so until being unplugged, which should then make Windows clear the used slot.</p>
 <p>Sometimes processes keep an open handle to these slots in order to remember the previously controller order in case there is an accidental disconnection... Or sometimes those processes are badly coded and just suck. When this happens, a slot can get stuck in a constant "reserved" state where controllers being connected or reconnected are pushed down to other XInput slots or are always reconnected to the same slots even though the user is trying to change their order.</p>
+<p><img alt="XInputSlot1Disconnected" class="glightbox" src="../images/XInputSlot1Disconnected.png" />  </p>
 <p>Obviously, this does not result in any real problem since games and applications know how to verify which controller to use regardless of the slot order, right? Ha, you wish. Most games dynamically detect controllers and have their own way of defining controller order, but others make the slots order the same as the players one and/or just fully require the main controller to be in Slot 1.</p>
 <p>To solve this issue, it's necessary to find which programs are keeping an open handle to the XInput slots and terminating them.</p>
 <h2 id="finding-out-what-is-keeping-an-open-handle-to-xinput-slots">Finding out what is keeping an open handle to XInput Slots</h2>

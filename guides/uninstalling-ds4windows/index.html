@@ -395,7 +395,7 @@
   
     <li class="md-nav__item">
       <a href="../../about-ds4windows/companion-drivers/" class="md-nav__link">
-        DS4Windows companion drivers
+        Companion drivers
       </a>
     </li>
   
@@ -1029,41 +1029,36 @@
 </ul>
 <p><img alt="DS4WRoaming.png" class="glightbox" src="../images/DS4WRoaming.png" />  </p>
 <h2 id="related-drivers">Related drivers</h2>
-<div class="admonition info">
-<p class="admonition-title">Uninstalling ViGEmBus</p>
-<div class="admonition important">
+<p>These are companion drivers that are currently used by DS4Windows. If you are looking for more info on what they are and their purpose, check the <a href="../../about-ds4windows/companion-drivers/"><em>about companion drivers</em> page</a>.</p>
+<details class="info"><summary>ViGEmBus (click to expand)</summary><div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>Keep in mind that the Nefarius' ViGEmBus is used by a good number of <a href="https://github.com/ViGEm/ViGEmBus#known-users-of-vigem">other applications</a>, with the most known one being Parsec. If you have other programs that make use of the ViGEmBUS, then uninstalling it may break their functionality, though the program might just prompt you to install it again</p>
 </div>
-<p>Check <a href="https://vigem.org/projects/ViGEm/How-to-Install/#removal">ViGEmBus's removal section</a> on the original ViGEmBus' documentation</p>
-</div>
-<div class="admonition info">
-<p class="admonition-title">Uninstalling HidHide</p>
 <ul>
+<li>Check <a href="https://vigem.org/projects/ViGEm/How-to-Install/#removal">ViGEmBus's removal section</a> on the original ViGEmBus' documentation</li>
+</ul>
+</details>
+<details class="info"><summary>HidHide</summary><ul>
 <li>Open Windows' <code>Apps &amp; Features</code> (search for it on the start menu)</li>
 <li>Search for/locate "HidHide"</li>
 <li>Uninstall it and then reboot your PC
 <img alt="HidHideUninstall.png" class="glightbox" src="../images/HidHideUninstall.png" /> </li>
 </ul>
-</div>
-<div class="admonition info">
-<p class="admonition-title">Uninstalling FakerInput</p>
-<ul>
+</details>
+<details class="info"><summary>FakerInput</summary><ul>
 <li>Open Windows' <code>Apps &amp; Features</code> (search for it on the start menu)</li>
 <li>Search for/locate "FakerInput" and uninstall it
 <img alt="FakerInputUninstall.png" class="glightbox" src="../images/FakerInputUninstall.png" /> </li>
 </ul>
-</div>
+</details>
 <h2 id="legacy-drivers">Legacy drivers</h2>
-<div class="admonition info">
-<p class="admonition-title">Verifying if HidGuardian is installed and uninstalling it if present</p>
-<ul>
-<li>Follow  <a href="https://kanuan.github.io/DS4WSite/troubleshooting/ds4w-controller-detection/">HidGuardian's section on HidHide's guide</a></li>
+<div class="highlight"><pre><span></span><code>These are drivers that are not used anymore by DS4Windows but users might still have installed.
+</code></pre></div>
+<details class="info"><summary>HidGuardian</summary><ul>
+<li>Follow  <a href="https://kanuan.github.io/DS4WSite/troubleshooting/ds4w-controller-detection/">HidGuardian's section on HidHide's guide</a> to verify if HidGuardian is present and how to uninstall it</li>
 </ul>
-</div>
-<div class="admonition info">
-<p class="admonition-title">Uninstalling ScpVBus</p>
-<div class="admonition note">
+</details>
+<details class="info"><summary>Uninstalling ScpVBus</summary><div class="admonition note">
 <p class="admonition-title">To Do: include pictures</p>
 </div>
 <ul>
@@ -1071,7 +1066,7 @@
 <li>Uninstall it while also ticking the <code>Delete the driver for this device</code> checkbox</li>
 <li>Check with <code>Driver Store Explorer</code> if it's still present on the system and remove it if true</li>
 </ul>
-</div>
+</details>
                 
               
               
