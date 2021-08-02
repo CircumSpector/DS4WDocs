@@ -500,7 +500,7 @@
   
     <li class="md-nav__item">
       <a href="../../guides/solving-double-input/" class="md-nav__link">
-        Solving double input issues in games
+        Preventing the double controller / double input issue in games
       </a>
     </li>
   
@@ -754,13 +754,6 @@
         <li class="md-nav__item">
   <a href="#windows-cant-find-the-controller-when-trying-to-add-it-in-bluetooth-other-devices" class="md-nav__link">
     Windows can't find the controller when trying  to add it in Bluetooth &amp; Other Devices
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#windows-fails-to-remove-the-controller-from-the-paired-device-list" class="md-nav__link">
-    Windows fails to remove the controller from the paired device list
   </a>
   
 </li>
@@ -1111,13 +1104,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#windows-fails-to-remove-the-controller-from-the-paired-device-list" class="md-nav__link">
-    Windows fails to remove the controller from the paired device list
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#controller-connects-and-stays-connected-but-windows-ds4windows-does-not-recognize-it" class="md-nav__link">
     Controller connects and stays connected but Windows / DS4Windows does not recognize it
   </a>
@@ -1201,7 +1187,7 @@
 <p class="admonition-title">PAGE PURPOSE</p>
 <ul>
 <li>This page is dedicated for issues regarding connecting, reconnecting or maintaining Bluetooth connection with the controller</li>
-<li>If your controller connects and stays connected as norma but is not detected by DS4Windows then refer to the <a href="../controller-detection/"><em>controller detection issues</em> page</a></li>
+<li>If your controller connects and stays connected as normal but is not detected by DS4Windows then refer to the <a href="../controller-detection/"><em>controller detection issues</em> page</a></li>
 </ul>
 </div>
 <h2 id="most-common-solutions-check-this-first">Most common solutions (check this first)</h2>
@@ -1233,11 +1219,25 @@
 </div>
 <h2 id="how-to-properly">How to properly...</h2>
 <h3 id="remove-a-paired-controller-from-windows">Remove a paired controller from Windows</h3>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<div class="tabbed-set" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">Usual way (Settings)</label><div class="tabbed-content">
 <ul>
 <li>Open Windows' Bluetooth Devices list on its Settings</li>
 <li>Locate your controller on the list, click on it then select <code>Remove device</code></li>
 </ul>
 <p><img alt="BTNOtherRemove" class="glightbox" src="../images/BTNOtherRemove.png" /> </p>
+</div>
+<input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><label for="__tabbed_2_2">Alternative way (Devices and Printers)</label><div class="tabbed-content">
+<p>Sometimes this can be used when Windows' fail to remove a device through the usual Devices Settings menu</p>
+<ul>
+<li>Open Windows' <a href="../controllers-check/#windows-devices-and-printers">Devices and Printers</a></li>
+<li>Locate your device, right-click it then select <code>Remove device</code></li>
+</ul>
+<p><img alt="DevicesNPrintersRemove" class="glightbox" src="../images/DevicesNPrintersRemove.png" /> </p>
+</div>
+</div>
+</div>
 <h3 id="pair-a-controller-to-windows">Pair a controller to Windows</h3>
 <ul>
 <li>Follow the instructions in the dedicated <a href="../../guides/connecting-controllers/#bluetooth"><em>Connecting your controllers to the PC</em> page</a></li>
@@ -1247,15 +1247,8 @@
 <li>MAKE SURE YOUR DEVICE IS IN PAIRING MODE!</li>
 <li>For most controllers a 2.1 Bluetooth adapter is required</li>
 <li>Windows will not detect the device if it already is on its paired devices list. In this case, it is recommended to remove it from the list and pair it again</li>
-<li>If the controller has been previously connected to the PC but does not appear on the list anymore, check if it exists on Windows' <a href="../controllers-check/#windows-devices-and-printers">Devices and Printers</a> </li>
+<li>If the controller has been previously connected to the PC but does not appear on the list anymore, check if it still exists on Windows' <a href="../controllers-check/#windows-devices-and-printers">Devices and Printers</a> </li>
 </ul>
-<h2 id="windows-fails-to-remove-the-controller-from-the-paired-device-list">Windows fails to remove the controller from the paired device list</h2>
-<ul>
-<li>Happens mostly when the users replaces their BT adapter with another one without removing paired devices first</li>
-<li>May also happen if Bluetooth adapter has been moved to another USB port (rare)</li>
-</ul>
-<p>Try removing your device through Windows' <a href="../controllers-check/#windows-devices-and-printers">Devices and Printers</a>:</p>
-<p><img alt="DevicesNPrintersRemove" class="glightbox" src="../images/DevicesNPrintersRemove.png" /> </p>
 <h2 id="controller-connects-and-stays-connected-but-windows-ds4windows-does-not-recognize-it">Controller connects and stays connected but Windows / DS4Windows does not recognize it</h2>
 <ul>
 <li>If you're using a controller from your gaming console (PS3, PS4, PS5, Switch) make sure it has not accidentally connected to it/turned it on. It is recommended to fully turn off/unplug it when first attempting to pair the controller to the PC</li>

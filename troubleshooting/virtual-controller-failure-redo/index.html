@@ -16,7 +16,7 @@
     
     
       
-        <title>XInput slots order issues - R7's DS4Windows Website (Unofficial)</title>
+        <title>DS4Windows not creating virtual controllers - R7's DS4Windows Website (Unofficial)</title>
       
     
     
@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#xinput-slots-order-issues" class="md-skip">
+        <a href="#ds4windows-not-creating-virtual-controllers" class="md-skip">
           Skip to content
         </a>
       
@@ -105,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              XInput slots order issues
+              DS4Windows not creating virtual controllers
             
           </span>
         </div>
@@ -251,15 +251,13 @@
         
   
   
-    
-  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../" class="md-tabs__link md-tabs__link--active">
+      <a href="../" class="md-tabs__link">
         Troubleshooting
       </a>
     </li>
@@ -581,14 +579,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
       
       <label class="md-nav__link" for="__nav_5">
         Troubleshooting
@@ -703,14 +699,12 @@
             
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3" type="checkbox" id="__nav_5_3" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3" type="checkbox" id="__nav_5_3" >
       
       <label class="md-nav__link" for="__nav_5_3">
         Virtual controller related issues
@@ -750,119 +744,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          XInput slots order issues
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../xinput-slots-order/" class="md-nav__link">
         XInput slots order issues
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#general-info" class="md-nav__link">
-    General info
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#finding-out-what-is-keeping-an-open-handle-to-xinput-slots" class="md-nav__link">
-    Finding out what is keeping an open handle to XInput Slots
-  </a>
-  
-    <nav class="md-nav" aria-label="Finding out what is keeping an open handle to XInput Slots">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#most-common-ofenders" class="md-nav__link">
-    Most common ofenders
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#usually-innocent-processes" class="md-nav__link">
-    Usually innocent processes
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#others" class="md-nav__link">
-    Others
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#what-to-do" class="md-nav__link">
-    What to do
-  </a>
-  
-    <nav class="md-nav" aria-label="What to do">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#closing-programs-terminating-offending-processes" class="md-nav__link">
-    Closing programs / terminating offending processes
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#re-logging-current-windows-user-restarting-windows" class="md-nav__link">
-    Re-logging current Windows' user / Restarting Windows
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#setting-a-permanent-output-slot-so-ds4windows-never-unplugs-the-virtual-xbox-controller" class="md-nav__link">
-    Setting a permanent output slot so DS4Windows never unplugs the virtual XBox controller
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -995,71 +881,30 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#general-info" class="md-nav__link">
-    General info
+  <a href="#starting-point" class="md-nav__link">
+    Starting point
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#finding-out-what-is-keeping-an-open-handle-to-xinput-slots" class="md-nav__link">
-    Finding out what is keeping an open handle to XInput Slots
+  <a href="#verifying-if-ds4windows-is-successfully-creating-virtual-controllers" class="md-nav__link">
+    Verifying if DS4Windows is successfully creating virtual controllers
   </a>
   
-    <nav class="md-nav" aria-label="Finding out what is keeping an open handle to XInput Slots">
+    <nav class="md-nav" aria-label="Verifying if DS4Windows is successfully creating virtual controllers">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#most-common-ofenders" class="md-nav__link">
-    Most common ofenders
+  <a href="#the-associate-x360ds4-controller-message-appears-on-the-log-but-the-virtual-controller-does-not-appear-on-the-game-controllers-list" class="md-nav__link">
+    The "Associate (X360/DS4) Controller (...)" message appears on the log but the virtual controller does not appear on the Game Controllers list
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#usually-innocent-processes" class="md-nav__link">
-    Usually innocent processes
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#others" class="md-nav__link">
-    Others
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#what-to-do" class="md-nav__link">
-    What to do
-  </a>
-  
-    <nav class="md-nav" aria-label="What to do">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#closing-programs-terminating-offending-processes" class="md-nav__link">
-    Closing programs / terminating offending processes
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#re-logging-current-windows-user-restarting-windows" class="md-nav__link">
-    Re-logging current Windows' user / Restarting Windows
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#setting-a-permanent-output-slot-so-ds4windows-never-unplugs-the-virtual-xbox-controller" class="md-nav__link">
-    Setting a permanent output slot so DS4Windows never unplugs the virtual XBox controller
+  <a href="#the-associate-x360ds4-controller-does-not-message-appears-on-the-log" class="md-nav__link">
+    The "Associate (X360/DS4) Controller (...)" does NOT message appears on the log
   </a>
   
 </li>
@@ -1081,45 +926,54 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/Kanuan/DS4W_Website.github.io/edit/master/docs/troubleshooting/xinput-slots-order.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/Kanuan/DS4W_Website.github.io/edit/master/docs/troubleshooting/virtual-controller-failure-redo.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="xinput-slots-order-issues">XInput slots order issues</h1>
+                <h1 id="ds4windows-not-creating-virtual-controllers">DS4Windows not creating virtual controllers</h1>
 <div class="admonition important">
 <p class="admonition-title">Under construction ⚒️</p>
 </div>
-<h2 id="general-info">General info</h2>
-<p>Upon connection, Xbox controllers are associated by Windows to hidden Xinput Slots that range from 1 to 4. After being associated they remain so until being unplugged, which should then make Windows clear the used slot.</p>
-<p>Sometimes processes keep an open handle to these slots in order to remember the previously controller order in case there is an accidental disconnection... Or sometimes those processes are badly coded and just suck. When this happens, a slot can get stuck in a constant "reserved" state where controllers being connected or reconnected are pushed down to other XInput slots or are always reconnected to the same slots even though the user is trying to change their order.</p>
-<p><img alt="XInputSlot1Disconnected" class="glightbox" src="../images/XInputSlot1Disconnected.png" />  </p>
-<p>Obviously, this does not result in any real problem since games and applications know how to verify which controller to use regardless of the slot order, right? Ha, you wish. Most games dynamically detect controllers and have their own way of defining controller order, but others make the slots order the same as the players one and/or just fully require the main controller to be in Slot 1.</p>
-<p>To solve this issue, it's necessary to find which programs are keeping an open handle to the XInput slots and terminating them.</p>
-<h2 id="finding-out-what-is-keeping-an-open-handle-to-xinput-slots">Finding out what is keeping an open handle to XInput Slots</h2>
+<h2 id="starting-point">Starting point</h2>
+<p>This page takes account that DS4Windows successfully detects your controller and starts as normal without error messages in the <code>Log</code> tab. </p>
+<p>TO DO: Also, that you are not facing physical issues with your controller.</p>
+<p>If DS4Windows is failing to start or is starting but creating error messages in the log, firstly refer to the <a href=""><em>DS4Windows does not open, crashes or cannot start</em> page</a>.</p>
+<h2 id="verifying-if-ds4windows-is-successfully-creating-virtual-controllers">Verifying if DS4Windows is successfully creating virtual controllers</h2>
+<p>DS4Windows cannot magically change your real controller to one for another type, so what it actually does is create a virtual Xbox or DS4 controller that is then associated to your real one. If the virtual controller creation fails then one of DS4Windows main features is not working.</p>
+<p>To confirm everything is working:</p>
+<div class="admonition important">
+<p class="admonition-title">Follow this carefully and step-by-step!</p>
+</div>
 <ul>
-<li><a href="https://docs.microsoft.com/en-us/sysinternals/downloads/process-explorer">Download and extract the Process Explorer archive</a></li>
-<li>Execute the <code>procexp64.exe</code> to open Process Explorer</li>
-<li>Click at the <code>Find</code> tab on the top and then select <code>Find Handle or DLL...</code></li>
-<li>Search for <code>XInput</code> and wait for the results, it might take a few seconds for all the entries to appear</li>
+<li>Let DS4Windows running but <strong>stop</strong> it by pressing the dedicated <code>Stop</code> button</li>
+<li>Open Windows' Game Controller list</li>
+<li>Make a mental note on what controllers are on the list</li>
+<li>Back on DS4Windows, Check the state of the <code>Hide DS4 controllers</code> option in the <code>Settings</code> tab. Disable it for now if it's enabled</li>
+<li>Start DS4Windows again</li>
+<li>On the <code>Log</code> tab more recent messages, check if the following messages exist:
+<div class="highlight"><pre><span></span><code>Plugging in virtual (X360/DS4) Controller
+Associate (X360/DS4) Controller in slot #X for input (your real controller type) controller #X
+</code></pre></div></li>
+<li>Confirm on Windows' Game Controllers list if the new virtual controller has now been detected</li>
 </ul>
-<p><img alt="ProcessExplorerXInput" class="glightbox" src="../images/ProcessExplorerXInput.png" /> </p>
-<h3 id="most-common-ofenders">Most common ofenders</h3>
-<div class="admonition important">
-<p class="admonition-title">Under construction ⚒️</p>
+<h3 id="the-associate-x360ds4-controller-message-appears-on-the-log-but-the-virtual-controller-does-not-appear-on-the-game-controllers-list">The "Associate (X360/DS4) Controller (...)" message appears on the log but the virtual controller does not appear on the Game Controllers list</h3>
+<p>Maybe the user has accidentally hidden the virtual controller with HidHide? In most cases, HidHide should be used to hide only real devices, though virtual devices will also appear on the list and can be hidden as well.</p>
+<p>To test if this is the case, open HideHide Configuration Client and temporarily disable it by unticking the <code>Enable device hiding</code> checkbox and check on the Game Controllers list again. If the virtual controller was hidden then it should appear now. Keep in mind that if your real controller was hidden then it will also re-appear on the list.</p>
+<p>If you found out this was your case then re-tick the <code>Enable device hiding</code> checkbox and re-do your HidHide' hidden devices list so only real, physical controllers are selected.</p>
+<p>For other situations...?</p>
+<div class="admonition note">
+<p class="admonition-title">To Do</p>
 </div>
-<h3 id="usually-innocent-processes">Usually innocent processes</h3>
-<div class="admonition important">
-<p class="admonition-title">Under construction ⚒️</p>
-</div>
-<h3 id="others">Others</h3>
-<h2 id="what-to-do">What to do</h2>
-<div class="admonition important">
-<p class="admonition-title">Under construction ⚒️</p>
-</div>
-<h3 id="closing-programs-terminating-offending-processes">Closing programs / terminating offending processes</h3>
-<h3 id="re-logging-current-windows-user-restarting-windows">Re-logging current Windows' user / Restarting Windows</h3>
-<h3 id="setting-a-permanent-output-slot-so-ds4windows-never-unplugs-the-virtual-xbox-controller">Setting a permanent output slot so DS4Windows never unplugs the virtual XBox controller</h3>
+<h3 id="the-associate-x360ds4-controller-does-not-message-appears-on-the-log">The "Associate (X360/DS4) Controller (...)" does NOT message appears on the log</h3>
+<p>It's possible that the user has disabled virtual controller creating/association in the currently active profile. To verify:</p>
+<ul>
+<li>Go into DS4Windows' <code>Controllers</code> tab</li>
+<li>Click on the <code>Edit</code> button next to the selected profile</li>
+<li>Check on the <code>Profile editor -&gt; Other</code> tab if the <code>Disable virtual controller</code> checkbox is ticked. Untick it if applicable</li>
+<li>Save the profile changes and stop/start DS4Windows</li>
+<li>Confirm on Windows' Game Controllers list if the new virtual controller has now been detected</li>
+</ul>
                 
               
               
@@ -1139,39 +993,6 @@
       
         
 <footer class="md-footer">
-  
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
-      
-        <a href="../games-controller-detection/" class="md-footer__link md-footer__link--prev" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Games not recognizing the virtual controller / controller issues in-game (under construction)
-            </div>
-          </div>
-        </a>
-      
-      
-        <a href="../double-input/" class="md-footer__link md-footer__link--next" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Double Input issue  (under construction)
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

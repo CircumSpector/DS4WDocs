@@ -500,7 +500,7 @@
   
     <li class="md-nav__item">
       <a href="../../guides/solving-double-input/" class="md-nav__link">
-        Solving double input issues in games
+        Preventing the double controller / double input issue in games
       </a>
     </li>
   
@@ -761,8 +761,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#starting-point" class="md-nav__link">
-    Starting point
+  <a href="#important-start-here" class="md-nav__link">
+    IMPORTANT, START HERE!
   </a>
   
 </li>
@@ -954,8 +954,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#starting-point" class="md-nav__link">
-    Starting point
+  <a href="#important-start-here" class="md-nav__link">
+    IMPORTANT, START HERE!
   </a>
   
 </li>
@@ -1008,35 +1008,39 @@
 <div class="admonition important">
 <p class="admonition-title">Under construction ⚒️</p>
 </div>
-<h2 id="starting-point">Starting point</h2>
-<p>This page takes account that DS4Windows successfully detects your controller and starts as normal without error messages in the <code>Log</code> tab. </p>
-<p>TO DO: Also, that you are not facing physical issues with your controller.</p>
-<p>If DS4Windows is failing to start or is starting but creating error messages in the log, firstly refer to the <a href=""><em>DS4Windows does not open, crashes or cannot start</em> page</a>.</p>
+<h2 id="important-start-here">IMPORTANT, START HERE!</h2>
+<ul>
+<li>This page takes account that DS4Windows successfully detects your controller and starts as normal without error messages in the <code>Log</code> tab<ul>
+<li>If DS4Windows is failing to start or is starting but creating error messages in the log, firstly refer to the <a href=""><em>DS4Windows does not open, crashes or cannot start</em> page</a>.</li>
+</ul>
+</li>
+<li>It's also considered that your real controller can be detected by DS4Windows and works as normal on the <a href="https://gamepad-tester.com/">Gamepad Tester Website</a><ul>
+<li>To make a full controller check to verify that the controller is not exhibiting a physical issue, refer to <a href="../../under-construction">this page</a></li>
+</ul>
+</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">To Do</p>
+<p>section under construction, topics to include:
+- Make sure the <code>Hide DS4 option</code> is not being used when troubleshooting this since the user might mistake their real controller with a virtual one when stopping DS4Windows and the device is un-hidden
+- Other remarks?</p>
+</div>
 <h2 id="verifying-if-ds4windows-is-successfully-creating-virtual-controllers">Verifying if DS4Windows is successfully creating virtual controllers</h2>
 <p>DS4Windows cannot magically change your real controller to one for another type, so what it actually does is create a virtual Xbox or DS4 controller that is then associated to your real one. If the virtual controller creation fails then one of DS4Windows main features is not working.</p>
 <p>To confirm everything is working:</p>
-<div class="admonition important">
-<p class="admonition-title">Follow this carefully and step-by-step!</p>
+<div class="admonition info">
+<p class="admonition-title">To Do</p>
+<p>Section under construction</p>
 </div>
-<ul>
-<li>Let DS4Windows running but <strong>stop</strong> it by pressing the dedicated <code>Stop</code> button</li>
-<li>Open Windows' Game Controller list</li>
-<li>Make a mental note on what controllers are on the list</li>
-<li>Back on DS4Windows, Check the state of the <code>Hide DS4 controllers</code> option in the <code>Settings</code> tab. Disable it for now if it's enabled</li>
-<li>Start DS4Windows again</li>
-<li>On the <code>Log</code> tab more recent messages, check if the following messages exist:
-<div class="highlight"><pre><span></span><code>Plugging in virtual (X360/DS4) Controller
-Associate (X360/DS4) Controller in slot #X for input (your real controller type) controller #X
-</code></pre></div></li>
-<li>Confirm on Windows' Game Controllers list if the new virtual controller has now been detected</li>
-</ul>
 <h3 id="the-associate-x360ds4-controller-message-appears-on-the-log-but-the-virtual-controller-does-not-appear-on-the-game-controllers-list">The "Associate (X360/DS4) Controller (...)" message appears on the log but the virtual controller does not appear on the Game Controllers list</h3>
-<p>Maybe the user has accidentally hidden the virtual controller with HidHide? In most cases, HidHide should be used to hide only real devices, though virtual devices will also appear on the list and can be hidden as well.</p>
-<p>To test if this is the case, open HideHide Configuration Client and temporarily disable it by unticking the <code>Enable device hiding</code> checkbox and check on the Game Controllers list again. If the virtual controller was hidden then it should appear now. Keep in mind that if your real controller was hidden then it will also re-appear on the list.</p>
-<p>If you found out this was your case then re-tick the <code>Enable device hiding</code> checkbox and re-do your HidHide' hidden devices list so only real, physical controllers are selected.</p>
-<p>For other situations...?</p>
 <div class="admonition note">
 <p class="admonition-title">To Do</p>
+<p>Section under construction. Topics to include:
+- ViGEm spawned the device but it's in a error state. Verify on Device Manager
+- Check ViGEm log
+- Virtual controller has been hidden by HidHide/HidGuardian?
+- HidHide HidGuardian issue that can happen when the user has both installed at the same time
+- Other?</p>
 </div>
 <h3 id="the-associate-x360ds4-controller-does-not-message-appears-on-the-log">The "Associate (X360/DS4) Controller (...)" does NOT message appears on the log</h3>
 <p>It's possible that the user has disabled virtual controller creating/association in the currently active profile. To verify:</p>
