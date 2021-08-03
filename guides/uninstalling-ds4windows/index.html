@@ -513,8 +513,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../saving-and-moving-your-settings/" class="md-nav__link">
-        Saving and moving your settings  (under construction)
+      <a href="../managing-user-data/" class="md-nav__link">
+        Backing up, restoring or deleting user data and settings
       </a>
     </li>
   
@@ -1030,14 +1030,16 @@
                 
                 <h1 id="uninstalling-ds4windows-and-related-drivers">Uninstalling DS4Windows and related drivers</h1>
 <h2 id="ds4windows">DS4Windows</h2>
+<div class="admonition important">
+<p class="admonition-title">Want a back up?</p>
+<p>If the plan is to reinstall DS4Windows later you might want to do a <a href="../managing-user-data">backup of your user data</a> first</p>
+</div>
 <h3 id="main-program">Main program</h3>
 <p>DS4Windows is a portable application, meaning it is not actually "installed". To get rid of DS4Windows just delete its folder. Simple as that.</p>
 <h3 id="settings-and-user-data">Settings and user data</h3>
-<p>When DS4Windows is executed for the first time it asks the user where to store the user data (profiles, macros, settings). If the user has chosen to save on <code>Local folder</code>, then all related user data is on DS4Windows main folder and deleting it will also get rid of it.</p>
-<p>If <code>%appdata%</code> was selected, then the user data is being stored in the Windows user' appdata folder and it must be deleted from there. To reach and delete it:</p>
 <ul>
 <li>Press <span class="keys"><kbd class="key-windows">Win</kbd><span>+</span><kbd class="key-r">R</kbd></span>, type <code>%appdata%</code> and then select OK. This should open windows <code>appdata/Roaming/</code> folder</li>
-<li>Find the <code>DS4Windows</code> folder and delete it</li>
+<li>Verify if the DS4Windows folder exists there and delete it if found</li>
 </ul>
 <p><img alt="DS4WRoaming.png" class="glightbox" src="../images/DS4WRoaming.png" />  </p>
 <h2 id="related-drivers">Related drivers</h2>
@@ -1100,7 +1102,7 @@
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
-        <a href="../saving-and-moving-your-settings/" class="md-footer__link md-footer__link--prev" rel="prev">
+        <a href="../managing-user-data/" class="md-footer__link md-footer__link--prev" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1109,7 +1111,7 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Saving and moving your settings  (under construction)
+              Backing up, restoring or deleting user data and settings
             </div>
           </div>
         </a>

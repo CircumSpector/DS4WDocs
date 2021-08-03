@@ -16,7 +16,7 @@
     
     
       
-        <title>Saving and moving your settings (under construction) - R7's DS4Windows Website (Unofficial)</title>
+        <title>Backing up, restoring or deleting user data and settings - R7's DS4Windows Website (Unofficial)</title>
       
     
     
@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#saving-and-moving-your-settings-under-construction" class="md-skip">
+        <a href="#backing-up-restoring-or-deleting-user-data-and-settings" class="md-skip">
           Skip to content
         </a>
       
@@ -105,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Saving and moving your settings  (under construction)
+              Backing up, restoring or deleting user data and settings
             
           </span>
         </div>
@@ -522,9 +522,66 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Backing up, restoring or deleting user data and settings
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
-        Saving and moving your settings  (under construction)
+        Backing up, restoring or deleting user data and settings
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#user-datas-files-and-folders" class="md-nav__link">
+    User data's files and folders
+  </a>
+  
+    <nav class="md-nav" aria-label="User data's files and folders">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#backup" class="md-nav__link">
+    Backup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restore" class="md-nav__link">
+    Restore
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete" class="md-nav__link">
+    Delete
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -900,6 +957,48 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#user-datas-files-and-folders" class="md-nav__link">
+    User data's files and folders
+  </a>
+  
+    <nav class="md-nav" aria-label="User data's files and folders">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#backup" class="md-nav__link">
+    Backup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restore" class="md-nav__link">
+    Restore
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete" class="md-nav__link">
+    Delete
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -910,15 +1009,41 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/Kanuan/DS4W_Website.github.io/edit/master/docs/guides/saving-and-moving-your-settings.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/Kanuan/DS4W_Website.github.io/edit/master/docs/guides/managing-user-data.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="saving-and-moving-your-settings-under-construction">Saving and moving your settings  (under construction)</h1>
-<div class="admonition important">
-<p class="admonition-title">Under construction ⚒️</p>
-</div>
+                <h1 id="backing-up-restoring-or-deleting-user-data-and-settings">Backing up, restoring or deleting user data and settings</h1>
+<h2 id="user-datas-files-and-folders">User data's files and folders</h2>
+<p>The complete list of user data related files and folders is the following: </p>
+<ul>
+<li>Actions.xml</li>
+<li>Auto Profiles.xml</li>
+<li>ControllerConfigs.xml</li>
+<li>LinkedProfiles.xml</li>
+<li>OutputSlots.xml</li>
+<li>Profiles.xml</li>
+<li>Profiles folder</li>
+</ul>
+<h3 id="backup">Backup</h3>
+<p>It's necessary to verify if there are user related data in two different folders: inside the main DS4Windows folder and in the user's Profile folder. To do so:</p>
+<ol>
+<li>Click on the <code>Profile Folder</code> option under DS4Windows' <code>Settings</code> tab and confirm if the user related data is there</li>
+<li>Also check if the user data is on DS4Windows' main folder, even if you found data previously on the Profile folder</li>
+<li>If both locations contains user data related files then the actual location used by DS4Windows load User Data is the one that cointains the <code>Profiles.xml</code> file<ul>
+<li>If the user plans to backup the entirity of DS4Windows and the User Data location is on the DS4Windows folder itself then they can just backup the whole folder</li>
+</ul>
+</li>
+<li>After finding the actual location User Data is loaded from, backup the related files and folders presented on the main section's list</li>
+</ol>
+<h3 id="restore">Restore</h3>
+<ul>
+<li>Copy the user data back to the profile folder or to the main DS4Windows folder accordingly to your use case, then restart DS4Windows if it's open</li>
+<li>If both locations contain user data DS4Windows will prompt the user to choose which place to load from. Most of the user data on the unused location will then be deleted</li>
+</ul>
+<h3 id="delete">Delete</h3>
+<p>Follow the same steps as on the Backup section, but delete the found User Data.</p>
                 
               
               
