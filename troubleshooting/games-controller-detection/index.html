@@ -840,6 +840,18 @@
   
 
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../misbehaving-controller-ingame/" class="md-nav__link">
+        Controller not behaving correctly in-game
+      </a>
+    </li>
+  
+
+          
         </ul>
       </nav>
     </li>
@@ -1037,12 +1049,18 @@
 <ul>
 <li>Test your controller in the <a href="https://gamepad-tester.com/">Gamepad Tester website</a>, check if it responds as expected accordingly to the used profile configurations</li>
 <li>If the virtual gamepad is not acting as expected, maybe your profile is misconfigured. To test, create a new profile under DS4Windows' <code>Profiles</code> tab using one of the recommended gamepad presets, save and then select it for your controller in the <code>Controllers</code> tab</li>
-<li>If the virtual controller does not respond in anyway double-check the currently selected profile in the <code>Controllers</code> tab and its configuration. Make sure the buttons bindings are actually mapped to something and a blank profile is not being used</li>
+<li>If on the gamepad tester website your controller does not respond to any command then double-check again the currently selected profile in the <code>Controllers</code> tab and its configuration. Make sure the buttons bindings are actually mapped to something and a blank profile is not being used</li>
 </ul>
 <h2 id="game-not-recognizing-the-virtual-xbox-controller-or-stops-recognizing-it-upon-controller-reconnection">Game not recognizing the virtual Xbox controller or stops recognizing it upon controller reconnection</h2>
 <p>This <strong>may</strong> be related to a somewhat known Windows issue where it has, hidden from view, associated the connected Xbox controller to a incorrect/not-expected "XInput Slot".  </p>
 <p>Check the dedicated <a href="../../troubleshooting/xinput-slots-order/"><em>XInput slots order issues</em> page</a> for more info on how to check and solve this issue.</p>
+<div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">"Wait, where is my controller?"</label><div class="tabbed-content">
 <p><img alt="XInputSlot1Disconnected" class="glightbox" src="../images/XInputSlot1Disconnected.png" />  </p>
+</div>
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">"Oh! There it... WHAT?!"</label><div class="tabbed-content">
+<p><img alt="XInputSlot3Connected.png" class="glightbox" src="../images/XInputSlot3Connected.png" />  </p>
+</div>
+</div>
 <h2 id="common-reasons-for-games-to-not-detect-virtual-emulated-dualshock-4-controllers">Common reasons for games to not detect virtual (emulated) DualShock 4 controllers</h2>
 <h3 id="game-supports-only-xbox-controllers">Game supports only Xbox controllers</h3>
 <p>Most games support only Xbox controller because of how easy it is to add complete support to it. Even games that were released for Playstation consoles sometimes don't have native DS4 support on the PC, and there is nothing that can be done besides switching to Xbox controller emulation.</p>
@@ -1055,7 +1073,7 @@
 <p>Though it's quite uncommon, some games absolutely require using your DS4 through Steam Input by enabling the <code>Playstation Configuration Support</code> option and launching the game through Steam to have working DS4 support or to support rumble/lightbar features.</p>
 <p>Keep in mind that for using your virtual DS4 controller through Steam Input you'll have to <a href="../../guides/ds4w-custom-name/">run DS4Windows under a custom name for Steam to not ignore it</a> (thanks for not giving us the option on this and making our lives harder, Steam).  </p>
 <h2 id="game-intentionally-ignore-virtual-controllers">Game intentionally ignore virtual controllers</h2>
-<p>No known cases. Most users who claimed some game had this behavior were actually having other unrelated issue. Example: Shovel Knight ignores DS4 controllers if it detects DS4Windows is running, but it shouldn't matter if the user is using is using a Xbox controller.</p>
+<p>No known cases. Most users who claimed some game had this behavior were actually having other unrelated issue. Example: Shovel Knight ignores DS4 controllers if it detects DS4Windows is running, but it shouldn't matter if the user is using is using a Xbox controller or if running disguised to not be detected.</p>
 <p>Not saying it's not possible, just that it's not known.</p>
                 
               
