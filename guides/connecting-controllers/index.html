@@ -16,7 +16,7 @@
     
     
       
-        <title>Connecting your controllers to the PC - R7's DS4Windows Website (Unofficial)</title>
+        <title>Connecting controllers to the PC and DS4Windows - R7's DS4Windows Website (Unofficial)</title>
       
     
     
@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#connecting-your-controllers-to-the-pc" class="md-skip">
+        <a href="#connecting-controllers-to-the-pc-and-ds4windows" class="md-skip">
           Skip to content
         </a>
       
@@ -105,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Connecting your controllers to the PC
+              Connecting controllers to the PC and DS4Windows
             
           </span>
         </div>
@@ -499,12 +499,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Connecting your controllers to the PC
+          Connecting controllers to the PC and DS4Windows
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Connecting your controllers to the PC
+        Connecting controllers to the PC and DS4Windows
       </a>
       
         
@@ -1056,15 +1056,14 @@
                   </a>
                 
                 
-                <h1 id="connecting-your-controllers-to-the-pc">Connecting your controllers to the PC</h1>
+                <h1 id="connecting-controllers-to-the-pc-and-ds4windows">Connecting controllers to the PC and DS4Windows</h1>
 <div class="admonition important">
 <p class="admonition-title">Under construction ⚒️</p>
 </div>
 <h2 id="general-info">General info</h2>
-<div class="admonition note">
-<p class="admonition-title">To Do</p>
-<p>Include general info about controller usage, input delay both on USB and BT and about BT adapters radio interferance</p>
-</div>
+<p>DS4Windows should immediatly recognize any controllers properly connected to the PC.</p>
+<p>Though USB cables are the most reliable, connecting controller wirelessly via Bluetooth will offer similar response times (input delay) and stable connections as long as a good quality BT adapter is being used and no major radio interference is affecting the connection.</p>
+<p>If facing issues, either when connecting wired or wirelessly, then have a look at the related links at the bottom of the page.</p>
 <h2 id="connection-methods">Connection methods</h2>
 <h3 id="usb">USB</h3>
 <ul>
@@ -1078,32 +1077,42 @@
 </div>
 <ul>
 <li>Make sure your BT adapter has the <a href="../../other/under-construction">minimum specs</a> for your controller</li>
-<li>The controller needs to be added as a Bluetooth device through Windows' settings. If a pin is asked try <code>0000</code></li>
-</ul>
-<p><img alt="AddBluetoothDevice.png" class="glightbox" src="../images/AddBluetoothDevice.png" /></p>
-<ul>
-<li>The controller must be in <code>pairing mode</code> to be detected by Windows. To enter pairing mode:<ul>
-<li><strong>DS4/DualSense</strong>: hold at the same time the <code>PS + Share</code> buttons until the lightbar starts flashing in heartbeat  pattern</li>
-<li><strong>Joy-cons/Pro Controller</strong>: hold down the <code>sync</code> button until the controller LEDs enter a back n' forth pattern</li>
-<li><strong>Bluetooth enabled copy-cats/replicas</strong>: probably the same as the official ones. If facing trouble, check the controller's manual</li>
-</ul>
-</li>
+<li>The controller needs to be set into <code>pairing mode</code> to be added as a Bluetooth device through Windows' settings. If a pin is asked try <code>0000</code></li>
 <li>If a controller has already been previously paired and you can't reconnect, try removing the device from Windows' Bluetooth devices list and repairing them</li>
 </ul>
-<h3 id="sony-dualshock-4-wireless-usb-adapter">Sony DualShock 4 Wireless USB adapter</h3>
-<div class="admonition note">
-<p class="admonition-title">To Do</p>
+<p><img alt="AddBluetoothDevice.png" class="glightbox" src="../images/AddBluetoothDevice.png" /></p>
+<div class="admonition info">
+<p class="admonition-title">Setting a controller into pairing mode</p>
+<div class="tabbed-set" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">DualShock 4 / DualSense</label><div class="tabbed-content">
+<p>Hold at the same time the <code>PS + Share</code> buttons until the lightbar starts flashing in heartbeat  pattern.</p>
+<p><img alt="DS4PairingMode.gif" class="glightbox" src="../images/DS4PairingMode.gif" /></p>
 </div>
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">Joy-con / Pro Controller</label><div class="tabbed-content">
+<p>Hold down the <code>sync</code> button until the controller LEDs enter a back n' forth pattern</p>
+<p><img alt="JoyConPairingMode.gif" class="glightbox" src="../images/JoyConPairingMode.gif" /></p>
+</div>
+<input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><label for="__tabbed_1_3">Copy-cats / replicas</label><div class="tabbed-content">
+<ul>
+<li>Probably the same as the official ones</li>
+<li>If facing trouble, check the controller's manual</li>
+</ul>
+</div>
+</div>
+</div>
+<h3 id="sony-dualshock-4-wireless-usb-adapter">Sony DualShock 4 Wireless USB adapter</h3>
+<p>The official adapter from Sony supports only 1 controller, but allows the headphone jack to be used wireless for both audio and mic.</p>
+<p>To pair a DualShock 4 to it, both must be set to pairing mode. For the Wireless Adapter, its main body must be slightly pressed towards the USB port (until a "click" is felt) then hold it down in this position for 3 seconds, with its LED flashing in a heartbeat pattern indicating that it's in pairing mode. Set then DualShock 4 into pairing mode (check the previous section) and it it should connect to the adapter.</p>
+<p><img alt="SonyDS4USBWirelessAdapter" class="glightbox" src="../images/SonyDS4USBWirelessAdapter.jpg" /></p>
 <h2 id="final-checks">Final checks</h2>
 <p>Assuming everything is working as expected then DS4Windows should have no trouble detecting your controller, just make sure you haven't accidentally stopped DS4Windows (in case you have, just press DS4Windows' <code>start</code> button)</p>
 <p>If for whatever reason DS4Windows is failing to detect your controller or you are not sure if it has been properly connected, check the <a href="">Controller Detection troubleshoot</a> page.</p>
 <h2 id="related-links">Related links</h2>
 <ul>
+<li><a href="../../About-DS4Windows/supported-gamepads/">Supported controllers</a></li>
 <li><a href="../../troubleshooting/controller-detection/">Controller Detection troubleshoot</a></li>
 <li><a href="../../other/under-construction">Bluetooth adapter minimum specs</a> </li>
-<li><a href="../../About-DS4Windows/supported-gamepads/">Supported controllers</a></li>
-<li><a href="../../troubleshooting/input-delay-bt/">Input Delay on Bluetooth</a></li>
 <li><a href="../../troubleshooting/bt-connection-issues/">Bluetooth connection issues troubleshoot</a></li>
+<li><a href="../../troubleshooting/input-delay-bt/">Lantecy or input delay issues on Bluetooth</a></li>
 </ul>
                 
               
