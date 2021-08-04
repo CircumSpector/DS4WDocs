@@ -885,7 +885,7 @@
   
     <li class="md-nav__item">
       <a href="../games-controller-detection/" class="md-nav__link">
-        Games not recognizing the virtual controller / controller issues in-game (under construction)
+        Games not recognizing the virtual controller (under construction)
       </a>
     </li>
   
@@ -1176,7 +1176,7 @@
 <p class="admonition-title">Too long, didn't read:</p>
 <p>The <code>Hide DS4 controllers</code> option is not recommended and <a href="../../guides/solving-double-input">HidHide</a> should be used instead</p>
 </div>
-<p>The <code>Hide DS4 controllers</code> option is a legacy feature of DS4Windows that was used to the infamous <a href="../../guides/solving-double-input/">double input issue</a>. This page is dedicated to explaining why it fails to work sometimes, showing alternatives and, in case the user really needs this option for some reason, to finding out exactly why it's failing and how to solve it.</p>
+<p>The <code>Hide DS4 controllers</code> option is a legacy feature of DS4Windows that was used to prevent the infamous <a href="../../guides/solving-double-input/">double input issue</a>. This page is dedicated to explaining why it fails to work sometimes, showing alternatives and, in case the user really needs this option for some reason, to finding out exactly why it's failing and how to solve it.</p>
 <h2 id="why-its-not-recommended">Why it's not recommended</h2>
 <p>When the <code>Hide DS4 controllers</code> option is enabled, DS4Windows will attempt to request Exclusive Access to detected controllers, meaning your real (physical) controller would not be detectable by games anymore. By keeping only DS4Windows' virtual controller visible the double input issue can be prevented.</p>
 <p>The problem is, if anything already has an open handle to the controller (games, programs, processes) then Windows will deny the Exclusive Access request and your real controller will remain visible. When this happens, DS4Windows will warn the user via the <code>log</code> tab as shown in the image below:</p>

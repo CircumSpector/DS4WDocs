@@ -741,7 +741,7 @@
   
     <li class="md-nav__item">
       <a href="../games-controller-detection/" class="md-nav__link">
-        Games not recognizing the virtual controller / controller issues in-game (under construction)
+        Games not recognizing the virtual controller (under construction)
       </a>
     </li>
   
@@ -1178,10 +1178,12 @@
 <h2 id="most-common-issues">Most common issues</h2>
 <h3 id="character-or-camera-moves-by-themselves">Character or camera moves by themselves</h3>
 <p>This is <strong>usually</strong> related to a hardware issue called "Stick drifting" that happens when the controller's not correctly reading the stick position. Depending on the controller, it can be fixed by cleaning the sticks' resistor-meters (not so hard to people who are confident of their DIY abilities) or fully replacing the sticks (advanced stuff!).</p>
-<p>Regarding DS4Windows, the only profile options that could cause this are:
-- The stick's <code>anti dead zone</code> being BIGGER than the <code>dead zone</code>
-- You've enabled on the profile editor's <code>gyro</code> tab some option that makes the motion sensors control your controller stick</p>
-<p>If the drifting is minor then it can be worked-around by slightyly increasing the controllers' <code>dead zone</code> on profile settings.</p>
+<p>Regarding DS4Windows, the only profile options that could cause this are:</p>
+<ul>
+<li>The stick's <code>anti dead zone</code> being BIGGER than the <code>dead zone</code></li>
+<li>You've enabled on the profile editor's <code>gyro</code> tab some option that makes the motion sensors control your controller stick</li>
+</ul>
+<p>If the drifting is minor then it can be worked-around by slightly increasing the controllers' <code>dead zone</code> on profile settings.</p>
 <p>If you are suffering from major drift then there's not much that can be done besides repairing the controller itself.</p>
 <div class="admonition info">
 <p class="admonition-title">Stick drift issue and workarounds</p>
@@ -1222,18 +1224,24 @@
 <li>Also, slowly do a full circle movement a few times</li>
 <li>After that, change the <code>(anti) dead zone</code> values back to what they were</li>
 </ul>
-<p>If the stick position corresponded to the movements of the real stick then all good. If not, if somehow it jumped position or behave erratically then your controller is physically faulty.</p>
+<p>If the stick position corresponded to the movements of the real stick then all good. If not, if somehow it jumped position or behave erratically then your controller probably is physically falty.</p>
+<div class="admonition info">
+<p class="admonition-title">Example of how proper functioning sticks moves like</p>
 <p><img alt="StickCircleTest" class="glightbox" src="../images/StickCircleTest.gif" /> </p>
+</div>
 <h3 id="buttons-triggers-pressing-themselves-randomly-or-not-registering-properly">Buttons / triggers pressing themselves randomly or not registering properly</h3>
 <p>Random inputs are 99.9% of the time caused by the controller itself being faulty, not by DS4Windows or other drivers.</p>
+<div class="admonition info">
+<p class="admonition-title">Usual reaction when users say it's a Windows' driver error</p>
 <p><img alt="NotHowThisWorksMeme" class="glightbox" src="../images/NotHowThisWorksMeme.jpg" /> </p>
+</div>
 <p>If the issue is in the triggers, it's possible to try increasing its/their dead-zone to require pressing them further before being registered.</p>
-<p>One way to test if you are having random buttom presses is by creating a profile that has a <code>Special action</code> enabled that causes a profile switch to <em>another</em> profile when an specific button is pressed, then just leave your controller turned on and wait, or maybe try slightly touching the buttons without fully pressing them to see if its a sensibility issue. </p>
+<p>One way to test if you are having random buttom presses is by creating a profile that has a <code>Special action</code> enabled that causes a profile switch to <em>another</em> profile when a specific button is pressed, then just leave your controller turned on and wait, or maybe try slightly touching the buttons without fully pressing them to see if its a sensibility issue. </p>
 <p>Other than that, the only thing left to do is taking the controller to the assistance.</p>
 <h3 id="controller-stops-responding-randomly">Controller stops responding randomly</h3>
-<p>Unless DS4Windows is out-right crashing or appear to be frozen (Windows says that it is not responding) then it is probably an issue with your controllers cable, its own USB port, the PC's USB port or if connected via Bluetooth then a <a href="../../troubleshooting/bt-connection-issues/">latency issue</a>.</p>
+<p>Unless DS4Windows is out-right crashing or appearing to be frozen (Windows says that it is not responding) then it is probably an issue with your controllers cable, its own USB port, the PC's USB port or if connected via Bluetooth then a <a href="../../troubleshooting/bt-connection-issues/">latency issue</a>.</p>
 <p>For wired users, try using other PC USB ports, replacing the cable or testing if the problem does not occur when connected over Bluetooth.</p>
-<p>Besides that, see if there isn't any error message in DS4Windows' Log.</p>
+<p>Besides that, check if there isn't any error message in DS4Windows' Log that could give some direction on this.</p>
 <h3 id="game-constantly-or-occasionally-feels-slow-to-respond-to-commands-high-input-delay-sensation">Game constantly or occasionally feels slow to respond to commands (high input delay sensation)</h3>
 <ul>
 <li>May be an issue with the game itself</li>

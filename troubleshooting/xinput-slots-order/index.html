@@ -741,7 +741,7 @@
   
     <li class="md-nav__item">
       <a href="../games-controller-detection/" class="md-nav__link">
-        Games not recognizing the virtual controller / controller issues in-game (under construction)
+        Games not recognizing the virtual controller (under construction)
       </a>
     </li>
   
@@ -792,6 +792,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#verifying-which-slot-controllers-are-being-associated-to" class="md-nav__link">
+    Verifying which slot controllers are being associated to
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#finding-out-what-is-keeping-an-open-handle-to-xinput-slots" class="md-nav__link">
     Finding out what is keeping an open handle to XInput Slots
   </a>
@@ -826,11 +833,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#what-to-do" class="md-nav__link">
-    What to do
+  <a href="#possible-solutions-and-workarounds" class="md-nav__link">
+    Possible solutions and workarounds
   </a>
   
-    <nav class="md-nav" aria-label="What to do">
+    <nav class="md-nav" aria-label="Possible solutions and workarounds">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -841,15 +848,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#re-logging-current-windows-user-restarting-windows" class="md-nav__link">
-    Re-logging current Windows' user / Restarting Windows
+  <a href="#setting-a-permanent-output-slot-so-ds4windows-never-unplugs-the-virtual-xbox-controller" class="md-nav__link">
+    Setting a permanent output slot so DS4Windows never unplugs the virtual XBox controller
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#setting-a-permanent-output-slot-so-ds4windows-never-unplugs-the-virtual-xbox-controller" class="md-nav__link">
-    Setting a permanent output slot so DS4Windows never unplugs the virtual XBox controller
+  <a href="#re-logging-current-windows-user-restarting-windows" class="md-nav__link">
+    Re-logging current Windows' user / Restarting Windows
   </a>
   
 </li>
@@ -1014,6 +1021,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#verifying-which-slot-controllers-are-being-associated-to" class="md-nav__link">
+    Verifying which slot controllers are being associated to
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#finding-out-what-is-keeping-an-open-handle-to-xinput-slots" class="md-nav__link">
     Finding out what is keeping an open handle to XInput Slots
   </a>
@@ -1048,11 +1062,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#what-to-do" class="md-nav__link">
-    What to do
+  <a href="#possible-solutions-and-workarounds" class="md-nav__link">
+    Possible solutions and workarounds
   </a>
   
-    <nav class="md-nav" aria-label="What to do">
+    <nav class="md-nav" aria-label="Possible solutions and workarounds">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1063,15 +1077,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#re-logging-current-windows-user-restarting-windows" class="md-nav__link">
-    Re-logging current Windows' user / Restarting Windows
+  <a href="#setting-a-permanent-output-slot-so-ds4windows-never-unplugs-the-virtual-xbox-controller" class="md-nav__link">
+    Setting a permanent output slot so DS4Windows never unplugs the virtual XBox controller
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#setting-a-permanent-output-slot-so-ds4windows-never-unplugs-the-virtual-xbox-controller" class="md-nav__link">
-    Setting a permanent output slot so DS4Windows never unplugs the virtual XBox controller
+  <a href="#re-logging-current-windows-user-restarting-windows" class="md-nav__link">
+    Re-logging current Windows' user / Restarting Windows
   </a>
   
 </li>
@@ -1104,7 +1118,7 @@
 </div>
 <h2 id="general-info">General info</h2>
 <p>Upon connection, Xbox controllers are associated by Windows to hidden Xinput Slots that range from 1 to 4. After being associated they remain so until being unplugged, which should then make Windows clear the used slot.</p>
-<p>Sometimes processes keep an open handle to these slots in order to remember the previously controller order in case there is an accidental disconnection... Or sometimes those processes are badly coded and just suck. When this happens, a slot can get stuck in a constant "reserved" state where controllers being connected or reconnected are pushed down to other XInput slots or are always reconnected to the same slots even though the user is trying to change their order.</p>
+<p>Sometimes processes keep an open handle to these slots in order to remember the previously controller order in case there is an accidental disconnection... Or sometimes those processes are badly coded and just suck. When this happens, a slot can get stuck in a constant "reserved" state where controllers being connected or reconnected are pushed down to other XInput slots or are always reconnected to the same slots even though the user is trying to change their order. Because this is an automatic Windows process, when a slot gets stuck there is not much DS4Windows can do besides hoping the slots get freed by the offender process next time it tries to connect the virtual controller.</p>
 <div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">"Wait, where is my controller?"</label><div class="tabbed-content">
 <p><img alt="XInputSlot1Disconnected" class="glightbox" src="../images/XInputSlot1Disconnected.png" />  </p>
 </div>
@@ -1112,8 +1126,14 @@
 <p><img alt="XInputSlot3Connected.png" class="glightbox" src="../images/XInputSlot3Connected.png" />  </p>
 </div>
 </div>
-<p>Obviously, this does not result in any real problem since games and applications know how to verify which controller to use regardless of the slot order, right? Ha, you wish. Most games dynamically detect controllers and have their own way of defining controller order, but others make the slots order the same as the players one and/or just fully require the main controller to be in Slot 1.</p>
+<p>Having stuck slots can lead to controller detection issues since some games require the main controller to be specifically in Slot 1 (or in the original slot the controller was initially detected) and some other ones have local multiplayer that make the player order directly tied to the XInput slots order.</p>
 <p>To solve this issue, it's necessary to find which programs are keeping an open handle to the XInput slots and terminating them.</p>
+<h2 id="verifying-which-slot-controllers-are-being-associated-to">Verifying which slot controllers are being associated to</h2>
+<ul>
+<li>Have at least one Xbox controller connected</li>
+<li>Go to DS4Windows' <code>Settings</code> tab and open the <code>XInputChecker</code> tool</li>
+<li>Check each slot to see which of them are connected. When finding a connected slot, make sure to confirm if it is associated t your controller by checking if it responds to commands</li>
+</ul>
 <h2 id="finding-out-what-is-keeping-an-open-handle-to-xinput-slots">Finding out what is keeping an open handle to XInput Slots</h2>
 <ul>
 <li><a href="https://docs.microsoft.com/en-us/sysinternals/downloads/process-explorer">Download and extract the Process Explorer archive</a></li>
@@ -1123,21 +1143,38 @@
 </ul>
 <p><img alt="ProcessExplorerXInput" class="glightbox" src="../images/ProcessExplorerXInput.png" /> </p>
 <h3 id="most-common-ofenders">Most common ofenders</h3>
-<div class="admonition important">
-<p class="admonition-title">Under construction ⚒️</p>
+<div class="admonition info">
+<p class="admonition-title">To Do</p>
 </div>
 <h3 id="usually-innocent-processes">Usually innocent processes</h3>
-<div class="admonition important">
-<p class="admonition-title">Under construction ⚒️</p>
+<div class="admonition info">
+<p class="admonition-title">To Do</p>
 </div>
 <h3 id="others">Others</h3>
-<h2 id="what-to-do">What to do</h2>
-<div class="admonition important">
-<p class="admonition-title">Under construction ⚒️</p>
+<div class="admonition info">
+<p class="admonition-title">To Do</p>
 </div>
+<h2 id="possible-solutions-and-workarounds">Possible solutions and workarounds</h2>
 <h3 id="closing-programs-terminating-offending-processes">Closing programs / terminating offending processes</h3>
-<h3 id="re-logging-current-windows-user-restarting-windows">Re-logging current Windows' user / Restarting Windows</h3>
+<div class="admonition info">
+<p class="admonition-title">To Do</p>
+</div>
 <h3 id="setting-a-permanent-output-slot-so-ds4windows-never-unplugs-the-virtual-xbox-controller">Setting a permanent output slot so DS4Windows never unplugs the virtual XBox controller</h3>
+<p>Because the issue usually does not occur when a Xbox controller is connected the first time, only upon disconnection / reconnection, one way to prevent it is by setting a permanent virtual Xbox controller that is connected to the system at all times, regardless if your real physical controller is connected or disconnected.</p>
+<p>Keep in mind that this solutions has limitations since it's still possible for a permanently set controller to be disconnected in the following situations:</p>
+<ul>
+<li>Stopping or closing DS4Windows</li>
+<li>Suspending the system (permanent virtual controller will be disconnected on doing so and reconnected on system wake-up, but then the issue may occur)</li>
+</ul>
+<p><img alt="PermanentX360OutputSlot" class="glightbox" src="../images/PermanentX360OutputSlot.png" /> </p>
+<p>To set a permanent Xbox controller, head to DS4Windows' <code>Output Slots</code> tab, select the first Output Slot on the list, make sure that the <code>X360</code> (Xbox 360) controller type is selected and then change it from <code>Dynamic</code> to <code>Permanent</code>. Verify then that it's working by heading to the <a href="https://gamepad-tester.com/">Gamepad Tester Website</a>, checking if the Xbox controller is present and permanent by trying to disconnect and reconnect your real controller a few times.</p>
+<div class="admonition important">
+<p class="admonition-title">Careful when doing DualShock 4 emulation while a permanent Xbox controller has been set</p>
+<p>If a permanent Xbox controller has been set but the user changes to a profile that has DualShock 4 emulation selected then there will be 2 controllers connected to the system: the unsued permanent Xbox and dynamically created DS4.</p>
+<p>Although this should not cause the double input issue it's better to unplug the permanent Xbox in this situation since games may detect the unused Xbox controller first and get stuck in a "nothing happens" situation</p>
+</div>
+<h3 id="re-logging-current-windows-user-restarting-windows">Re-logging current Windows' user / Restarting Windows</h3>
+<p>If nothing else works, it may be necessary to log off from the current Windows' user and logging in again or, if the issue persists, to restart the system.</p>
                 
               
               
@@ -1169,7 +1206,7 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Games not recognizing the virtual controller / controller issues in-game (under construction)
+              Games not recognizing the virtual controller (under construction)
             </div>
           </div>
         </a>
