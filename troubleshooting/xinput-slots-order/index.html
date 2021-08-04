@@ -1117,8 +1117,9 @@
 <p class="admonition-title">Under construction ⚒️</p>
 </div>
 <h2 id="general-info">General info</h2>
-<p>Upon connection, Xbox controllers are associated by Windows to hidden Xinput Slots that range from 1 to 4. After being associated they remain so until being unplugged, which should then make Windows clear the used slot.</p>
-<p>Sometimes processes keep an open handle to these slots in order to remember the previously controller order in case there is an accidental disconnection... Or sometimes those processes are badly coded and just suck. When this happens, a slot can get stuck in a constant "reserved" state where controllers being connected or reconnected are pushed down to other XInput slots or are always reconnected to the same slots even though the user is trying to change their order. Because this is an automatic Windows process, when a slot gets stuck there is not much DS4Windows can do besides hoping the slots get freed by the offender process next time it tries to connect the virtual controller.</p>
+<p>Upon connection, Xbox controllers are associated by Windows to hidden Xinput Slots that range from 1 to 4. After being associated they remain so until being unplugged, which should then make Windows clear the used slot... "Should".</p>
+<p>Sometimes processes keep an open handle to these slots in order to remember the previously controller order in case there is an accidental disconnection... Or sometimes those processes are badly coded and just suck. When this happens, slots can get stuck in a constant "reserved" state where controllers being connected or reconnected are pushed down to other XInput slots or are always reconnected to the same ones even though the user is trying to change their order. </p>
+<p>Because this is an automatic Windows process, when a slot gets stuck there is not much DS4Windows can do besides hoping the slots get freed by the offender process next time it tries to connect the virtual controller.</p>
 <div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">"Wait, where is my controller?"</label><div class="tabbed-content">
 <p><img alt="XInputSlot1Disconnected" class="glightbox" src="../images/XInputSlot1Disconnected.png" />  </p>
 </div>
