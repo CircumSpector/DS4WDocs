@@ -617,20 +617,32 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../ds4w-does-not-run/" class="md-nav__link">
+        DS4Windows silently does not open, crashes, does not start or fails to save settings
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
     
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3" type="checkbox" id="__nav_5_3" >
       
-      <label class="md-nav__link" for="__nav_5_2">
-        Physical controller related issues
+      <label class="md-nav__link" for="__nav_5_3">
+        Physical controller detection, connection and related issues
         <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="Physical controller related issues" data-md-level="2">
-        <label class="md-nav__title" for="__nav_5_2">
+      <nav class="md-nav" aria-label="Physical controller detection, connection and related issues" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_3">
           <span class="md-nav__icon md-icon"></span>
-          Physical controller related issues
+          Physical controller detection, connection and related issues
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -710,16 +722,16 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3" type="checkbox" id="__nav_5_3" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_4" type="checkbox" id="__nav_5_4" checked>
       
-      <label class="md-nav__link" for="__nav_5_3">
-        Virtual controller related issues
+      <label class="md-nav__link" for="__nav_5_4">
+        Virtual controller usage in games and related issues
         <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="Virtual controller related issues" data-md-level="2">
-        <label class="md-nav__title" for="__nav_5_3">
+      <nav class="md-nav" aria-label="Virtual controller usage in games and related issues" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_4">
           <span class="md-nav__icon md-icon"></span>
-          Virtual controller related issues
+          Virtual controller usage in games and related issues
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -1118,7 +1130,7 @@
 </div>
 <h2 id="general-info">General info</h2>
 <p>Upon connection, Xbox controllers are associated by Windows to hidden Xinput Slots that range from 1 to 4. After being associated they remain so until being unplugged, which should then make Windows clear the used slot... "Should".</p>
-<p>Sometimes processes keep an open handle to these slots in order to remember the previously controller order in case there is an accidental disconnection... Or sometimes those processes are badly coded and just suck. When this happens, slots can get stuck in a constant "reserved" state where controllers being connected or reconnected are pushed down to other XInput slots or are always reconnected to the same ones even though the user is trying to change their order. </p>
+<p>Sometimes processes keep an open handle to these slots in order to remember the previous controller order in case there is an accidental disconnection... Or sometimes those processes are badly coded and just suck. When this happens, slots can get stuck in a constant "reserved" state where controllers being connected or reconnected are pushed down to other XInput slots or are always reconnected to the same ones even though the user is trying to change their order. </p>
 <p>Because this is an automatic Windows process, when a slot gets stuck there is not much DS4Windows can do besides hoping the slots get freed by the offender process next time it tries to connect the virtual controller.</p>
 <div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">"Wait, where is my controller?"</label><div class="tabbed-content">
 <p><img alt="XInputSlot1Disconnected" class="glightbox" src="../images/XInputSlot1Disconnected.png" />  </p>
@@ -1128,7 +1140,7 @@
 </div>
 </div>
 <p>Having stuck slots can lead to controller detection issues since some games require the main controller to be specifically in Slot 1 (or in the original slot the controller was initially detected) and some other ones have local multiplayer that make the player order directly tied to the XInput slots order.</p>
-<p>To solve this issue, it's necessary to find which programs are keeping an open handle to the XInput slots and terminating them.</p>
+<p>To solve this issue, it's necessary to find which programs are keeping an open handle to the XInput slots and terminate them.</p>
 <h2 id="verifying-which-slot-controllers-are-being-associated-to">Verifying which slot controllers are being associated to</h2>
 <ul>
 <li>Have at least one Xbox controller connected</li>

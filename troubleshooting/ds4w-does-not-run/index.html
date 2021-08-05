@@ -16,7 +16,7 @@
     
     
       
-        <title>Under construction - R7's DS4Windows Website (Unofficial)</title>
+        <title>DS4Windows silently does not open, crashes, does not start or fails to save settings - R7's DS4Windows Website (Unofficial)</title>
       
     
     
@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#under-construction" class="md-skip">
+        <a href="#ds4windows-silently-does-not-open-crashes-does-not-start-or-fails-to-save-settings" class="md-skip">
           Skip to content
         </a>
       
@@ -105,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Under construction
+              DS4Windows silently does not open, crashes, does not start or fails to save settings
             
           </span>
         </div>
@@ -251,22 +251,6 @@
         
   
   
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../troubleshooting/" class="md-tabs__link">
-        Troubleshooting
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
     
   
 
@@ -276,6 +260,22 @@
   
     <li class="md-tabs__item">
       <a href="../" class="md-tabs__link md-tabs__link--active">
+        Troubleshooting
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../other/" class="md-tabs__link">
         Other
       </a>
     </li>
@@ -581,12 +581,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
       
       <label class="md-nav__link" for="__nav_5">
         Troubleshooting
@@ -604,7 +606,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../troubleshooting/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         Troubleshooting tips and general directions  (under construction)
       </a>
     </li>
@@ -614,11 +616,140 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../troubleshooting/ds4w-does-not-run/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          DS4Windows silently does not open, crashes, does not start or fails to save settings
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         DS4Windows silently does not open, crashes, does not start or fails to save settings
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#to-whom-this-page-does-not-apply" class="md-nav__link">
+    To whom this page does NOT apply
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-to-verify-fisrt" class="md-nav__link">
+    What to verify fisrt
+  </a>
+  
+    <nav class="md-nav" aria-label="What to verify fisrt">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#make-sure-all-prerequisites-are-installed" class="md-nav__link">
+    Make sure all prerequisites are installed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ds4windows-log-and-windows-event-viewer" class="md-nav__link">
+    DS4Windows' Log and Windows' Event Viewer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#confirm-ds4windows-folder-is-not-write-protected" class="md-nav__link">
+    Confirm DS4Windows folder is not write-protected
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-if-user-data-is-not-corruted" class="md-nav__link">
+    Check if User Data is not corruted
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#issues-that-may-prevent-ds4windows-from-running-or-starting" class="md-nav__link">
+    Issues that may prevent DS4Windows from running or starting
+  </a>
+  
+    <nav class="md-nav" aria-label="Issues that may prevent DS4Windows from running or starting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vigembus-is-not-installed-log-message-when-attempting-to-start-ds4windows" class="md-nav__link">
+    "ViGEmBus is not installed" log message when attempting to start DS4Windows
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attempting-to-start-the-service-winmgmt-failed-or-windows-management-interface-not-found-messages" class="md-nav__link">
+    "Attempting to start the service winmgmt failed" or "Windows Management Interface not found" messages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-is-running-msi-afterburner-and-or-msi-rtss-rivatuner" class="md-nav__link">
+    User is running MSI Afterburner and / or MSI RTSS RivaTuner
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-has-the-legacy-scpvbus-driver-installed" class="md-nav__link">
+    User has the legacy ScpVBus driver installed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#windows-is-not-updated" class="md-nav__link">
+    Windows is not updated
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -649,7 +780,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../troubleshooting/ds4w-controller-detection/" class="md-nav__link">
+      <a href="../ds4w-controller-detection/" class="md-nav__link">
         DS4Windows not detecting controllers
       </a>
     </li>
@@ -661,7 +792,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../troubleshooting/controllers-check/" class="md-nav__link">
+      <a href="../controllers-check/" class="md-nav__link">
         Ways to check if a controller has been detected by Windows
       </a>
     </li>
@@ -673,7 +804,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../troubleshooting/bt-connection-issues/" class="md-nav__link">
+      <a href="../bt-connection-issues/" class="md-nav__link">
         Bluetooth connection issues
       </a>
     </li>
@@ -685,7 +816,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../troubleshooting/input-delay-bt/" class="md-nav__link">
+      <a href="../input-delay-bt/" class="md-nav__link">
         Latency/input delay issues on Bluetooth
       </a>
     </li>
@@ -697,7 +828,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../troubleshooting/hide-ds4-option/" class="md-nav__link">
+      <a href="../hide-ds4-option/" class="md-nav__link">
         "Could not open (controller) exclusively" / Hide DS4 controllers option not working
       </a>
     </li>
@@ -736,7 +867,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../troubleshooting/virtual-controller-failure/" class="md-nav__link">
+      <a href="../virtual-controller-failure/" class="md-nav__link">
         DS4Windows not creating virtual controllers
       </a>
     </li>
@@ -748,7 +879,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../troubleshooting/games-controller-detection/" class="md-nav__link">
+      <a href="../games-controller-detection/" class="md-nav__link">
         Games not recognizing the virtual controller (under construction)
       </a>
     </li>
@@ -760,7 +891,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../troubleshooting/xinput-slots-order/" class="md-nav__link">
+      <a href="../xinput-slots-order/" class="md-nav__link">
         XInput slots order issues
       </a>
     </li>
@@ -772,7 +903,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../troubleshooting/misbehaving-controller-ingame/" class="md-nav__link">
+      <a href="../misbehaving-controller-ingame/" class="md-nav__link">
         Controller not behaving correctly in-game
       </a>
     </li>
@@ -790,7 +921,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../troubleshooting/double-input/" class="md-nav__link">
+      <a href="../double-input/" class="md-nav__link">
         Double Input issue  (under construction)
       </a>
     </li>
@@ -802,7 +933,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../troubleshooting/steam-related/" class="md-nav__link">
+      <a href="../steam-related/" class="md-nav__link">
         Steam related information and issues
       </a>
     </li>
@@ -821,14 +952,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
       
       <label class="md-nav__link" for="__nav_6">
         Other
@@ -846,7 +975,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
+      <a href="../../other/" class="md-nav__link">
         Miscellaneous area
       </a>
     </li>
@@ -858,7 +987,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../how-to-check-architecture/" class="md-nav__link">
+      <a href="../../other/how-to-check-architecture/" class="md-nav__link">
         How to check which architecture I'm running
       </a>
     </li>
@@ -868,21 +997,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../other/under-construction/" class="md-nav__link">
         Under construction
       </a>
-      
     </li>
   
 
@@ -912,6 +1031,110 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#to-whom-this-page-does-not-apply" class="md-nav__link">
+    To whom this page does NOT apply
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-to-verify-fisrt" class="md-nav__link">
+    What to verify fisrt
+  </a>
+  
+    <nav class="md-nav" aria-label="What to verify fisrt">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#make-sure-all-prerequisites-are-installed" class="md-nav__link">
+    Make sure all prerequisites are installed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ds4windows-log-and-windows-event-viewer" class="md-nav__link">
+    DS4Windows' Log and Windows' Event Viewer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#confirm-ds4windows-folder-is-not-write-protected" class="md-nav__link">
+    Confirm DS4Windows folder is not write-protected
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-if-user-data-is-not-corruted" class="md-nav__link">
+    Check if User Data is not corruted
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#issues-that-may-prevent-ds4windows-from-running-or-starting" class="md-nav__link">
+    Issues that may prevent DS4Windows from running or starting
+  </a>
+  
+    <nav class="md-nav" aria-label="Issues that may prevent DS4Windows from running or starting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vigembus-is-not-installed-log-message-when-attempting-to-start-ds4windows" class="md-nav__link">
+    "ViGEmBus is not installed" log message when attempting to start DS4Windows
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attempting-to-start-the-service-winmgmt-failed-or-windows-management-interface-not-found-messages" class="md-nav__link">
+    "Attempting to start the service winmgmt failed" or "Windows Management Interface not found" messages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-is-running-msi-afterburner-and-or-msi-rtss-rivatuner" class="md-nav__link">
+    User is running MSI Afterburner and / or MSI RTSS RivaTuner
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-has-the-legacy-scpvbus-driver-installed" class="md-nav__link">
+    User has the legacy ScpVBus driver installed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#windows-is-not-updated" class="md-nav__link">
+    Windows is not updated
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -922,20 +1145,66 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/Kanuan/DS4W_Website.github.io/edit/master/docs/other/under-construction.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/Kanuan/DS4W_Website.github.io/edit/master/docs/troubleshooting/ds4w-does-not-run.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="under-construction">Under construction</h1>
+                <h1 id="ds4windows-silently-does-not-open-crashes-does-not-start-or-fails-to-save-settings">DS4Windows silently does not open, crashes, does not start or fails to save settings</h1>
+<h2 id="to-whom-this-page-does-not-apply">To whom this page does NOT apply</h2>
 <div class="admonition important">
-<p class="admonition-title">Under construction ⚒️</p>
+<p class="admonition-title">Important</p>
+<p>If your DS4Windows opens and starts normally, but then does not detect controllers or fails for another reason then this page is not for you. Take a look at the other troubleshooting pages.</p>
 </div>
-<p>In case you haven't noticed, this site is under construction. If you end-up here that's because either:</p>
+<h2 id="what-to-verify-fisrt">What to verify fisrt</h2>
+<h3 id="make-sure-all-prerequisites-are-installed">Make sure all prerequisites are installed</h3>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>After installing the prerequesities it may be necessary to reinstall the ViGEmBus and the FakerInput drivers if they are still having issues.</p>
+</div>
 <ul>
-<li>The page you are looking for has not been created yet or...</li>
-<li>The page you are looking for is somewhere on the site but someone forgot to update the hyperlink that brought you here (Oops!)</li>
+<li>Windows 10 / 11</li>
+<li><a href="https://dotnet.microsoft.com/download/dotnet/5.0/runtime">Microsoft .NET 5.0 Runtime or higher FOR DESKTOP APPS</a>. The Console or Server version will NOT work, and 99% of the users need the x64 package.</li>
+<li>Visual C++ 2015-2019 Redistributable. <a href="https://aka.ms/vs/16/release/vc_redist.x64.exe">x64 for most people</a> or <a href="https://aka.ms/vs/16/release/vc_redist.x86.exe">x86 for those on 32 bits systems</a></li>
+<li><a href="https://vigem.org/projects/ViGEm/How-to-Install/">ViGEmBus</a> driver (DS4Windows should offer to install it when it's not detected)<ul>
+<li>The ViGEm driver requires <a href="https://support.microsoft.com/en-us/topic/the-latest-supported-visual-c-downloads-2647da03-1eea-4433-9aff-95f26a218cc0">Visual-C++ 2017 runtime libraries</a> (most users need the x64 version)</li>
 </ul>
+</li>
+<li>Microsoft 360 Driver (link inside DS4Windows, already installed by Windows if you've used a 360 controller before)<ul>
+<li>Already installed by default on Windows 10 and 11</li>
+</ul>
+</li>
+</ul>
+<h3 id="ds4windows-log-and-windows-event-viewer">DS4Windows' Log and Windows' Event Viewer</h3>
+<p>DS4Windows' Log can give important warnings when issues occur. It may be found in 2 different place and, if it exists on both, the most recent one should be inspected:</p>
+<ul>
+<li>In DS4Windows main folder</li>
+<li>In DS4Windows folder inside <code>%appdata%</code> (Press <span class="keys"><kbd class="key-windows">Win</kbd><span>+</span><kbd class="key-r">R</kbd></span>, type <code>%appdata%</code>, hit OK then check if the DS4Windows folder exists and the presence of the Log file)</li>
+</ul>
+<p>Check the dedicated page for <a href="../../under-construction">troubleshooting error messages in DS4Windows' Log</a>.</p>
+<div class="admonition info">
+<p class="admonition-title">To Do</p>
+<p>Add more info related to Windows' Event Viewer</p>
+</div>
+<h3 id="confirm-ds4windows-folder-is-not-write-protected">Confirm DS4Windows folder is not write-protected</h3>
+<p>DS4Windows may be inside a folder that is write-protected, therefore requiring it to be executed with higher privileges to be able to save and edit data. Such folders can be the "Windows" folder, "Program Files" and sometimes even the user Desktop (unlikely, but possible). </p>
+<p>It's recommended to have DS4Windows inside a folder that is known to not require higher-privileges to prevent this issue, like the user's "Documents" or "Downloads" folder.</p>
+<h3 id="check-if-user-data-is-not-corruted">Check if User Data is not corruted</h3>
+<p>The easy way to check this is making sure DS4Windows is not running and then <a href="">backing up and erasing all of its User Data</a>. If erasing the User Data fix the issue but the user wishes to keep some of its old data, it's possible to restore each User Data related file and folder individually until the corrupted file is found, then removing it only.</p>
+<h2 id="issues-that-may-prevent-ds4windows-from-running-or-starting">Issues that may prevent DS4Windows from running or starting</h2>
+<h3 id="vigembus-is-not-installed-log-message-when-attempting-to-start-ds4windows">"ViGEmBus is not installed" log message when attempting to start DS4Windows</h3>
+<p>Either ViGEmBus is not installed or DS4Windows is failing to detect it. The ViGEmBus's guides on how to install, verify if its working correctly, uninstall or perform a full clean of everything vigem related can be found on <a href="https://vigem.org/projects/ViGEm/How-to-Install/">ViGEmBus' <em>How to Install/Remove</em> page</a>.</p>
+<h3 id="attempting-to-start-the-service-winmgmt-failed-or-windows-management-interface-not-found-messages">"<em>Attempting to start the service winmgmt failed</em>" or "<em>Windows Management Interface not found</em>" messages</h3>
+<p>If these messages appear on DS4Windows' Log or in Windows' Event View then try to do the "repair Windows installation" fix using a Microsoft Windows installation media. There has been reports that this fixed a problem of DS4Windows app silently doing nothing when launched -issue. Or run WinOS "WMI repository repair" commands. <a href="https://www.thewindowsclub.com/how-to-repair-or-rebuild-the-wmi-repository-on-windows-10/">Repair WinOS WMI repository</a></p>
+<h3 id="user-is-running-msi-afterburner-and-or-msi-rtss-rivatuner">User is running <code>MSI Afterburner</code> and / or <code>MSI RTSS RivaTuner</code></h3>
+<p>Some users have reported that certain versions of <em><strong>MSI Afterburner</strong></em> and <em><strong>MSI RTSS RivaTuner</strong></em> apps are not compatible with WPF version of DS4Windows (every version since v2.0).</p>
+<p>RTSS prevents DS4Windows app to startup. Try adding DS4Windows.exe file to RTSS application list and set app option as "Application Detection Level=NONE" in RTSS (search issue tickets with these keywords for more information on DS4Windows' Issue Tracker).</p>
+<h3 id="user-has-the-legacy-scpvbus-driver-installed">User has the legacy ScpVBus driver installed</h3>
+<p>The <code>Scp Virtual Bus Driver</code> (ScpVBus) is a legacy driver that was used to spawn virtual Xbox controllers. It has been succeeded by the ViGEmBus.</p>
+<p>Though DS4Windows should just ignore the ScpVBus, there is a small chance that having it installed along-side the ViGEmBus can lead to issues.</p>
+<p>To properly uninstall and remove remaining traces of it from the system, follow the instructions in the <a href="https://vigem.org/projects/ScpToolkit/ScpToolkit-Removal-Guide/#remove-scp-virtual-bus-driver"><em>Manual removal of ScpToolkit residue page</em></a> starting from the "Remove Scp Virtual Bus Driver" section. </p>
+<h3 id="windows-is-not-updated">Windows is not updated</h3>
+<p>When everything else fails, update Windows.</p>
                 
               
               
@@ -958,7 +1227,7 @@
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
-        <a href="../how-to-check-architecture/" class="md-footer__link md-footer__link--prev" rel="prev">
+        <a href="../" class="md-footer__link md-footer__link--prev" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -967,11 +1236,25 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              How to check which architecture I'm running
+              Troubleshooting tips and general directions  (under construction)
             </div>
           </div>
         </a>
       
+      
+        <a href="../ds4w-controller-detection/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              DS4Windows not detecting controllers
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
       
     </nav>
   
