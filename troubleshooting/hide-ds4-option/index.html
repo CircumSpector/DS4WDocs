@@ -628,14 +628,12 @@
             
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3" type="checkbox" id="__nav_5_3" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3" type="checkbox" id="__nav_5_3" >
       
       <label class="md-nav__link" for="__nav_5_3">
         Physical controller detection, connection and related issues
@@ -691,6 +689,122 @@
     <li class="md-nav__item">
       <a href="../input-delay-bt/" class="md-nav__link">
         Latency/input delay issues on Bluetooth
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_4" type="checkbox" id="__nav_5_4" >
+      
+      <label class="md-nav__link" for="__nav_5_4">
+        Virtual controller usage in games and related issues
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Virtual controller usage in games and related issues" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_4">
+          <span class="md-nav__icon md-icon"></span>
+          Virtual controller usage in games and related issues
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../virtual-controller-failure/" class="md-nav__link">
+        DS4Windows not creating virtual controllers
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../games-controller-detection/" class="md-nav__link">
+        Games not recognizing the virtual controller (under construction)
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xinput-slots-order/" class="md-nav__link">
+        XInput slots order issues
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../misbehaving-controller-ingame/" class="md-nav__link">
+        Controller not behaving correctly in-game
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_5" type="checkbox" id="__nav_5_5" checked>
+      
+      <label class="md-nav__link" for="__nav_5_5">
+        Double input related issues
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Double input related issues" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_5">
+          <span class="md-nav__icon md-icon"></span>
+          Double input related issues
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hidhide-troubleshoot/" class="md-nav__link">
+        HidHide usage troubleshoot
       </a>
     </li>
   
@@ -854,93 +968,6 @@
           
         </ul>
       </nav>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_4" type="checkbox" id="__nav_5_4" >
-      
-      <label class="md-nav__link" for="__nav_5_4">
-        Virtual controller usage in games and related issues
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="Virtual controller usage in games and related issues" data-md-level="2">
-        <label class="md-nav__title" for="__nav_5_4">
-          <span class="md-nav__icon md-icon"></span>
-          Virtual controller usage in games and related issues
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../virtual-controller-failure/" class="md-nav__link">
-        DS4Windows not creating virtual controllers
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../games-controller-detection/" class="md-nav__link">
-        Games not recognizing the virtual controller (under construction)
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../xinput-slots-order/" class="md-nav__link">
-        XInput slots order issues
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../misbehaving-controller-ingame/" class="md-nav__link">
-        Controller not behaving correctly in-game
-      </a>
-    </li>
-  
-
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../double-input/" class="md-nav__link">
-        Double Input issue  (under construction)
-      </a>
     </li>
   
 
@@ -1202,7 +1229,7 @@
 <p>Even if it looks like a program is not open, sometimes it has a background process running, requiring the user to terminate it via Windows' Task Manager.</p>
 </div>
 <p>To solve problems with exclusive mode you should try to close all other applications which may be using the real controller and then try to re-connect it (or <code>-&gt;Stop -&gt;Start</code> DS4Windows). If DS4Windows tool is the first application opening a connection to the controller then Exclusive Access can be acquireed and the real controller hidden. After Exclusive Access is obtained it will remain active until DS4Windows is stopped/started or the controller is reconnected. </p>
-<p><strong>Following list is NOT a complete list</strong> of applications which may be running in your system in the background and may have an open connection to the original DS4 controller. Sometimes very unexpected application may have an open connection to Dualshock4 controller without your knowledge and this way preventing DS4Windows tool to enable "Hide DS4 Controller" exclusive mode.</p>
+<p><strong>The following is a NOT complete list</strong> of applications which may be running in your system in the background and may have an open connection to the original DS4 controller. Sometimes very unexpected applications may have an open connection to the physical controller without your knowledge and then prevent DS4Windows to enable the "Hide DS4 Controllers" exclusive mode.</p>
 <h3 id="nvidia-geforce-experience-and-in-game-overlay">NVIDIA GeForce Experience and in-game overlay</h3>
 <p>Disable GeForce in-game overlay feature in NVIDIA options or enable it only after you have started DS4Windows tool.</p>
 <p><img alt="NvidiaOverlay" class="glightbox" src="../images/NvidiaOverlay.png" /> </p>
@@ -1255,7 +1282,7 @@
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
-        <a href="../input-delay-bt/" class="md-footer__link md-footer__link--prev" rel="prev">
+        <a href="../hidhide-troubleshoot/" class="md-footer__link md-footer__link--prev" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1264,19 +1291,19 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Latency/input delay issues on Bluetooth
+              HidHide usage troubleshoot
             </div>
           </div>
         </a>
       
       
-        <a href="../virtual-controller-failure/" class="md-footer__link md-footer__link--next" rel="next">
+        <a href="../steam-related/" class="md-footer__link md-footer__link--next" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              DS4Windows not creating virtual controllers
+              Steam related information and issues
             </div>
           </div>
           <div class="md-footer__button md-icon">

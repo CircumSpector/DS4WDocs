@@ -694,18 +694,6 @@
   
 
           
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../hide-ds4-option/" class="md-nav__link">
-        "Could not open (controller) exclusively" / Hide DS4 controllers option not working
-      </a>
-    </li>
-  
-
-          
         </ul>
       </nav>
     </li>
@@ -922,10 +910,49 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_5" type="checkbox" id="__nav_5_5" >
+      
+      <label class="md-nav__link" for="__nav_5_5">
+        Double input related issues
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Double input related issues" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_5">
+          <span class="md-nav__icon md-icon"></span>
+          Double input related issues
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../double-input/" class="md-nav__link">
-        Double Input issue  (under construction)
+      <a href="../hidhide-troubleshoot/" class="md-nav__link">
+        HidHide usage troubleshoot
       </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hide-ds4-option/" class="md-nav__link">
+        "Could not open (controller) exclusively" / Hide DS4 controllers option not working
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -1189,29 +1216,39 @@
 <p>This should result in a good profile for troubleshooting most issues.</p>
 <h2 id="most-common-issues">Most common issues</h2>
 <h3 id="character-or-camera-moves-by-themselves">Character or camera moves by themselves</h3>
-<p>This is <strong>usually</strong> related to a hardware issue called "Stick drifting" that happens when the controller's not correctly reading the stick position.</p>
-<p>When using a preset profile (default settings) there are no options that can cause this type of issue.</p>
-<p>To fully verify the stick behavior:</p>
+<p>This is usually caused by the "stick drifting" issue, which happens when the controller stick position is not perfectly centered when at rest and can be possibly caused by 2 different hardware issues:</p>
+<ul>
+<li>The stick is not physically snapping back to its center or</li>
+<li>The stick being physically centered but the sticks' position sensors not correctly reading its position</li>
+</ul>
+<p>When using a preset Xbox profile (default settings), for the drift to not occur the stick's resting position must be below 8% of the total "movement" range. If above 8% then the stick position will fall outside of the default <code>dead zone</code> and DS4Windows will think the user is intentionally moving the stick.</p>
+<p>If using a DS4 <strong>preset profile</strong> (not related to the real controller you are using) then there are no (Anti) Dead Zone configured and DS4Windows just directly repasses the real stick position to the virtual DS4 controller.</p>
+<div class="admonition info">
+<p class="admonition-title">Instructions on how to properly verify the stick behavior</p>
 <ol>
-<li>Create a new profile and choose of the Gamepad Presets DS4Windows recommends</li>
-<li>Se both the <code>dead zone</code> and <code>anti dead zone</code> to <code>0.00</code> in the new profile<ul>
-<li>Remember to do this for both sticks (LS and RS)</li>
-</ul>
-</li>
-<li>Open the <a href="https://gamepad-tester.com/">Gamepad Tester Website</a> and verify if your stick is correctly centered when at a resting position<ul>
-<li>Even if it appears to be centered, try moving it to different positions and let it snap back to the center on its own many times to fully confirm it's properly functioning</li>
-</ul>
-</li>
-<li>After that, change the <code>(anti) dead zone</code> values back to what they were</li>
+<li>Create a new profile and choose one of the Gamepad Presets DS4Windows recommends. Then adjust it to the following:<ol>
+<li>Make this profile's name "stick position test"</li>
+<li>Set both the <code>dead zone</code> and <code>anti dead zone</code> to <code>0.00</code> in this new profile for both sticks (LS and RS)</li>
 </ol>
-<p>If the stick's resting position is perfectly at the center then there's no drift. In case of minor drifts it's possible to workaround the issue by slightly increasing the controllers' <code>dead zone</code> on profile settings. On the Profile Editor's <code>Controller reading</code> tab, the black dot (controller's real stick position) must be inside the read area (dead zone). </p>
+</li>
+<li>Select this profile on the main <code>Controllers</code> tab everytime you want to test your real stick behavior</li>
+<li>With this profile active, open the <a href="https://gamepad-tester.com/">Gamepad Tester Website</a> and verify if your stick is correctly centered when at a resting position<ul>
+<li>Check the actual value of the axes. Values above <code>+/- 0.08</code> are enough to cause drifting issues on DS4Windows default settings </li>
+<li>Even if it appears to be centered, try moving it to different positions and let it snap back to the center on its own many times to fully confirm it's properly functioning</li>
+<li>It's recommended to make this test MANY TIMES and at different periods. Sometimes the drift appears or disappears randomly, making it hard to properly confirm if the stick is 100% <em>OK</em></li>
+<li>If possible, when the random camera movement is perceived mid-game try to quickly alt-tab and test this to check the stick position</li>
+</ul>
+</li>
+</ol>
+</div>
+<p>A minor but constant drift can be workarounded by increasing the <code>dead zone</code> (check the <code>Minor drift workaround</code> example below).</p>
 <p>If you are suffering from major drift then there's not much that can be done besides repairing the controller itself. Depending on the controller, it can be fixed by cleaning the sticks' resistor-meters (not so hard to people who are confident of their DIY abilities) or fully replacing the sticks (advanced stuff, take it to the assistance).</p>
 <div class="admonition info">
 <p class="admonition-title">Stick drift issue and workarounds</p>
 <ul>
 <li>When not being moved, the sticks positions must be centered</li>
 </ul>
-<div class="tabbed-set" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">Issue example (minor)</label><div class="tabbed-content">
+<div class="tabbed-set" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">Issue example (minor)</label><div class="tabbed-content">
 <ul>
 <li>The Right Stick is at the correct resting position</li>
 <li>The Left stick's horizontal axis is slightly drifting to the right (<code>axis 0 = ~0.16</code>)<ul>
@@ -1231,21 +1268,35 @@
 </ul>
 <p><img alt="GamepadTesterMajorDrift" class="glightbox" src="../images/GamepadTesterMajorDrift.png" /> </p>
 </div>
+<input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><label for="__tabbed_2_3">Minor drift workaround</label><div class="tabbed-content">
+<ul>
+<li>The Black Dot (real stick position) must be inside the Red Area (Dead Zone) so that DS4Windows makes the Gray Dot (Virtual Stick Position) centered</li>
+<li>For this controller's Left Stick, a Dead Zone of 23% was required to counter its drift</li>
+</ul>
+<p><img alt="MinorDriftWorkaround" class="glightbox" src="../images/MinorDriftWorkaround.png" /> </p>
+</div>
 </div>
 </div>
 <h3 id="occasionally-character-or-camera-moves-in-a-random-direction-or-not-respond-to-the-exact-movement-that-is-expected">Occasionally character or camera moves in a random direction or not respond to the exact movement that is expected</h3>
-<p>This is <strong>usually</strong> related to a hardware issue called "Stick drifting" that happens when the controller's not correctly reading the stick position. To verify:</p>
+<p>This is <strong>usually</strong> related to a hardware issue called "Stick drifting" that happens when the controller's not correctly reading the stick position, which can cause it to "jump" to random positions when using it. To verify, it's needed to verify the stick in all possible positions:</p>
+<div class="admonition info">
+<p class="admonition-title">Instructions on how to properly verify the stick behavior</p>
 <ol>
-<li>For these tests, edit the currently used profile and set both the <code>dead zone</code> and <code>anti dead zone</code> to <code>0.00</code><ul>
-<li>Remember to do this for both sticks (LS and RS)</li>
-</ul>
+<li>Create a new profile and choose one of the Gamepad Presets DS4Windows recommends. Then adjust it to the following:<ol>
+<li>Make this profile's name "stick position test"</li>
+<li>Set both the <code>dead zone</code> and <code>anti dead zone</code> to <code>0.00</code> in this new profile for both sticks (LS and RS)</li>
+</ol>
 </li>
+<li>Select this profile on the main <code>Controllers</code> tab everytime you want to test your real stick behavior</li>
 <li>Open the <a href="https://gamepad-tester.com/">Gamepad Tester Website</a> </li>
 <li>Do, slowly, a cross movement by makign the stick position go up-and-down, left-and-right. Test both sticks separately</li>
-<li>Also, slowly do a full circle movement a few times</li>
-<li>After that, change the <code>(anti) dead zone</code> values back to what they were</li>
+<li>Also, slowly do a full circle movement a few times<ul>
+<li>It's recommended to make the 2 tests above MANY TIMES and at different periods. Sometimes the drift appears or disappears randomly making it hard to properly confirm if the stick is 100% <em>Ok</em></li>
+</ul>
+</li>
 </ol>
-<p>If the stick position corresponded to the movements of the real stick then all good. If not, if somehow it jumped position or behave erratically then your controller probably is physically falty.</p>
+</div>
+<p>If when testing the stick position corresponded to the movements of the real stick then all good. If not, if somehow it jumped position or behave erratically then your controller probably is physically faulty. Depending on the controller, it can be fixed by cleaning the sticks' resistor-meters (not so hard to people who are confident of their DIY abilities) or fully replacing the sticks (advanced stuff, take it to the assistance).</p>
 <div class="admonition info">
 <p class="admonition-title">Example of how proper functioning sticks moves like</p>
 <p><img alt="StickCircleTest" class="glightbox" src="../images/StickCircleTest.gif" /> </p>
@@ -1274,23 +1325,32 @@
 <p>Keep in mind that this issue does not happen when using a emulated Xbox controller, so if you are having issues with this then it's unrelated to this one.</p>
 <h3 id="game-has-native-support-to-ds4s-rumble-motion-gyro-touchpad-andor-lightbar-but-it-does-not-work">Game has native support to DS4's rumble, motion, gyro, touchpad and/or lightbar but it does not work</h3>
 <div class="admonition important">
-<p class="admonition-title">Rumble and lightbar passthrough are currently disabled</p>
+<p class="admonition-title">Rumble and lightbar passthrough are currently disabled when DS4 emulation is active</p>
 <ul>
-<li>Because of an issue with the ViGEmBus, DS4Windows has disabled support for rumble when using virtual DS4 controllers and the Lightbar passthru mode</li>
+<li>Because of an issue with the ViGEmBus, DS4Windows has disabled support for rumble and the Lightbar passthru mode when using virtual DS4 controllers</li>
 <li>The issue causes the controller to occasionally not stop rumbling or to set wrong lightbar colors</li>
-<li>The last version to have these features enabled was v3.0.10. Keep in mind that these features may or may not work well with games and support will not be given to users that aren't to the latest version</li>
+<li>The last version to have these features enabled was v3.0.10. Keep in mind that these features may or may not work well with games in this version and support will not be given to users that aren't to the latest version</li>
 </ul>
 </div>
 <ul>
 <li>Are you reeeeeally sure it actually has support for those features? One good way of knowing, though not 100% reliable, is by looking in your games' page on the <a href="https://www.pcgamingwiki.com/wiki/Home">PC Gaming Wiki</a> and checking in the controller section if it has 1) DS4 Controller support and 2) if it's specifically stated that those functions are supported</li>
 <li>Make sure you are using a emulated DS4 controller and that you've <a href="../../other/under-construction">enabled the corresponding passthru options that you intend to use on the active profile</a></li>
-<li>Sometimes, a game has support for these features only when when the following conditions are met: 1) It has been launched through Steam and 2) The DS4 controller has been picked by Steam and is being used through its <code>Playstation Configuration Support</code>. For more info on that, please check the <a href="../steam-related">Steam related info page</a></li>
+<li>Sometimes, a game has support for these features (or to even detect DS4 controllers) only when when the following conditions are met: 1) It has been launched through Steam and 2) The DS4 controller has been picked by Steam and is being used through its <code>Playstation Configuration Support</code>. For more info on that, please check the <a href="../steam-related">Steam related info page</a></li>
 </ul>
 <h3 id="rumble-does-not-work">Rumble does not work</h3>
+<div class="admonition important">
+<p class="admonition-title">Rumble and lightbar passthrough are currently disabled when DS4 emulation is active</p>
+<ul>
+<li>Because of an issue with the ViGEmBus, DS4Windows has disabled support for rumble and the Lightbar passthru mode when using virtual DS4 controllers </li>
+<li>The issue causes the controller to occasionally not stop rumbling or to set wrong lightbar colors</li>
+<li>The last version to have these features enabled was v3.0.10. Keep in mind that these features may or may not work well with games in this version and support will not be given to users that aren't to the latest version</li>
+</ul>
+</div>
 <ul>
 <li>Check on your profile settings' <code>Other</code> tab if the rumble is not at <code>0%</code> </li>
 <li>Still on the <code>Other</code> tab test there if both your motors are working. If they don't work there then it's a hardware issue with your controller or you have a third-party / copy-cat controller that doesn't have rumble or does not work with DS4Windows </li>
-<li>Most games only have working rumble when using Xbox controllers even if the game supports both Xbox and DualShock 4 controllers </li>
+<li>Most games only have working rumble when using Xbox controllers even if the game supports both Xbox and DualShock 4 controllers</li>
+<li>Some games only support DS4 controllers or DS4 controller rumble when using Steam's <code>Playstation Configuration Support</code>. Read the previous topic for more info on that </li>
 </ul>
                 
               
@@ -1329,13 +1389,13 @@
         </a>
       
       
-        <a href="../double-input/" class="md-footer__link md-footer__link--next" rel="next">
+        <a href="../hidhide-troubleshoot/" class="md-footer__link md-footer__link--next" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Double Input issue  (under construction)
+              HidHide usage troubleshoot
             </div>
           </div>
           <div class="md-footer__button md-icon">
