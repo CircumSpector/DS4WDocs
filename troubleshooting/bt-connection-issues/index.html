@@ -725,8 +725,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#pairing-it-to-windows-using-the-correct-method" class="md-nav__link">
-    Pairing it to Windows using the correct method
+  <a href="#re-pairing-it-to-windows-using-the-correct-method" class="md-nav__link">
+    Re-pairing it to Windows using the correct method
   </a>
   
 </li>
@@ -745,15 +745,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#remove-a-paired-controller-from-windows" class="md-nav__link">
-    Remove a paired controller from Windows
+  <a href="#pair-a-controller-to-windows" class="md-nav__link">
+    Pair a controller to Windows
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#pair-a-controller-to-windows" class="md-nav__link">
-    Pair a controller to Windows
+  <a href="#remove-a-paired-controller-from-windows" class="md-nav__link">
+    Remove a paired controller from Windows
   </a>
   
 </li>
@@ -1116,8 +1116,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#pairing-it-to-windows-using-the-correct-method" class="md-nav__link">
-    Pairing it to Windows using the correct method
+  <a href="#re-pairing-it-to-windows-using-the-correct-method" class="md-nav__link">
+    Re-pairing it to Windows using the correct method
   </a>
   
 </li>
@@ -1136,15 +1136,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#remove-a-paired-controller-from-windows" class="md-nav__link">
-    Remove a paired controller from Windows
+  <a href="#pair-a-controller-to-windows" class="md-nav__link">
+    Pair a controller to Windows
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#pair-a-controller-to-windows" class="md-nav__link">
-    Pair a controller to Windows
+  <a href="#remove-a-paired-controller-from-windows" class="md-nav__link">
+    Remove a paired controller from Windows
   </a>
   
 </li>
@@ -1265,13 +1265,13 @@
 </ul>
 </li>
 </ul>
-<h3 id="pairing-it-to-windows-using-the-correct-method">Pairing it to Windows using the correct method</h3>
+<h3 id="re-pairing-it-to-windows-using-the-correct-method">Re-pairing it to Windows using the correct method</h3>
 <p>There are 2 ways a controller can be paired to Windows:</p>
 <ul>
 <li>The controller makes the connection request to Windows (incorrect method)</li>
 <li>Controller is set in its special <code>pairing mode</code> and then the user manually makes Windows connect to it (correct method)</li>
 </ul>
-<p>If the controller has been connected in the wrong method it will 100% not work even though it <em>appears</em> on Windows as if it has been properly added. If in doubt, make Windows remove the controller from its Device list and re-pair it again using the correct method.</p>
+<p>If the controller has been connected in the wrong method it will 100% not work even though it <em>appears</em> on Windows as if it has been properly added. If in doubt, make Windows remove the controller from its Device list and re-pair it again using the correct method. Check the following section on how to propperly connect a controller to the PC.</p>
 <div class="admonition important">
 <p class="admonition-title">Pairing a controller to Windows</p>
 <div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Correct method</label><div class="tabbed-content">
@@ -1283,6 +1283,11 @@
 </div>
 </div>
 <h2 id="how-to-properly">How to properly...</h2>
+<h3 id="pair-a-controller-to-windows">Pair a controller to Windows</h3>
+<ol>
+<li>Verify if the controller is not already on Windows' Paired Devices list. If it is, remove it as per the next section</li>
+<li>Follow the instructions in the dedicated <a href="../../guides/connecting-controllers/#bluetooth"><em>Connecting your controllers to the PC</em> page</a></li>
+</ol>
 <h3 id="remove-a-paired-controller-from-windows">Remove a paired controller from Windows</h3>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
@@ -1303,20 +1308,17 @@
 </div>
 </div>
 </div>
-<h3 id="pair-a-controller-to-windows">Pair a controller to Windows</h3>
-<ol>
-<li>Verify if the controller is not already on Windows' Paired Devices list. If it is, remove it as per the previous section</li>
-<li>Follow the instructions in the dedicated <a href="../../guides/connecting-controllers/#bluetooth"><em>Connecting your controllers to the PC</em> page</a></li>
-</ol>
 <h2 id="windows-cant-find-the-controller-when-trying-to-add-it-in-bluetooth-other-devices">Windows can't find the controller when trying  to add it in <code>Bluetooth &amp; Other Devices</code></h2>
 <ul>
-<li>MAKE SURE YOUR DEVICE IS IN PAIRING MODE!</li>
+<li><a href="../../guides/connecting-controllers/#bluetooth"><strong>MAKE SURE YOUR DEVICE IS IN PAIRING MODE!</strong></a></li>
 <li>For most controllers a 2.1 Bluetooth adapter is required</li>
-<li>Windows will not detect the device if it already is on its paired devices list. In this case, it is recommended to remove it from the list and pair it again</li>
-<li>If the controller has been previously connected to the PC but does not appear on the list anymore, check if it still exists on Windows' <a href="../controllers-check/#windows-devices-and-printers">Devices and Printers</a> </li>
+<li><strong>Windows will not detect the device if it already is on its paired devices list, requiruing it to be removed from there beforehand</strong></li>
+<li>If the controller has been previously connected to the PC but does not appear on the list anymore, check if it still exists on Windows' <a href="../controllers-check/#windows-devices-and-printers">Devices and Printers</a></li>
+<li>Sometimes Windows takes an awful long time to detect DS4v1 controllers</li>
 </ul>
 <h2 id="controller-connects-and-stays-connected-but-windows-ds4windows-does-not-recognize-it">Controller connects and stays connected but Windows / DS4Windows does not recognize it</h2>
 <ul>
+<li>Re-pair the controller to Windows using the correct method explained in one of the topics above just to be sure</li>
 <li>If you're using a controller from your gaming console (PS3, PS4, PS5, Switch) make sure it has not accidentally connected to it/turned it on. It is recommended to fully turn off/unplug it when first attempting to pair the controller to the PC</li>
 <li>If this is not the case, check the dedicated <a href="../controller-detection/"><em>controller detection issues</em> page</a></li>
 </ul>
