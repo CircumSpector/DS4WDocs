@@ -779,8 +779,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ds4windows-settings" class="md-nav__link">
-    DS4Windows settings
+  <a href="#ds4windows-causing-controller-to-increase-data-transfer-rate" class="md-nav__link">
+    DS4Windows causing controller to increase data transfer rate
   </a>
   
 </li>
@@ -997,6 +997,18 @@
   
   
     <li class="md-nav__item">
+      <a href="../kb-mouse-issues/" class="md-nav__link">
+        Keyboard & Mouse (KB+M) remapping issues
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../steam-related/" class="md-nav__link">
         Steam related information and issues
       </a>
@@ -1159,8 +1171,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ds4windows-settings" class="md-nav__link">
-    DS4Windows settings
+  <a href="#ds4windows-causing-controller-to-increase-data-transfer-rate" class="md-nav__link">
+    DS4Windows causing controller to increase data transfer rate
   </a>
   
 </li>
@@ -1330,7 +1342,7 @@
 <p>Keep in mind that when the term "bad" is used it does not necessarily mean "cheap". Multiple users have confirmed they have no latency issues even with 4 controllers connected with cheap, generic $5 adapters from Aliexpress</p>
 </div>
 <h3 id="bluetooth-and-wifi-interference">Bluetooth and WiFi interference</h3>
-<p>Both use the same frequency. Although they should auto adjust to prevent interference, sometimes it just happens. Check if your area isn't overloaded with different 2.4Ghz WiFi networks and Bluetooth devices. </p>
+<p>Both use the same frequency. Although they should auto adjust to prevent interference, sometimes it just happens. Check if your area isn't overloaded with different 2.4Ghz WiFi networks and Bluetooth devices. Also, if one of the signals is too weak then it's quite easy for the other to heavily interfere.</p>
 <h3 id="integrated-or-bad-bluetooth-adapters">Integrated or bad Bluetooth adapters</h3>
 <p>It's quite common for integrated BT adapters to suck for one of the following reasons:</p>
 <ul>
@@ -1342,11 +1354,18 @@
 <h3 id="multiple-connected-controllers">Multiple connected controllers</h3>
 <p>Each connected controller means more data that is being transferred through the Bluetooth adapter. If you have a bad adapter or high radio interference near it it may not be able to maintain the required data rate between the system and controllers, causing high latency or even connection loss. Not much can be done besides trying to lower the interference or replacing the adater with a better one.</p>
 <p>A good quality adapter can easily maintain a stable, low latency connection with 4 controllers or even more.</p>
-<h3 id="ds4windows-settings">DS4Windows settings</h3>
-<p>Some general info on DS4Windows and mainly DualShock 4 and DualSense controllers.</p>
-<p>When a DS4 or DualSense is first connected to it, they present themselves in a limited form. They don't send the data related to rumble, motion sensors, lightbar etc. Meaning they are sending just basic buttons and axis states info and Windows is basically not sending anything back.</p>
-<p>After DS4Windows first detects the controller a special request is sent for it to change into full feature mode, where the missing info starts being sent. DS4Windows also starts then sending rumble, lightbar and triggers (DualSense only) data back to it. Mind you, Steam sends the same request when the <code>Playstation Configuration Support</code> option is enabled.</p>
-<p>This change from limited to full feature mode results in a increase of data rate between the controller and the system and sometimes the adapter can't keep up with it. So, if your never had latency problems when using your DS4/DualSense in games with generic controller support but then start having them after start using DS4Windows or Steam, this is the cause.</p>
+<h3 id="ds4windows-causing-controller-to-increase-data-transfer-rate">DS4Windows causing controller to increase data transfer rate</h3>
+<div class="admonition important">
+<p class="admonition-title">This only applies to DS4 and DualSense controllers</p>
+</div>
+<p>DS4 and DualSense controllers can communicate in 2 different modes:</p>
+<ul>
+<li>PC friendly mode: only basic button/axes information is sent by the controller to the PC</li>
+<li>Native PS4 mode: controller sends its full set of information, including motion sensors data, status, touchpad states etc</li>
+</ul>
+<p>When first connected to Windows, these controllers communicate in PC friendly mode and their data transfer rate is low. When picked by DS4Windows (or Steam for that matter), a request is sent for them to change into Native PS4 mode, which increases the volume and the frequency of data being sent.</p>
+<p>Not only that, DS4Windows also sends data back to the controller related to the rumble, lightbar, triggers (DualSense only) etc.</p>
+<p>When these changes occur, if the Bluetooth adapter can't keep up with the required data rate then the user may suffer with high input delay or even connection loss. So if your never had latency problems when using your DS4/DualSense in games as a generic controller but then start having issues when trying to use DS4Windows or Steam this may be the cause.</p>
 <h2 id="potential-fixes-to-latency-issues">Potential fixes to latency issues</h2>
 <h3 id="test-with-wifi-fully-disabled">Test with WiFi fully disabled</h3>
 <div class="admonition note">
@@ -1359,16 +1378,17 @@
 <li>On Windows' Device Manager locate your Bluetooth Dongle -&gt; Enter its <code>properties</code> -&gt; Check if there is a tab called <code>Power Management</code> and disable the <code>turn off this device to save power</code>  (untick the option)</li>
 </ul>
 <h3 id="use-a-dedicated-bt-adapter">Use a dedicated BT adapter</h3>
-<div class="admonition note">
-<p class="admonition-title">Recommended for users of integrated BT adapter users</p>
+<div class="admonition important">
+<p class="admonition-title">Even if a dedicated adapter is already being used consider that it might be faulty or of bad quality</p>
 </div>
-<p>A dedicated, good quality BT USB Adapter should offer better performance than a integrated one. Because its antenna is located outside of the laptop/desktop's shell, it also suffers less from signal loss caused by physical obstacles.</p>
-<p>Because Windows can only use 1 BT adapter, when using a USB adapter in a PC that also has a integrated one the later must be disabled in Windows' <code>Device Manager</code> in order for the USB BT adapter one to be used.</p>
+<p>A dedicated, good quality BT USB Adapter should offer better performance than an integrated one. Because its antenna is located outside of the laptop/desktop's shell, it also suffers less from signal loss caused by physical obstacles.</p>
+<p>When using a USB adapter in a PC that also has a integrated one the later must be disabled in Windows' <code>Device Manager</code> in order for the USB BT adapter one to be used, since Windows can only keep one dongle active.</p>
 <p><img alt="DisablingIntegratedAdapter" class="glightbox" src="images/DisablingIntegratedAdapter.png" />  </p>
 <h3 id="moving-the-adapter-to-another-usb-port">Moving the adapter to another USB port</h3>
 <p>Moving the dongle to a better located USB port may offer a better quality signal. Also, USB ports (specially 3.0 and above) can be a source of radio noise. Test the dongle in different ports to verify which offer you a better signal.</p>
 <h3 id="connect-usb-bt-adapter-through-a-usb-extension-cable">Connect USB BT adapter through a USB extension cable</h3>
-<p>A laptop/desktop's shell is a source of radio noise, specially near high powered, high data transfer ports like USB 3.0 and above. This noise may worsen your BT's adapter performance. Connecting your BT adapter through a cable extension so it stays located at some distance from the computers shell is known to be useful in these cases.</p>
+<p>A laptop/desktop's shell is a source of radio noise, specially if it's ungrounded or near high powered, high data transfer ports like USB 3.0 and above. This noise may worsen your BT's adapter performance.</p>
+<p>Connecting your BT adapter through an active cable extension, so it stays located at some distance from the computers shell (not <em>necessarily</em> nearer to the controller), is known to be useful in these cases.</p>
 <h3 id="decrease-the-bt-polling-rate-on-profile-settings">Decrease the BT polling rate on profile settings</h3>
 <div class="admonition note">
 <p class="admonition-title">Only works with DS4 gamepads. The BT polling rates of other types cannot be controlled</p>

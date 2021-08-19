@@ -962,6 +962,18 @@
   
   
     <li class="md-nav__item">
+      <a href="../kb-mouse-issues/" class="md-nav__link">
+        Keyboard & Mouse (KB+M) remapping issues
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../steam-related/" class="md-nav__link">
         Steam related information and issues
       </a>
@@ -1261,8 +1273,8 @@
 <p>To check if your controller is disabled:</p>
 <ul>
 <li>Open Windows' <code>Devices and Printers</code> by pressing <span class="keys"><kbd class="key-windows">Win</kbd><span>+</span><kbd class="key-r">R</kbd></span> in your keyboard, typing <code>control printers</code> then selecting <code>Ok</code></li>
-<li>Locate your controller on the list (if it does not appear there then you are probably having a <a href="">connection issue</a>)</li>
-<li>Right-click it, select <code>Properties</code> then select the <code>Hardware</code> tab</li>
+<li>Locate your controller on the list</li>
+<li>Right-click on it, select <code>Properties</code> then select the <code>Hardware</code> tab</li>
 <li>Select the <code>HID-compliant game controller</code> and check its status at the bottom of the Window</li>
 <li>If disabled, re-enable it by clicking at <code>Properties</code> then <code>Enable device</code></li>
 </ul>
@@ -1279,10 +1291,25 @@
 </ol>
 <p>Then it may be hidden. The following tools could be the culprit:</p>
 <h4 id="hidguardian">HidGuardian</h4>
-<p>HidGuardian is a driver that can hide controllers from the system and allow only chosen processes to detect them. It was an optional companion driver used by DS4Windows to prevent the double input issue but its installation instructions were hidden on DS4Windows' wiki in order to keep non-tech-savvy users from installing it and having issues. It was made obsolete by the release of its successor, HidHide, a similar driver that works better and is easier to use. As such, <strong>DS4Windows removed support for HidGuardian in version 3.0.8</strong> and those who still have it installed are required to uninstall it in order to continue using their controllers with DS4Windows.</p>
-<p>To verify if HidGuardian is installed and uninstall it if present, check <a href="https://vigem.org/projects/HidHide/Simple-Setup-Guide/#verifying-if-hidguardian-is-installed-and-uninstalling-it">HidGuardian's section of HidHide's guide</a>.</p>
+<p>HidGuardian is a driver that can prevent Windows from recognizing a connected controller as an actual game controller. It was used by DS4Windows to prevent the <strong>double-input issue</strong>, but support for it was removed in v3.0.8 for 2 reasons:</p>
+<ul>
+<li>Users didn't know how to properly configure HidGuardian and ended up having issues that were complicated to troubleshoot and fix</li>
+<li>The release of HidGuardian's successor, HidHide, which works the same but is more user-friendly</li>
+</ul>
+<p>As such, the latest versions of DS4Windows won't request HidGuardian for hidden controller's access and if a controller is hidden by it then it won't be detected anymore. </p>
+<p>Users who still have HidGuardian installed must:</p>
+<ol>
+<li>Uninstall it for their controller to be detected again<ul>
+<li>To verify if HidGuardian is installed and uninstall it if present, check <a href="https://vigem.org/projects/HidHide/Simple-Setup-Guide/#verifying-if-hidguardian-is-installed-and-uninstalling-it">HidGuardian's section of HidHide's guide</a></li>
+</ul>
+</li>
+<li>Install HidHide as a replacement for the "controller hiding" function that is necessary to prevent the double input issue <ul>
+<li>For more information about HidHide and the double input issue, check the <a href="../../guides/solving-double-input/"><em>Preventing the double controller / double input issue in games</em> guide</a></li>
+</ul>
+</li>
+</ol>
 <h4 id="hidhide">HidHide</h4>
-<p>HidHide is an optional (but strongly recommended) third-party driver that can hide controllers from the system and only allow chosen processes to detect them. Its use along DS4Windows is recommended in order to prevent the <a href="../../guides/solving-double-input">infamous double input issue</a>. </p>
+<p>HidHide is an optional (but highly recommended) third-party driver that can hide controllers from the system and only allow chosen processes to detect them. Its use along DS4Windows is recommended in order to prevent the <a href="../../guides/solving-double-input">infamous double input issue</a>. </p>
 <p>You can check if you have HidHide installed by opening Windows' <code>Apps and Features</code> and searching for it, though if it do is installed then it's probably just not properly configured to grant DS4Windows access to hidden controllers. Check <a href="(https://vigem.org/projects/HidHide/Simple-Setup-Guide/#allowing-chosen-applications-to-see-hidden-devices)">HidHide's guide</a> for more info on that.</p>
 <p><img alt="HidHideApps" class="glightbox" src="../images/HidHideApps.png" />  </p>
 <ul>
@@ -1293,11 +1320,11 @@
 <h3 id="controller-is-a-copy-catreplica">Controller is a copy-cat/replica</h3>
 <p>For these type of controllers to be detected by DS4Windows, they need to:</p>
 <ul>
-<li>or present themselves as a complete copy of the original in a way that DS4Windows actually thinks they <strong>are</strong> the original</li>
+<li>or present themselves as a complete copy of the original in a way that DS4Windows actually thinks they <strong>are</strong> the original and also <em>behaves</em> exactly like a original one</li>
 <li>or have specific support for them on DS4Windows' code</li>
 <li>or try to force their detection by using the debug version of DS4Windows </li>
 </ul>
-<p>For more info on this, check the <a href="../../other/under-construction"><em>Adding support to third-party controllers</em></a> page</p>
+<p>For more info on this, check the <a href="../../other/under-construction"><em>Adding support to third-party controllers</em> page</a>.</p>
 <h3 id="you-have-disabled-support-for-your-type-of-controller-in-ds4windows-settings">You have disabled support for your type of controller in DS4Windows settings</h3>
 <ul>
 <li>On DS4Windows' <code>Settings</code> tab there is a option called <code>Device options</code> that allows the user to disable controller support per type. Check there if everything is enabled</li>

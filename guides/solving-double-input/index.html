@@ -905,6 +905,18 @@
   
   
     <li class="md-nav__item">
+      <a href="../../troubleshooting/kb-mouse-issues/" class="md-nav__link">
+        Keyboard & Mouse (KB+M) remapping issues
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../troubleshooting/steam-related/" class="md-nav__link">
         Steam related information and issues
       </a>
@@ -1088,10 +1100,11 @@
 <li>If HidHide is properly configured then the <code>Hide DS4 controllers</code> option under DS4Windows' <code>Settings</code> tab is redundant and should be left disabled</li>
 </ul>
 </div>
-<p>HidHide is a driver that acts as a barrier between Windows and every HID Device connected (physical peripherals). It allows the user to selectively hide gamepads and only allow specific software to see them. This is the recommended method because once it has been properly setup the double input issue is solved for good.</p>
+<p>HidHide is a driver that acts as a barrier between Windows and every Human Interaction Device (or just "<strong>HID</strong>") connected to the system, which includes game controllers. It allows the user to selectively hide gamepads and only allow specific software to see them.</p>
+<p>It is the recommended method because once it has been properly setup the double input issue is solved for good.</p>
 <p>In DS4W case, the user needs to set HidHide to:</p>
 <ol>
-<li>Hide the real gamepads from the system, once when connected via USB and once when via Bluetooth</li>
+<li>Hide the real gamepads from the system <strong>once when connected via USB and once when via Bluetooth</strong></li>
 <li>Allow DS4Windows to see all hidden devices, otherwise it would think there are no supported gamepads connected</li>
 </ol>
 <div class="tabbed-set" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">HidHide result</label><div class="tabbed-content">
@@ -1108,13 +1121,17 @@
 </div>
 </div>
 <p>HidHide has its own <a href="https://vigem.org/projects/HidHide/Simple-Setup-Guide/">dedicated setup page</a>. Users who know more or less what they are doing can follow the quick setup section and for the ones having trouble there is also the step-by-step section.</p>
+<div class="admonition note">
+<p class="admonition-title">Dedicated troubleshooting page</p>
+<p>Though HidHide's own setup guide should cover everything the user needs, this site also has a <a href="../../troubleshooting/hidhide-troubleshoot/">dedicated HidHide usage troubleshooting page</a> for users having trouble configuring it or confirming if their real controllers are actually hidden.</p>
+</div>
 <h3 id="hide-ds4-controllers-option-legacy-not-recommended"><code>Hide DS4 Controllers</code> option (legacy. Not recommended)</h3>
 <div class="admonition important">
 <p class="admonition-title">Though it is written "DS4 Controllers" it applies to any real controller detected by DS4Windows</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note to users of HidHide</p>
-<p>If you have HidHide installed and correctly setup it's recommended to leave this option disabled except in some <a href="">really specific games</a></p>
+<p>If you have HidHide installed and correctly setup then this option is redudant and should be left disabled to prevent issues or confusion.</p>
 </div>
 <p>This option exists on DS4Windows' <code>Settings</code> tab. When enabled, DS4Windows will <em>kindly</em> ask Windows for exclusive access to detected devices, meaning the later would only allow DS4Windows to detect the gamepads and preventing the double input issue.</p>
 <p><img alt="ExclusiveAccess" class="glightbox" src="../images/ExclusiveAccess.png" /> </p>
@@ -1130,13 +1147,14 @@
 <p>For the reasons explained above, the <code>Hide DS4 Controllers</code> option is <strong>NOT RECOMMENDED</strong>, though it remains available to users that need to use it for whatever reason. HidHide is the better option all around for those who can use it.</p>
 <div class="admonition note">
 <p class="admonition-title">Dedicated troubleshooting page</p>
-<p>In case you really need to use this option, there is a <a href="../../troubleshooting/hide-ds4-option/">dedicated troubleshooting article</a> on it to verify why windows is failing to grant exclusive access to the controller</p>
+<p>In case you really need to use this option, there is a <a href="../../troubleshooting/hide-ds4-option/">dedicated troubleshooting page for the <code>Hide DS4 controllers</code> option</a> that can be followed to verify why windows is failing to grant the exclusive access request.</p>
 </div>
 <h2 id="related-links">Related links</h2>
 <ul>
 <li><a href="../../under-construction">Examples of games that suffer from the double input issue</a></li>
-<li><a href="../../">Troubleshooting double input issues</a></li>
-<li><a href="">Troubleshooting gamepad detection issues</a></li>
+<li><a href="../../troubleshooting/hidhide-troubleshoot/">HidHide usage troubleshoot</a></li>
+<li><a href="../../troubleshooting/hide-ds4-option/"><em>"Could not open (controller) exclusively" / Hide DS4 controllers option not working</em> troubleshoot</a></li>
+<li><a href="../../troubleshooting/ds4w-controller-detection/">Troubleshooting gamepad detection issues</a></li>
 </ul>
                 
               
