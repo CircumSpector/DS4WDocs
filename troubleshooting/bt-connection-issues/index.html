@@ -407,7 +407,7 @@
   
     <li class="md-nav__item">
       <a href="../../about-ds4windows/faq/" class="md-nav__link">
-        Frequently Asked Questions (under construction)
+        Frequently Asked Questions about DS4Windows
       </a>
     </li>
   
@@ -765,7 +765,7 @@
       
         <li class="md-nav__item">
   <a href="#windows-cant-find-the-controller-when-trying-to-add-it-in-bluetooth-other-devices" class="md-nav__link">
-    Windows can't find the controller when trying  to add it in Bluetooth &amp; Other Devices
+    Windows can't find the controller when trying to add it in Bluetooth &amp; Other Devices
   </a>
   
 </li>
@@ -835,6 +835,13 @@
         <li class="md-nav__item">
   <a href="#loss-of-wifi-signal-if-controller-is-connected-via-bt-or-loss-of-bt-connection-when-wifi-is-being-used" class="md-nav__link">
     Loss of WiFi signal if controller is connected via BT or Loss of BT connection when WiFi is being used
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#controller-sometimes-tries-to-reconnect-to-wrong-nearby-pc" class="md-nav__link">
+    Controller sometimes tries to reconnect to wrong, nearby PC
   </a>
   
 </li>
@@ -1015,6 +1022,18 @@
   
 
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../audio-related/" class="md-nav__link">
+        Headphone or mic related issues when using supported gamepads
+      </a>
+    </li>
+  
+
+          
         </ul>
       </nav>
     </li>
@@ -1168,7 +1187,7 @@
       
         <li class="md-nav__item">
   <a href="#windows-cant-find-the-controller-when-trying-to-add-it-in-bluetooth-other-devices" class="md-nav__link">
-    Windows can't find the controller when trying  to add it in Bluetooth &amp; Other Devices
+    Windows can't find the controller when trying to add it in Bluetooth &amp; Other Devices
   </a>
   
 </li>
@@ -1238,6 +1257,13 @@
         <li class="md-nav__item">
   <a href="#loss-of-wifi-signal-if-controller-is-connected-via-bt-or-loss-of-bt-connection-when-wifi-is-being-used" class="md-nav__link">
     Loss of WiFi signal if controller is connected via BT or Loss of BT connection when WiFi is being used
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#controller-sometimes-tries-to-reconnect-to-wrong-nearby-pc" class="md-nav__link">
+    Controller sometimes tries to reconnect to wrong, nearby PC
   </a>
   
 </li>
@@ -1320,7 +1346,7 @@
 </div>
 </div>
 </div>
-<h2 id="windows-cant-find-the-controller-when-trying-to-add-it-in-bluetooth-other-devices">Windows can't find the controller when trying  to add it in <code>Bluetooth &amp; Other Devices</code></h2>
+<h2 id="windows-cant-find-the-controller-when-trying-to-add-it-in-bluetooth-other-devices">Windows can't find the controller when trying to add it in <code>Bluetooth &amp; Other Devices</code></h2>
 <ul>
 <li><a href="../../guides/connecting-controllers/#bluetooth"><strong>MAKE SURE YOUR DEVICE IS IN PAIRING MODE!</strong></a></li>
 <li>For most controllers a 2.1 Bluetooth adapter is required</li>
@@ -1365,7 +1391,7 @@
 <li>Possible faulty controller or dying controller battery</li>
 <li>Check DS4Windows' log for error messages</li>
 <li>Verify if the issue does not occur when DS4Windows or Steam are not running<ul>
-<li>Keep in mind that using some controllers (DS4, DualSense) with DS4W or Steam makes them transfer more data, thus making them more prone to lose connection if your BT adapter is not up to the task</li>
+<li>Keep in mind that using some controllers (DS4, DualSense) with DS4W or Steam makes them transfer more data, thus making them more prone to lose connection if your BT adapter is not up to the task </li>
 </ul>
 </li>
 </ul>
@@ -1394,6 +1420,21 @@
 <li>When DS4Windows starts communicating with controllers the amount the data being traded vastly increases and may serve as an explanation if this issue does not occur when the controller is connected but DS4Windows is not running</li>
 <li>Refer to the <a href="../input-delay-bt/#causes-of-high-or-unstable-latency"><em>Input delay on Bluetooth</em> page</a> for more related info</li>
 </ul>
+<h2 id="controller-sometimes-tries-to-reconnect-to-wrong-nearby-pc">Controller sometimes tries to reconnect to wrong, nearby PC</h2>
+<p>Both PCs' Bluetooth adapters probably have the exact same MAC Address, so the controller can't differentiate between them and tries to connect to the first one that responds.</p>
+<p>Check the dedicated <a href="../../other/under-construction"><em>Controller trying to reconnect to wrong, nearby PC</em> page</a> for more info on how to verify if this is the case and how to fix the issue.</p>
+<details class="info"><summary>Move content to dedicated page in the "other" section</summary><p>When trying to reconnect, a controller tries to locate the BT adapter with the same MAC Address of the last PC it has been paired to.</p>
+<p>The only way for a controller to try reconnecting to the wrong PC is if both PC's Bluetooth adapters have the exact same MAC Address, a situation that can easily happen if the user has brought multiple adapters from the same model.</p>
+<p>The fix to this is to either:</p>
+<ul>
+<li>Replace one of the PCs' BT adapter with one that has a different MAC Address or...</li>
+<li>Use a tool to rewrite the BT dongles MAC Address <strong>out of your own resonsability</strong><ul>
+<li>Even though many users had success with this tool there is always a small chance that things can go wrong and BT dongle ends-up dead. As such, we recommend using only with USB BT Adapters since these can be easily replaced</li>
+<li>If you understood the points above, the tool is </li>
+</ul>
+</li>
+</ul>
+</details>
                 
               
               

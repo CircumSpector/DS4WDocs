@@ -407,7 +407,7 @@
   
     <li class="md-nav__item">
       <a href="../../about-ds4windows/faq/" class="md-nav__link">
-        Frequently Asked Questions (under construction)
+        Frequently Asked Questions about DS4Windows
       </a>
     </li>
   
@@ -924,6 +924,18 @@
   
 
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../troubleshooting/audio-related/" class="md-nav__link">
+        Headphone or mic related issues when using supported gamepads
+      </a>
+    </li>
+  
+
+          
         </ul>
       </nav>
     </li>
@@ -1082,11 +1094,36 @@
                 <h1 id="preventing-the-double-controller-double-input-issue-in-games">Preventing the double controller / double input issue in games</h1>
 <h2 id="about-the-double-input-controller-issue">About the double input (controller) issue</h2>
 <p>DS4Windows does not magically transform your gamepad from one type to another. It creates a <strong><em>virtual</em></strong> gamepad that is associated to your real one. This means that if you have 1 real gamepad connected then windows will actually detect 2 gamepads. If 2 real then 4 and so on.</p>
-<p>The image below shows how Windows behaves when a DS4v2 (Wireless Controller) is connected to the system while DS4Windows is emulating a Xbox gamepad: </p>
-<p><img alt="SharedJoycpl" class="glightbox" src="../images/SharedJoycpl.png" /> </p>
-<p>If the game detects both the real and the virtual gamepad at the same time then it will receive commands from 2 different devices at every button press and stick movement, which can lead to the infamous double-input issue that can make games unplayable.</p>
-<p>Alternatively, the game may end-up ignoring the virtual controller because it has picked the real controller first. When this happens, it may also be unable to read its commands, which can create a dead-lock state where nothing happens.</p>
-<p>To prevent or fix those issues it's necessary to make only DS4Windows' virtual controller be visible to games by hiding the real controller. This can be done in two ways:</p>
+<p>The image below shows how Windows behaves when a DS4v2 (Wireless Controller) is connected to the system while DS4Windows is emulating a Xbox gamepad:</p>
+<p><img alt="SharedJoycpl" class="glightbox" src="../images/SharedJoycpl.png" /></p>
+<p>If the game detects both the real and the virtual gamepad at the same time then it will receive commands from 2 different devices at every button press and stick movement, which can lead to the infamous double-input issue that can make games unplayable. Check the examples below:</p>
+<details class="info"><summary>GIF showcasing the double input issue (click to expand)</summary><div class="admonition important">
+<p class="admonition-title">Important</p>
+<ul>
+<li>"Keep in mind that the "double input issue" encompass every problem related to 2 controllers responding to the same user' input, even if both controllers are not 100% mimicking each other</li>
+<li>Test it yourself on the <a href="https://gamepad-tester.com/">Gamepad Tester Website</a></li>
+</ul>
+</div>
+<p><img alt="GamepadTesterDoubleInput" class="glightbox" src="../images/GamepadTesterDoubleInput.gif" /></p>
+</details>
+<details class="info"><summary>Problems caused by the double input issue (click to expand)</summary><p>The game may:</p>
+<ul>
+<li>Detect every command twice, making it unplayable</li>
+<li>Start 2 player mode randomly</li>
+<li>Ignore the virtual controller because it picked the real controller first</li>
+<li>Respond incorrectly to the controller's inputs<ul>
+<li>Usually happens because, even though the game is correctly reading the virtual controller, it is also incorrectly reading the real controller's inputs at the same time</li>
+</ul>
+</li>
+<li>Do not respond to any controller command<ul>
+<li>Usually happens because the game detected the real controller first while being simultaneously unable to read its inputs</li>
+</ul>
+</li>
+<li>Other non-obvious issues</li>
+</ul>
+</details>
+<hr />
+<p><strong>To prevent or fix this issue it's necessary to hide the real controller in order to make only DS4Windows' virtual controller visible to games.</strong> This can be done in two ways:</p>
 <ul>
 <li>HidHide (recommended)</li>
 <li>DS4Windows' <code>Hide DS4 Controllers</code> option (legacy, non-recommended option)</li>
@@ -1100,13 +1137,20 @@
 <li>If HidHide is properly configured then the <code>Hide DS4 controllers</code> option under DS4Windows' <code>Settings</code> tab is redundant and should be left disabled</li>
 </ul>
 </div>
-<p>HidHide is a driver that acts as a barrier between Windows and every Human Interaction Device (or just "<strong>HID</strong>") connected to the system, which includes game controllers. It allows the user to selectively hide gamepads and only allow specific software to see them.</p>
-<p>It is the recommended method because once it has been properly setup the double input issue is solved for good.</p>
+<p>HidHide is a driver that acts as a barrier between Windows and game controllers connected to the system. It allows the user to selectively hide gamepads and only allow specific software to still detect them.</p>
+<p>It is the recommended method because once it has been properly setup the double input issue is solved for good for the hidden controller.</p>
 <p>In DS4W case, the user needs to set HidHide to:</p>
 <ol>
-<li>Hide the real gamepads from the system <strong>once when connected via USB and once when via Bluetooth</strong></li>
+<li>Hide the real controllers from the system <strong>once when connected via USB and once when via Bluetooth</strong></li>
 <li>Allow DS4Windows to see all hidden devices, otherwise it would think there are no supported gamepads connected</li>
 </ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul>
+<li>In order to avoid confusion, make sure DS4Windows is stopped or fully closed <strong>BEFORE</strong> opening HidHide's Client so only real controllers appear on its devices list</li>
+<li>Remember to close HidHide's Client before re-opening DS4Windows, otherwise the <code>Ex</code> check will fail even if the controller is correctly hidden</li>
+</ul>
+</div>
 <div class="tabbed-set" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">HidHide result</label><div class="tabbed-content">
 <p><img alt="HidHideAccess" class="glightbox" src="../images/HidHideAccess.png" /> </p>
 </div>
@@ -1114,9 +1158,6 @@
 <p><img alt="HidHideConfigClient" class="glightbox" src="../images/HidHideConfigClient.png" /></p>
 </div>
 <input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><label for="__tabbed_1_3">Example: Hiding a DS4</label><div class="tabbed-content">
-<div class="admonition important">
-<p class="admonition-title">Make sure DS4Windows is stopped or fully close <strong>BEFORE</strong> opening HidHide's Client</p>
-</div>
 <p><img alt="HidingDS4HidHide.gif" class="glightbox" src="../images/HidingDS4HidHide.gif" />  </p>
 </div>
 </div>
