@@ -1276,9 +1276,10 @@
 <p>To "manually" verify if a controller has been successfully hidden:</p>
 <ol>
 <li>Make sure that DS4Windows is Stopped or fully closed, otherwise you might mistake a DS4Windows' virtual controller with your real one</li>
-<li>Verify on the <a href="">Gamepad Tester Website</a> and on <a href="">Windows' Game Controllers list</a> if your real controller is still detected<ul>
-<li>If your controller appears and you can see its responses to commands (specially on the Gamepad Test Website) then your controller is not hidden. In this case, re-configure HidHide</li>
-<li>If your controller is not detected then it has been successfully hidden and the double-input issue is prevented</li>
+<li>Verify on the <a href="https://gamepad-tester.com/">Gamepad Tester Website</a> and on <a href="../../troubleshooting/controllers-check/#windows-game-controllers-list-joycpl">Windows' Game Controllers list</a> if your real controller is still detected<ul>
+<li>It's recommended to reconnect the controllers after hiding them for the changes to take full effect, otherwise some applications might continue to still detect them</li>
+<li>If your controller is detected/appears on the list then your controller is obviously not hidden. In this case, re-configure HidHide</li>
+<li>If your controller is not detected then it has been successfully hidden and the double-input issue should be prevented</li>
 </ul>
 </li>
 </ol>
@@ -1296,7 +1297,8 @@
 <li>Fully confirm if the controller is hidden by using the "Manual method" on this page</li>
 <li>If the controller is used via both USB and Bluetooth remember that it needs to be hidden once via USB and another via Bluetooth</li>
 <li>Sometimes a controller can be marked as hidden but remain visible. In this case, verify all the marked entries in the list and just uncheck and re-check them<ul>
-<li>This usually happens if a Bluetooth connected controller has been removed and re-paired</li>
+<li>This usually happens if a Bluetooth connected controller that was hidden has been removed and re-paired</li>
+<li>Reconnect the controller after re-marking them as hidden</li>
 </ul>
 </li>
 </ul>
