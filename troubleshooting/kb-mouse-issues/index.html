@@ -1008,8 +1008,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#special-actions-macros-not-workinhg" class="md-nav__link">
-    Special action's MACROs not workinhg
+  <a href="#kbm-commands-not-working-when-being-sent-via-macros" class="md-nav__link">
+    KB/M commands not working when being sent via MACROs
   </a>
   
 </li>
@@ -1239,8 +1239,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#special-actions-macros-not-workinhg" class="md-nav__link">
-    Special action's MACROs not workinhg
+  <a href="#kbm-commands-not-working-when-being-sent-via-macros" class="md-nav__link">
+    KB/M commands not working when being sent via MACROs
   </a>
   
 </li>
@@ -1284,9 +1284,8 @@
 <li>Games simply not recognizing commands coming from the SendInput function</li>
 </ul>
 <h3 id="fakerinput">FakerInput</h3>
-<p>The FakerInput handler does not suffer from the limitations of the SendInput handler, but it's usage requires its driver installation.</p>
+<p>The FakerInput handler does not suffer from the limitations of the SendInput handler, but it's usage requires its driver installation. It's also currently in beta and the user may suffer from unknown issues.</p>
 <p>When it's active, DS4Windows' KB+M commands are sent via the FakerInput and received by the system as non-different than a real keyboard and mouse, meaning Windows and games will accept its commands even in situations that virtual KB+M usage are blocked.</p>
-<p>It's currently in beta and the user may suffer from unknown issues. One known problem is that MACROs that involve KB+M usage are currently broken when using it (unconfirmed), though directly remapping a controller function to a key or mouse action is working as normal.</p>
 <h2 id="verifying-changing-current-kbm-handler-being-used-by-ds4windows">Verifying / changing current KB+M handler being used by DS4Windows</h2>
 <p>You can check on DS4Windows' <code>Log</code> tab which handler is being used.</p>
 <p><img alt="LogKBnMHandlerFakerInput" class="glightbox" src="../images/LogKBnMHandlerFakerInput.png" /> </p>
@@ -1323,7 +1322,6 @@
 <li>Switching to the FakerInput handler<ul>
 <li>FakerInput's KB+M are recognized by the system/games as non-different than a real keyboard and mouse</li>
 <li>It's in beta test (v0.1) and the user may face some not-known issues </li>
-<li>Currently there is a bug where Special Actions' MACROS that involve KB &amp; M commands will not work when the FakerInput handler is being used, though normal KB &amp; M remapping works as usual</li>
 </ul>
 </li>
 </ul>
@@ -1348,8 +1346,22 @@
 </ul>
 </li>
 </ul>
-<h3 id="special-actions-macros-not-workinhg">Special action's MACROs not workinhg</h3>
-<p>Unconfirmed: it seems that MACROs configured under the profile's Special Actions section do not work when using the <strong>FakerInput handler</strong>. Until this is fixed, the only workaround is uninstalling the FakerInput driver so the <strong>SendInput handler</strong> is used.</p>
+<h3 id="kbm-commands-not-working-when-being-sent-via-macros">KB/M commands not working when being sent via MACROs</h3>
+<div class="admonition note">
+<p class="admonition-title">Section to be re-worked</p>
+</div>
+<p>If keyboard events are sent too fast Windows may not register that they happened. It is advised that the user:</p>
+<ul>
+<li>OR Manually adds a wait time between the key press and release commands<ul>
+<li>100ms is the recommended minimum wait time</li>
+</ul>
+</li>
+<li>OR Activate the <code>Record delays</code> option when recording a MACRO, which will make the MACRO recorder auto-register the time it takes for the user to send commands (only starts registering the time after the first command is sent)<ul>
+<li>Depending on the key sequence being registered this may not work. Example: trying to record <code>Alt + Tab</code>, the <code>Win</code> key and some others combinations won't work since pressing these keys or key combination will un-focus the MACRO recorder window, making it stop registering some/all the keys being used.</li>
+</ul>
+</li>
+</ul>
+<p><img alt="MACROWaitTime" class="glightbox" src="../images/MACROWaitTime.png" /> </p>
                 
               
               
