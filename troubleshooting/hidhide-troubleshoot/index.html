@@ -1235,19 +1235,18 @@
 <p>It's mostly used to prevent the infamous Double Input issue. For more info on this, check the <a href="../../guides/solving-double-input/"><em>Preventing the double input issue in games</em> page</a>.</p>
 <h2 id="common-problems-and-issues-when-using-hidhide">Common problems and issues when using HidHide</h2>
 <h3 id="hidhide-is-installed-but-the-double-input-issue-still-occurs">HidHide is installed but the double input issue still occurs</h3>
-<p>Just installing HidHide is not enough. On its default settings it basically does nothing. It needs to be properly configured accordingly to <a href="https://vigem.org/projects/DsHidMini/DS4-Mode-User-Guide/">its setup guide</a>.</p>
+<p>Just installing HidHide is not enough since on its default settings it basically does nothing. It needs to be manually configured to hide specific controllers on its Configuration Client.</p>
 <h3 id="what-should-i-add-to-hidhides-application-list">"What should I add to HidHide's Application list?"</h3>
 <p>Usually only DS4Windows itself since it needs to keep detecting physical controllers even when they are hidden.</p>
 <p>Games or other applications should not be on the application list unless you have an specific use-case that requires them to have direct access to your real controller instead of using DS4Windows' virtual controllers.</p>
 <h3 id="im-having-trouble-finding-which-controller-to-hide-on-hidhides-list">"I'm having trouble finding which controller to hide on HidHide's list"</h3>
-<p>Keep in mind: real (physical) controllers are the one that need to be hidden to prevent the double input issue, but HidHide will show both real and virtual controllers on its list with no apparent distinction.</p>
-<p>To not get confused on which devices are real and which are virtual, <strong>the major recomendation is to make sure DS4Windows is NOT RUNNING so no virtual devices are present on the system BEFORE opening HidHide's Client</strong>. The proper steps for this are:</p>
+<p>Keep in mind: real (physical) controllers are the one that need to be hidden to prevent the double input issue, but HidHide will show both real and virtual controllers on its devices list.</p>
+<p>To not get confused, <strong>the major recomendation is to make sure DS4Windows is NOT RUNNING so no virtual devices are present on the system BEFORE opening HidHide's Client</strong>. The proper steps for this are:</p>
 <ol>
-<li><strong>Make sure both DS4Windows is "Stopped" and fully closed  BEFORE the HidHide Configuration Client is open!</strong></li>
 <li>Open Windows' <a href="../controllers-check/#windows-game-controllers-list">Game Controllers list (joy.cpl)</a></li>
-<li>On HidHide Configuration Client select the <code>Devices</code> tab</li>
-<li>Mark the <code>Enable Device Hiding</code> checkbox at the bottom</li>
-<li>Find your controller in the list and mark it, a Red Lock should appear indicating that it is hidden<ul>
+<li><strong>Make sure both DS4Windows is "Stopped" and fully closed, THEN you open the HidHide Configuration Client</strong></li>
+<li>Mark the <code>Enable Device Hiding</code> checkbox at the bottom of the Devices tab</li>
+<li>Find your controller in the Devices tab list and mark it, a Red Lock should appear indicating that it is hidden<ul>
 <li>This needs to be done once via USB and once via Bluetooth if both connection methods are used</li>
 </ul>
 </li>
@@ -1256,22 +1255,22 @@
 <li>Reconnecting the controller may be required</li>
 </ul>
 </li>
-<li><strong>CLOSE</strong> HidHide Config. Client and then open or Start DS4Windows</li>
-<li>Confirm if the <code>Key</code> icon check is now present on your controllers "Ex" tab</li>
+<li><strong>CLOSE</strong> HidHide Config. Client and only then open or Start DS4Windows</li>
 </ol>
 <h3 id="how-do-i-confirm-my-physical-controller-is-really-hidden">"How do I confirm my physical controller is really hidden?"</h3>
 <h4 id="verifying-on-ds4windows">Verifying on DS4Windows</h4>
 <p>Verify on DS4Windows' <code>Controllers</code> tab if the "Key" icon is present on the connected controllers' <code>Ex</code> Column.</p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p>Keep in mind that DS4Windows only verifies if a controller is hidden on connection or if DS4Windows is restarted.</p>
+<ul>
+<li>The <code>Ex</code> check can fail if the HidHide Configuration Client (or other program using HidHide) is open when DS4Windows starts<ul>
+<li>This makes no difference on if the controller is properly hidden or not, DS4Windows just will fail to inform you in case it really is</li>
+</ul>
+</li>
+<li>Keep in mind that DS4Windows only verifies if a controller is hidden on connection or if DS4Windows is restarted.</li>
+</ul>
 </div>
 <p><img alt="HidHideAccess" class="glightbox" src="../images/HidHideAccessSmall.png" /> </p>
-<p>Situations that can make the check fail (but have no influence on if the controller is actually hidden or not) are:</p>
-<ul>
-<li>Some other process is already accessing HidHide's settings (example: HidHide's own Configuration Client being open)</li>
-<li>The controller was marked as hidden / visible in HidHide's Client while DS4Windows was still running</li>
-</ul>
 <h4 id="manual-method">Manual method</h4>
 <p>To "manually" verify if a controller has been successfully hidden:</p>
 <ol>
@@ -1292,7 +1291,7 @@
 </ul>
 <h3 id="ive-hidden-my-controller-but-still-suffer-from-double-input">"I've hidden my controller but still suffer from double input"</h3>
 <ul>
-<li>Make sure the <code>Enable Device Hiding</code> checkbox is marked</li>
+<li>Make sure the <code>Enable Device Hiding</code> checkbox is marked on HidHide's Config Client <code>Devices</code> tab</li>
 <li>Try reconnecting the controller</li>
 <li>Fully confirm if the controller is hidden by using the "Manual method" on this page</li>
 <li>If the controller is used via both USB and Bluetooth remember that it needs to be hidden once via USB and another via Bluetooth</li>

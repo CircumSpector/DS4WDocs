@@ -576,6 +576,19 @@
     HidHide (recommended)
   </a>
   
+    <nav class="md-nav" aria-label="HidHide (recommended)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hidhide-usage-tips" class="md-nav__link">
+    HidHide Usage tips
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -1109,6 +1122,19 @@
     HidHide (recommended)
   </a>
   
+    <nav class="md-nav" aria-label="HidHide (recommended)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hidhide-usage-tips" class="md-nav__link">
+    HidHide Usage tips
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -1186,27 +1212,13 @@
 </ul>
 <h2 id="methods-to-prevent-it">Methods to prevent it</h2>
 <h3 id="hidhide-recommended">HidHide (recommended)</h3>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<ul>
-<li>After installing the HidHide driver you <strong>MUST</strong> reboot your system before using it</li>
-<li>If HidHide is properly configured then the <code>Hide DS4 controllers</code> option under DS4Windows' <code>Settings</code> tab is redundant and should be left disabled</li>
-</ul>
-</div>
 <p>HidHide is a driver that acts as a barrier between Windows and game controllers connected to the system. It allows the user to selectively hide gamepads and only allow specific software to still detect them.</p>
 <p>It is the recommended method because once it has been properly setup the double input issue is solved for good for the hidden controller.</p>
-<p>In DS4W case, the user needs to set HidHide to:</p>
+<p>In DS4Windows case, the user needs to set HidHide to:</p>
 <ol>
 <li>Hide the real controllers from the system <strong>once when connected via USB and once when via Bluetooth</strong></li>
 <li>Allow DS4Windows to see all hidden devices, otherwise it would think there are no supported gamepads connected</li>
 </ol>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<ul>
-<li>In order to avoid confusion, make sure DS4Windows is stopped or fully closed <strong>BEFORE</strong> opening HidHide's Client so only real controllers appear on its devices list</li>
-<li>Remember to close HidHide's Client before re-opening DS4Windows, otherwise the <code>Ex</code> check will fail even if the controller is correctly hidden</li>
-</ul>
-</div>
 <div class="tabbed-set" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">HidHide result</label><div class="tabbed-content">
 <p><img alt="HidHideAccess" class="glightbox" src="../images/HidHideAccess.png" /> </p>
 </div>
@@ -1214,13 +1226,25 @@
 <p><img alt="HidHideConfigClient" class="glightbox" src="../images/HidHideConfigClient.png" /></p>
 </div>
 <input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><label for="__tabbed_1_3">Example: Hiding a DS4</label><div class="tabbed-content">
-<p><img alt="HidingDS4HidHide.gif" class="glightbox" src="../images/HidingDS4HidHide.gif" />  </p>
+<p><img alt="HidingDS4HidHide.gif" class="glightbox" src="../images/HidingDS4HidHide.gif" /> </p>
 </div>
 </div>
 <p>HidHide has its own <a href="https://vigem.org/projects/HidHide/Simple-Setup-Guide/">dedicated setup page</a>. Users who know more or less what they are doing can follow the quick setup section and for the ones having trouble there is also the step-by-step section.</p>
-<div class="admonition note">
-<p class="admonition-title">Dedicated troubleshooting page</p>
-<p>Though HidHide's own setup guide should cover everything the user needs, this site also has a <a href="../../troubleshooting/hidhide-troubleshoot/">dedicated HidHide usage troubleshooting page</a> for users having trouble configuring it or confirming if their real controllers are actually hidden.</p>
+<h4 id="hidhide-usage-tips">HidHide Usage tips</h4>
+<div class="admonition info">
+<p class="admonition-title">General usage tips</p>
+<ul>
+<li>After installing the HidHide driver you <strong>MUST</strong> reboot your system before using it</li>
+<li>If HidHide is properly configured then the <code>Hide DS4 controllers</code> option under DS4Windows' <code>Settings</code> tab is redundant and should be left disabled</li>
+<li>Though HidHide's own setup guide should cover everything the user needs, this site also has a <a href="../../troubleshooting/hidhide-troubleshoot/">dedicated HidHide usage troubleshooting page</a> for users having trouble configuring it or confirming if their real controllers are actually hidden.</li>
+</ul>
+</div>
+<div class="admonition important">
+<p class="admonition-title">HidHide Configuration Client tips</p>
+<ul>
+<li>In order to avoid confusion, make sure DS4Windows is stopped or fully closed <strong>BEFORE</strong> opening HidHide's Client so only real controllers appear on its devices list</li>
+<li>Remember to close HidHide's Client before re-opening DS4Windows, otherwise the <code>Ex</code> check will fail even if the controller is correctly hidden</li>
+</ul>
 </div>
 <h3 id="hide-ds4-controllers-option-legacy-not-recommended"><code>Hide DS4 Controllers</code> option (legacy. Not recommended)</h3>
 <div class="admonition important">
