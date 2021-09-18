@@ -100,11 +100,7 @@ Because of motives above and the fact that this is something unfixable by DS4Win
 
 The main difference is that for Steam's controller support to work every game or application need to be launched __through__ Steam, since it needs to directly intercepts the game's controller communication. On the other hand, DS4Windows' virtual controllers behave as real ones on the system and will work in any game or application that has support to them, _including_ Steam games.
 
-Function wise, DS4Windows can be considered more powerful, with only a few exceptions where Steam can do something better or that the former cannot.
-
-With everything said, Steam does A LOT of things automatically to ensure game-controller compatibility and prevent some known issues, which can make using it easier for the average gamer.
-
-In the end they are both tools and the choice on which to use falls upon the user themselves.
+Both tools have the same main functions while also having their own extras. In the end, the users themselves need to learn what both tools can do and how to properly use them to decide which one is better for their use case. 
 
 ## Can I use the headphone jack port of a DS4 or DualSense controller on a PC?
 
