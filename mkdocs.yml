@@ -1,0 +1,103 @@
+site_name: R7's DS4Windows Website (Unofficial)
+repo_url: https://github.com/Kanuan/DS4W_Website.github.io
+site_description: Projects devoted to USB input device emulation and game peripherals reverse engineering
+
+theme:
+  name: material
+  custom_dir: overrides
+  favicon: images/favicon.png
+  palette:
+    - scheme: slate
+      primary: blue
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+    - scheme: default
+      primary: blue
+      toggle:
+       icon: material/weather-night
+       name: Switch to dark mode
+
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.top
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/Ryochan7/DS4Windows
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/ds4windows
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/channel/UCIoUA_XLlCSZbvZGeg3Byeg    
+extra_css:
+  - stylesheets/glightbox.css
+extra_javascript:
+  - javascripts/glightbox.js
+  - javascripts/main.js
+
+plugins:
+  - search:
+      lang: en
+
+markdown_extensions:
+  - admonition:
+  - attr_list:
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight:
+  - pymdownx.tabbed:
+  - pymdownx.superfences:
+  - pymdownx.keys:
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.details:
+  - pymdownx.tilde:
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      social_url_shorthand: true
+
+nav:
+  - Welcome: index.md
+  - About DS4Windows:
+    - 'about-ds4windows/index.md'
+    - 'about-ds4windows/supported-gamepads.md'
+    - 'about-ds4windows/companion-drivers.md'
+    - 'about-ds4windows/faq.md'
+  - Community and Support: community-support.md
+  - Guides:
+    - 'guides/index.md'
+    - The basics:
+      - 'guides/install-setup.md'
+      - 'guides/connecting-controllers.md'
+      - 'guides/solving-double-input.md'
+    - Managing DS4W. Installation and User Data:  
+      - 'guides/managing-user-data.md'
+      - 'guides/uninstalling-ds4windows.md'
+    - Advanced guides:
+      - 'guides/ds4w-custom-name.md'
+  - Troubleshooting:
+    - 'troubleshooting/index.md'
+    - 'troubleshooting/ds4w-does-not-run.md'
+    - Physical controller detection, connection and related issues:
+      - 'troubleshooting/ds4w-controller-detection.md'
+      - 'troubleshooting/controllers-check.md'
+      - 'troubleshooting/bt-connection-issues.md'
+      - 'troubleshooting/input-delay-bt.md'
+    - Virtual controller usage in games and related issues: 
+      - 'troubleshooting/virtual-controller-failure.md'
+      - 'troubleshooting/games-controller-detection.md'
+      - 'troubleshooting/xinput-slots-order.md'
+      - 'troubleshooting/misbehaving-controller-ingame.md'
+    - Double input related issues:
+      - 'troubleshooting/hidhide-troubleshoot.md'
+      - 'troubleshooting/hide-ds4-option.md'
+    - 'troubleshooting/kb-mouse-issues.md'
+    - 'troubleshooting/steam-related.md'
+    - 'troubleshooting/audio-related.md'
+  - Other:
+    - "other/index.md"
+    - "other/how-to-check-architecture.md"
+    - "other/under-construction.md"
