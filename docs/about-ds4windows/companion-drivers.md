@@ -36,4 +36,4 @@ The ScpVBus driver is used to create fake/virtual/emulated Xbox 360 controllers.
 
 Usually, users accidentally install this driver when they search for "DS4Windows" on google and end-up clicking on the first result that appears, which leads to the original (but now obsolete) version of DS4Windows from the developer Jays2kings which prompts the user to install it. 
 
-ScpVBus is not used anymore by Ryochan7's DS4Windows besides for experimenting purposes on special testing builds. Therefore, this driver has no use for the average user and it's better if it were to be uninstalled if it's present, since it has a minor chance of causing issues with Windows.
+ScpVBus is not used anymore by Ryochan7's DS4Windows besides for experimenting purposes on special testing builds. Therefore, this driver has no use for the average user and [it's better if it were to be uninstalled in case it's present](../../guides/uninstalling-ds4windows/#legacy-drivers) since it has a minor chance of causing issues/BSoD on Windows.
