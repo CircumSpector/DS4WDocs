@@ -104,14 +104,9 @@ Both tools have the same main functions while also having their own extras. In t
 
 ## Can I use the headphone jack port of a DS4 or DualSense controller on a PC?
 
-Only when using:
+Only when connected via USB (official DS4v2, DualSense and some fake DS4) or when connected over Sony's official USB Wireless Adapter (DS4 controllers)
 
-- a DS4 version 2 or a DualSense connected via USB
-- a DS4 controller connected wirelessly by using the official Sony USB Wireless Adapter
-
-When a controller is connected accordingly to the options above, a new audio and mic device should be detected by Windows automatically, without the need of special drivers or similar.
-
-Keep in mind that those are native functions of the controller or of the official Sony Adapter and that DS4Windows is not involved with anything audio related. If the audio device parts of the controller are not being detected or you are having audio issues then that's 100% not DS4Windows' fault.
+For more info: [Headphone or mic related issues when using supported gamepads](../../troubleshooting/audio-related/).
 
 ### Will DS4Windows add suport for DS4/DualSense's headphone jack when connected via the standard Windows Bluetooth?
 
