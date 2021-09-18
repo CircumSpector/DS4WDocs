@@ -26,6 +26,8 @@ HidGuardian is a driver that can hide controllers from the system and allow only
 
 DS4Windows removed support for HidGuardian in version 3.0.8 in favor of HidHide. As such, users who used and still have HidGuardian installed can be in a state where their controllers are hidden and undetectable to Windows and DS4Windows.
 
+**It's highly recommended for the user to follow [HidGuardian's uninstall instructions](../../guides/uninstalling-ds4windows/#legacy-drivers) in order to verify if it's installed and how to safely remove it in case it is.**
+
 ### Virtual Gamepad Emulation Bus (ScpVBus)
 
 !!! note "Necessary to confirm the information here"
