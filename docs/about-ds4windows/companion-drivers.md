@@ -24,7 +24,7 @@ DS4Windows uses the FakerInput driver to expose system-wide virtual keyboard, re
 
 HidGuardian is a driver that can hide controllers from the system and allow only chosen processes to detect them. It was previously used by DS4Windows to solve the double input issue, but was made obsolete by the release of its successor, HidHide, a similar driver that works better and is easier to use.
 
-DS4Windows removed support for HidGuardian in version 3.0.8 in favor of HidHide. As such, users who used and still have HidGuardian installed can be in a state where their controllers are hidden and undetectable to Windows and DS4Windows, though the controllers should still appear on Windows' Devices and Printers.
+DS4Windows removed support for HidGuardian in version 3.0.8 in favor of HidHide. As such, users who used and still have HidGuardian installed can be in a state where their controllers are hidden and undetectable to Windows and DS4Windows.
 
 ### Virtual Gamepad Emulation Bus (ScpVBus)
 
