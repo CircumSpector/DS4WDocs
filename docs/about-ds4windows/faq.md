@@ -115,7 +115,7 @@ Keep in mind that those are native functions of the controller or of the officia
 
 ### Will DS4Windows add suport for DS4/DualSense's headphone jack when connected via the standard Windows Bluetooth?
 
-Is it possible to implement this? Apparently yes. ___WILL___ it be implemented? The answer is probably ___no___ unless some new developer steps in to specifically focus on this.
+Is it possible to implement this? Apparently yes. ___WILL___ it be implemented? The answer is probably **no** unless some new developer steps in to specifically focus on this.
 
 What most users don't understand is that:
 
