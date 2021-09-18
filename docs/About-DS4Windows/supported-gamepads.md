@@ -91,8 +91,9 @@ DS3 | 	2.2.10 | Needs to be running under [DsHidMini driver](https://github.com/
 - If a gamepad is made to be a complete replica of a official one (acts exactly as the original and appear to Windows as such) then chances are DS4Windows will just detect it as being the official controller and it __may__ just work (no guarantees though)
     - __Example:__ 8bitdo controllers that are compatible with Nitendo's Switch usually present themselves as a replica of the Pro Controller and can be used as normal with DS4Windows.
 - For cases where the gamepad presents itself differently than the official one to the system (most DS4 replicas) then DS4Windows will not recognize them. DS4W detects controller by their **V**endor and **P**roduct **I**dentification (VID/PID), so if a controller's VID/PID is not already on DS4W code then it will just be ignored
-    - Adding support to new copy-cats may be as easy as just adding their VID/PID to the code or as hard as making major changes to the internal structures of DS4Windows
-    - If you have a unsupported copy-cat feel free to reach us and kindly ask for it to be added to DS4Windows code while providing the [maximum amount of information]() on it and always, **ALWAYS**, respect the [golden rule]().
+    - Adding support to new copy-cats may be as easy as just adding their VID/PID to the code or as hard as making major changes to the internal structures of DS4Windows, so it's not feasible to add support for every single controller out there
+    
+!!! note "To Do: add info on how to request for a 3rd party controller to be supported"
 
 ### Xbox controllers
 
