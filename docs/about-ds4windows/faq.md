@@ -98,7 +98,7 @@ Because of motives above and the fact that this is something unfixable by DS4Win
 
 ## What's the differences between using a controller with DS4Windows and using it with Steam Input?
 
-The main difference is that for Steam's controller support to work every game or application need to be launched __through__ Steam, since it needs to directly intercepts the game's controller communication. On the other hand, DS4Windows' virtual controllers behave as real ones on the system and will work in any game or application that has support to them, including Steam games.
+The main difference is that for Steam's controller support to work every game or application need to be launched __through__ Steam, since it needs to directly intercepts the game's controller communication. On the other hand, DS4Windows' virtual controllers behave as real ones on the system and will work in any game or application that has support to them, _including_ Steam games.
 
 Function wise, DS4Windows can be considered more powerful, with only a few exceptions where Steam can do something better or that the former cannot.
 
