@@ -1400,20 +1400,13 @@
 <p>There is an issue with the ViGEmBus's virtual DS4 controllers where it doesn't correctly register if a game wants to activate <strong>only</strong> the rumble or <strong>only</strong> change the lightbar color. Depending on how the game is coded to manage these functions, this may cause the rumble to never stop or the lightbar to change to the wrong color.</p>
 <p>Because of motives above and the fact that this is something unfixable by DS4Windows, the rumble and lightbar passthru functions were disabled until the next version of the ViGEmBus is released, with no estimate for when this will happen.</p>
 <h2 id="whats-the-differences-between-using-a-controller-with-ds4windows-and-using-it-with-steam-input">What's the differences between using a controller with DS4Windows and using it with Steam Input?</h2>
-<p>The main difference is that for Steam's controller support to work every game or application need to be launched <strong>through</strong> Steam, since it needs to directly intercepts the game's controller communication. On the other hand, DS4Windows' virtual controllers behave as real ones on the system and will work in any game or application that has support to them, including Steam games.</p>
-<p>Function wise, DS4Windows can be considered more powerful, with only a few exceptions where Steam can do something better or that the former cannot.</p>
-<p>With everything said, Steam does A LOT of things automatically to ensure game-controller compatibility and prevent some known issues, which can make using it easier for the average gamer.</p>
-<p>In the end they are both tools and the choice on which to use falls upon the user themselves.</p>
+<p>The main difference is that for Steam's controller support to work every game or application need to be launched <strong>through</strong> Steam, since it needs to directly intercepts the game's controller communication. On the other hand, DS4Windows' virtual controllers behave as real ones on the system and will work in any game or application that has support to them, <em>including</em> Steam games.</p>
+<p>Both tools have the same main functions while also having their own extras. In the end, the users themselves need to learn what both tools can do and how to properly use them to decide which one is better for their use case. </p>
 <h2 id="can-i-use-the-headphone-jack-port-of-a-ds4-or-dualsense-controller-on-a-pc">Can I use the headphone jack port of a DS4 or DualSense controller on a PC?</h2>
-<p>Only when using:</p>
-<ul>
-<li>a DS4 version 2 or a DualSense connected via USB</li>
-<li>a DS4 controller connected wirelessly by using the official Sony USB Wireless Adapter</li>
-</ul>
-<p>When a controller is connected accordingly to the options above, a new audio and mic device should be detected by Windows automatically, without the need of special drivers or similar.</p>
-<p>Keep in mind that those are native functions of the controller or of the official Sony Adapter and that DS4Windows is not involved with anything audio related. If the audio device parts of the controller are not being detected or you are having audio issues then that's 100% not DS4Windows' fault.</p>
+<p>Only when connected via USB (official DS4v2, DualSense and some fake DS4) or when connected over Sony's official USB Wireless Adapter (DS4 controllers)</p>
+<p>For more info: <a href="../../troubleshooting/audio-related/">Headphone or mic related issues when using supported gamepads</a>.</p>
 <h3 id="will-ds4windows-add-suport-for-ds4dualsenses-headphone-jack-when-connected-via-the-standard-windows-bluetooth">Will DS4Windows add suport for DS4/DualSense's headphone jack when connected via the standard Windows Bluetooth?</h3>
-<p>Is it possible to implement this? Apparently yes. <strong><em>WILL</em></strong> it be implemented? The answer is probably <strong><em>no</em></strong> unless some new developer steps in to specifically focus on this.</p>
+<p>Is it possible to implement this? Apparently yes. <strong><em>WILL</em></strong> it be implemented? The answer is probably <strong>no</strong> unless some new developer steps in to specifically focus on this.</p>
 <p>What most users don't understand is that:</p>
 <ul>
 <li>DS4Windows is a free, open-source software developed by a few people out of their own limited free time. Have you ever had to work, study, have fun <em>and still have time left to work on non-paid software for random internet users?</em> Balancing all these things is not an easy task</li>
