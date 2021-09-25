@@ -129,7 +129,7 @@ As such, the latest versions of DS4Windows won't request HidGuardian for hidden 
 Users who still have HidGuardian installed must:
 
 1. Uninstall it for their controller to be detected again
-    - To verify if HidGuardian is installed and uninstall it if present, check [HidGuardian's section of HidHide's guide](https://vigem.org/projects/HidHide/Simple-Setup-Guide/#verifying-if-hidguardian-is-installed-and-uninstalling-it)
+    - To verify if HidGuardian is installed and uninstall it if present, check the [legacy drivers section of DS4Windows uninstallation guide](../../guides/uninstalling-ds4windows/#legacy-drivers)
 1. Install HidHide as a replacement for the "controller hiding" function that is necessary to prevent the double input issue 
     - For more information about HidHide and the double input issue, check the [_Preventing the double controller / double input issue in games_ guide](../../guides/solving-double-input/)
 
