@@ -38,10 +38,23 @@ These are companion drivers that are currently used by DS4Windows. If you are lo
 
 ## Legacy drivers
 
-These are drivers that are not used anymore but users might still have installed if they've been using DS4Windows for a long time
+These are drivers that are not used anymore but users might still have installed if they've been using DS4Windows for a long time.
 
-??? info "HidGuardian"
-    - Follow  [HidGuardian's section on HidHide's guide](https://kanuan.github.io/DS4WSite/troubleshooting/ds4w-controller-detection/) to verify if HidGuardian is present and how to uninstall it
+Of the drivers below, it's highly recommended that HidGuardian is uninstalled if present.
+
+??? info "HidGuardian (click to expand)"
+    
+    HidGuardian's installer utility can check if it's installed and _**SAFELLY**_ uninstall it in case it is, so that's what we are going to use:
+
+    - [Download and extract this archive](https://drive.google.com/file/d/1PNL3uv_4KektN00S9fm61djypSQ-3HED/view?usp=sharing)
+    - Inside the extracted folder, run HidGuardianInstaller.exe
+    - Check in the text log if HidGuardian is installed. If it is not, you can close the utility and move on with your life
+
+    ![UninstallHG](images/uninstall_hidguardian.png){: .glightbox }
+
+    - If HidGuardian is installed, click on the "Uninstall" button
+    - Wait until the utility finishes uninstalling HidGuardian, keep and eye on the text log to know what its status
+    - After the tool finishes uninstalling HidGuardian, close the tool **AND THEN REBOOT YOUR PC**
 
 ??? info "Uninstalling ScpVBus"
     !!! note "To Do: include pictures"
