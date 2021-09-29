@@ -73,6 +73,8 @@ nav:
       - 'guides/install-setup.md'
       - 'guides/connecting-controllers.md'
       - 'guides/solving-double-input.md'
+    - Customization:
+      - 'guides/p-editor-axis.md'
     - Managing DS4W. Installation and User Data:  
       - 'guides/managing-user-data.md'
       - 'guides/uninstalling-ds4windows.md'
