@@ -63,4 +63,4 @@ Dead Zone and Anti Dead Zone
 
         ![ADZ_0.80.jpg](images/deadzones/ADZ_0.80.jpg){: .glightbox } 
 
-- When the **Input** is inside the Dead Zone (red area) the resulting position (**Output**) is perfectly centered (or _zeroed_ if it's trigger instead of a stick) 
+- When the **Input** is inside the Dead Zone (red area) the **Output** (resulting position) is perfectly centered (or _zeroed_ in case it's trigger instead of a stick) 
