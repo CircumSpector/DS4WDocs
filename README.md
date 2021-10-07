@@ -1,6 +1,6 @@
 # DS4WSite
 
-Sources of [the unofficial Ryochan7's DS4Windows Website](https://vigem.github.io/), created in effort to document DS4Windows usage, issues, guides and general knowledge so end-users have a good starting point when trying to troubleshoot problems or use features of [Ryochan7's DS4Windows](https://github.com/Ryochan7/DS4Windows).
+Sources of the [CircumSpector's DS4Windows documentation](https://docs.ds4windows.app), created in effort to document usage, issues, guides and general knowledge so end-users have a good starting point when trying to troubleshoot problems or use features of [CircumSpector's DS4Windows](https://github.com/CircumSpector/DS4Windows).
 
 ## 3rd party credits
 
