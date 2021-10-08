@@ -1,6 +1,6 @@
 # Welcome
 
-Unofficial site for __Ryochan7's DS4Windows__ project
+Here you will find the documentation for the DS4Windows project
 
 ![DS4WMainWindow.png](images/DS4WMainWindow.png){: .glightbox }
 
