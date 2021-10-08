@@ -1,6 +1,6 @@
-site_name: R7's DS4Windows Website (Unofficial)
-repo_url: https://github.com/Kanuan/DS4W_Website.github.io
-site_description: Projects devoted to USB input device emulation and game peripherals reverse engineering
+site_name: DS4Windows Docs
+repo_url: https://github.com/CircumSpector/DS4WDocs
+site_description: DS4Windows documentation website. Guides, FAQs, troubleshooting articles and more.
 
 theme:
   name: material
