@@ -26,11 +26,7 @@ theme:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/Ryochan7/DS4Windows
-    - icon: fontawesome/brands/twitter
-      link: https://twitter.com/ds4windows
-    - icon: fontawesome/brands/youtube
-      link: https://www.youtube.com/channel/UCIoUA_XLlCSZbvZGeg3Byeg    
+      link: https://github.com/CircumSpector/DS4Windows 
 extra_css:
   - stylesheets/glightbox.css
 extra_javascript:
