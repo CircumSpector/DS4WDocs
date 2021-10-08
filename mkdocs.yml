@@ -58,10 +58,10 @@ markdown_extensions:
 nav:
   - Welcome: index.md
   - About DS4Windows:
-    - 'about-ds4windows/index.md'
-    - 'about-ds4windows/supported-gamepads.md'
-    - 'about-ds4windows/companion-drivers.md'
-    - 'about-ds4windows/faq.md'
+    - 'about/index.md'
+    - 'about/supported-gamepads.md'
+    - 'about/companion-drivers.md'
+    - 'about/faq.md'
   - Community and Support: community-support.md
   - Guides:
     - 'guides/index.md'
