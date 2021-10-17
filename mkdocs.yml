@@ -99,6 +99,8 @@ nav:
     - 'troubleshooting/kb-mouse-issues.md'
     - 'troubleshooting/steam-related.md'
     - 'troubleshooting/audio-related.md'
+    - Advanced:
+      - 'troubleshooting/tracing-guide.md'
   - Other:
     - "other/index.md"
     - "other/how-to-check-architecture.md"
