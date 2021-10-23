@@ -1,0 +1,287 @@
+# Preventing conflicts between Steam and DS4Windows
+
+## General info 
+
+Besides being a game store, Steam also has controller remapping functions (Steam Input). Since you are already using DS4Windows as your controller remapping tool, _re-remapping_ DS4Windows' virtual controller via Steam Input can lead to confusion at best ("which tool is doing what?") and actual conflicts at worst (each one doing something different for the same button/axis).
+
+Therefore, it's recommended that the user tweaks some Steam (or DS4Windows) settings to prevent remapping conflicts.
+
+Moreover, Steam alters its behavior if it detects DS4Windows is running. Though this usually DOES NOT affect controller detection in games or cause any sort of "grave" issue, it will:
+
+- Prevent the user from interacting with Steam's Big Picture interface when using a virtual DS4 controller
+- Not allow the user to use virtual DS4 controllers through Steam Input
+    - Which makes no difference for the vast majority of games, but may be needed for a few specific titles that require Steam Input for having native Playstation Controllers support
+
+
+## Recomendations
+
+!!! important "Preventing reemapping conflicts"
+	
+	In order to prevent remapping conflicts:
+	
+	- The major recommendation is following the "**Fully disabling Steam remapping functions**" section in this page so only DS4Windows' remapping functions are used
+
+	- In case the user needs to use both DS4Windows and Steam Input at the same time, the "**Using DS4Windows + Steam Input (DS4Windows as the main remapper)**" instructions will guide them on how to do so
+
+!!! info "Situational: Big Picture mode with emulated DS4 controllers"
+
+	- If the user wants to use Steam's Big Picture while emulating DS4 controllers then it's required that [DS4Windows is run under a custom ".exe" name](../../guides/ds4w-custom-name/), otherwise the Steam interface will ignore every PS controller in the system
+        - If the user has not [hidden their real controller in order to prevent the double input issue](../../guides/solving-double-input/) they WILL SURELY suffer from double input in the Steam interface AND in-game depending on Steam's controller settings
+
+### Situations where using DS4Windows + Steam Input is necessary
+
+**Usually using Steam Input along DS4Windows is not necessary and the user will have no problems with just using DS4Windows default configuration and disabling every Steam remapping function as instructed in this page.**
+
+Still, the few situations where it might be required are:
+
+- Using a very specific Steam remapping function which an equivalent does not exist on DS4Windows
+- Using Steam's "Xbox Config. Support" when emulating Xbox controllers to prevent the [incorrect XInput Slot issue](../../troubleshooting/xinput-slots-order/), as Steam can directly hijack the XInput Slots order for games launched through it
+    - This is usually not necessary for most users
+- Using Steam's "PlayStation Config. Support" when emulating DS4 controllers for the few games that only have PS controller support _through_ Steam Input
+    - **STEAM CANNOT MAGICALLY ADD DS4 SUPPORT TO GAMES THAT DON'T HAVE IT**. If a game does not have native DS4 support and you use a emulated DS4 controller + Steam's "PS Config. Support" them Steam will probably just emulate a Xbox controller for the game anyway
+    - This also requires [running DS4Windows under a custom ".exe" name](../../other/under-construction) since otherwise virtual DS4 controllers won't be detected by Steam controller list
+
+## Instructions on how to prevent remapping conflicts
+
+### Recommended
+
+??? check "Fully disabling Steam remapping functions (click to expand)"
+
+    === "Part 1"
+
+        1. Open Steam Settings -> controllers section
+
+        ![SteamSettingsController](images/SteamSettingsControllerSmall.png){: .glightbox } 
+
+    === "Part 2"
+
+        1. Select the **General controller Settings** option
+        1. **DISABLE** the "Xbox Configuration Support" options
+        1. **DISABLE** the "PlayStation Configuration Support" options
+
+        ![SteamXboxPSConfigDisabled](images/SteamXboxPSConfigDisabled.png){: .glightbox }                
+
+    === "Part 3"
+
+        1. Get back to the Steam' Settings window -> Controller section
+        1. Go into the "**Guide Button Chord Configuration**" option
+        1. Manually un-bind/remove/disable every setting so your settings looks like the following image
+            - You might need to execute this 2 times: once when emulating a Xbox controller and another when emulating a DS4
+            - The image might be different depending on if you are emulating an Xbox or DS4 controller
+
+        ![SteamButtonChordConfigDisabledXbox](images/SteamButtonChordConfigDisabledXbox.png){: .glightbox } 
+
+    === "Final remarks"
+
+        - Disabling Steam's Xbox/PS Config. Support settings + manually unbinding every action in the "Desktop Configuration Settings" is enough to fully disable Steam Input
+        - The "Big Picture Configuration Settings" can be freely tweaked to your likings, just remember to consider how DS4Windows' virtual controller is set in case you are not using a Default/Preset profile
+
+### Other
+
+??? check "Using DS4Windows + Steam Input (DS4Windows as the main remapper)"
+
+    === "Info"
+
+        !!! info "For who this configuration might apply"
+
+            Check the "Situations where using DS4Windows + Steam Input is necessary" **SECTION** in this page for more info.
+
+        !!! info "Purpose of this configuration"
+
+            - Disable every steam function that allow Keyboard and Mouse control
+                - Those functions must only be executed by DS4Windows
+            - Make sure that Steam does not mess with controller buttons/axis in-game in order for whatever remapping is done by DS4Windows to "passthrough" Steam's remapping without interference
+
+    === "Part 1"
+
+        1. Open Steam Settings -> controllers section
+
+        ![SteamSettingsController](images/SteamSettingsControllerSmall.png){: .glightbox } 
+
+    === "Part 2"
+
+        1. Select the **General controller Settings** option
+        1. Enable the "Xbox Configuration Support" options
+        1. Enable the "PlayStation Configuration Support" options
+
+        ![SteamXboxPSConfigEnabled](images/SteamXboxPSConfigEnabled.png){: .glightbox } 
+
+    === "Part 3"
+
+        1. Get back to the Steam' Settings window -> Controller section
+        1. Go into the "**Guide Button Chord Configuration**" option
+        1. Manually un-bind/remove/disable every setting so your settings looks like the following image
+            - You might need to execute this 2 times: once when emulating a Xbox controller and another when emulating a DS4
+            - The image might be different depending on if you are emulating an Xbox or DS4 controller
+
+        ![SteamButtonChordConfigDisabledXbox](images/SteamButtonChordConfigDisabledXbox.png){: .glightbox } 
+
+    === "Part 4"
+
+        1. Get back to the Steam' Settings window -> Controller section
+        1. Go into the "**Desktop Configuration**" option
+        1. Manually un-bind/remove/disable every setting so your settings looks like the following image
+            - You might need to execute this 2 times: once when emulating a Xbox controller and another when emulating a DS4
+            - The image might be different depending on if you are emulating an Xbox or DS4 controller
+
+        ![SteamButtonChordConfigDisabledXbox](images/SteamButtonChordConfigDisabledXbox.png){: .glightbox } 
+
+    === "Final remarks"
+
+        !!! important "Any type of controller customization must be done through DS4Windows to prevent issues"
+
+            - In case you had previously changed controller settings inside Steam options you can revert to the standard Steam configuration by:
+                1. Going in-game
+                1. Opening the Steam overlay
+                1. On the overlay opening Steam's controller configurations
+                1. "Browse Configs"
+                1. Selecting a recommended standard gamepad layout
+
+??? caution "Using DS4Windows + Steam Input (Steam Input as the main remapper)"
+
+    === "Info"
+    
+        !!! info "For who this configuration might apply"
+
+            Useful for those that want to use Steam's remapping functions while also using DS4Windows for non-Steam games, but also don't want to un-hide their **real** controller everytime they want to use it with Steam
+
+        !!! info "Purpose of this configuration"
+
+            In this configuration, DS4Windows will basically "do nothing" besides passthru information (as accurately as possible) between Steam and the real controller through its virtual controller
+
+        !!! bug "Issue warning"
+
+            - Currently, the **Lightbar Passthru mode** and **controller rumble** are directly **DISABLED** on DS4Windows code when emulating a DS4 controller because of an currently impossible to solve issue
+                - The issue could cause controllers to not stop rumbling or the lightbar to change to incorrect colors than what the game requested
+                - It can't be currently solved because it's an issue with the ViGEmBus, used by DS4Windows to spawn virtual Xbox/DS4 controllers. Until the ViGEmBus itself fixes this issue DS4Windows cannot re-enable these functions
+
+    === "Part 1"
+
+        1. Verify on DS4Windows' Log tab which version you are using
+        1. Download the following pre-made profile archive accordingly to your DS4Windows version:
+            - For DS4Windows v3.0.18: [DS4 Total Passthru](https://github.com/CircumSpector/DS4WDocs/files/7402123/DS4.Total.Passthru.-.DS4Windows.3.0.18.profile.zip)
+        1. Extract the profile file (.xml) from inside the archive to a folder of your choice
+        1. On DS4Windows' profile tab Import the extracted profile
+        1. Select the "DS4 Total Passthru" profile for your controller in the main "controllers" tab
+        
+        ![ProfileDS4TotalPassthru](images/ProfileDS4TotalPassthru.png){: .glightbox } 
+
+        ??? summary "Extended description on how this profile is configured (click to expand)"
+
+            This profile is based on the "Default" profile with some key differences:
+
+            - Has set the Lightbar, Touchpad and Gyro Modes to "passthru"
+            - Disabled/un-binded any Keyboard or Mouse related remapping
+            - Disabed sticks "dead zone" and "anti dead zone"
+            - Controller emulation is set to "DualShock 4"
+
+    === "Part 2"
+
+        1. Disable "Swipe Touchpad to Switch Profiles" on the Settings tab
+            - Having this option enabled might cause DS4Windows to accidantly switch profiles depending on how your Steam remappings are customized or how the game you're playing uses the Touchpad
+        2. Check on your Auto Profiles tab if you haven't associated any Steam game to other profile that might disable the "DS4 Total Passthru" profile
+            - In case you never messed with anything inside of the Auto Profiles tab then just ignore it 
+        
+        ![DS4WSettingsSwipe](images/DS4WSettingsSwipe.png){: .glightbox } 
+
+    === "Part 3"
+
+        1. Make sure [DS4Windows is running under a custom ".exe" name](../../guides/ds4w-custom-name/)
+            - If DS4Windows is running under its default "DS4Windows.exe" name Steam will detect it and ignore every PlayStation controller in the system, making it impossible to use the virtual DS4 controller through Steam Input
+            - After changing DS4Windows' ".exe" name Steam needs to be restarted
+        1. Open Steam Settings -> controllers section
+        1. Select the **General controller Settings** option
+        1. Enable the "PlayStation Configuration Support" option
+        1. Confirm that DS4Windows' virtual DS4 controller has been detected
+
+        ![SteamPSConfigEnabledContrDetected](images/SteamPSConfigEnabledContrDetected.png){: .glightbox } 
+
+    === "Final remarks"
+
+        !!! important "Use Steam options to customize your controller"
+
+            - After finishing the previous steps you should be able to safely use Steam to customize your controller
+            - While using the "DS4 Total Passthru" profile it will be (mostly) like you were directly using your DS4/DualSense controller with Steam and without DS4Windows
+            - Most customizations should be done via Steam settings. We won't instruct on how to do so since there are probably countless tutorials throughout the internet on this
+
+        !!! question "What safe to customize/use on DS4Windows side?"
+
+            - You can edit the "DS4 Total Passthru" profile to...
+                - Tweak the "idle disconnect timeout" option in the "Other" tab
+                - tweak the DS4 Bluetooth Polling Rate option in the "Other" tab
+                    - It's set for 15min on the initial configuration
+                - Set special actions that can be used to check Battery life or disconnect the controller on button combo
+                    - Just remember the chosen button combo in order to not conflict with Steam
+            - On DS4Windows settings you can...
+                - Tweak the "Flash lightbar at high latency"
+                - Enable the UDP server
+
+
+??? caution "Using ONLY Steam Input and disabling almost every DS4Windows functions" 
+
+    === "Info"
+    
+        !!! info "For who this configuration might apply"
+
+            For those who want to use DS4Windows only to:
+
+            - Check the controller's battery life
+            - Check the controller's input latency
+            - Use DS4Windows to disconnect the controller through the "idle disconnect" option / Special action / right-clicking on the BT icon in the "controllers" tab
+            - Set the controller's BT polling rate
+                - (Some info left to confirm: which BT polling rate does Steam set the DS4 into? Can DS4Windows even change the controller's polling rate if Data Output to the controller is disabled?)
+
+        !!! info "Purpose of this configuration"
+
+            In this configuration, DS4Windows will try as best as it can to "do nothing" that could interfere with communication between the controller and Steam/whatever other application:
+
+            - No virtual controller will be spawned
+                - The real controller should then remain visible as normal to applications
+            - DS4Windows will not send data back to the controller
+
+    === "Part 1"
+
+        If your real controller is hidden then you need to un-hide it (your controller needs to be in "X"/Shared Access Mode accordingly to the "Ex" column in the main "Controllers" tab)
+
+        ![DS4WSharedAccess](images/DS4WSharedAccess.png){: .glightbox }
+
+        If your controller is not in "X" (Shared Access) mode then:
+
+        1. On DS4Windows' Settings tab make sure that the "Hide DS4 controllers" option is DISABLED
+        1. In case you are using HidHide... you probably remember how you hid the controller, so you should know how to un-hide it as well (we have faith in your memory!)
+            - In case you need help with HidHide: [HidHide usage troubleshoot](../../troubleshooting/hidhide-troubleshoot/)
+            - It's recommended to reconnect your controller after unhiding it with HidHide
+
+    === "Part 2"
+
+        1. Verify on DS4Windows' Log tab which version you are using
+        1. Download the following pre-made profile archive accordingly to your DS4Windows version:
+            - For DS4Windows v3.0.18: [Do Nothing Mode](https://github.com/CircumSpector/DS4WDocs/files/7401988/DS4.Total.Passthru.zip)
+        1. Extract the profile file (.xml) from inside the archive to a folder of your choice
+        1. On DS4Windows' profile tab Import the extracted profile
+        1. Select the "DS4 Total Passthru" profile for your controller in the main "controllers" tab
+        
+        ![ProfileDS4TotalPassthru](images/ProfileDS4TotalPassthru.png){: .glightbox } 
+
+        ??? summary "Extended description on how this profile is configured (click to expand)"
+
+            This profile has...:
+
+            - Fully disabled the DS4Windows' virtual controller
+                - Has all possible buttons/axes remappings disabled (kind overkill since the virtual controller is already disabled)
+                - Lightbar/Touchpad/Gyro Modes were set to Passthru to disable them since the virtual controller itself is disabled
+                - Disabled every keyboard/mouse related remapping
+            - On the Profile's Other tab:
+                - Disabled the "Touchpad toogle" in the Other tab
+                    - Kind overkill since the Touchpad is already set to passthru
+                - Disabled the "idle disconnection timeout" option
+                - Disabled the "Enable Output Data to DS4" option
+
+
+## Related links
+
+- [Steam related issues](../../troubleshooting/steam-related)
+- [Preventing the double controller / double input issue in games](../../guides/solving-double-input/)
+- [Running DS4Windows under a custom ".exe" name](../../guides/ds4w-custom-name/)
+- [XInput slots order issues](../../troubleshooting/xinput-slots-order/)
+         
