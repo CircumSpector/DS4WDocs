@@ -79,6 +79,7 @@ nav:
       - 'guides/managing-user-data.md'
       - 'guides/uninstalling-ds4windows.md'
     - Advanced guides:
+      - 'guides/prevent-steam-conflict.md'
       - 'guides/ds4w-custom-name.md'
   - Troubleshooting:
     - 'troubleshooting/index.md'
