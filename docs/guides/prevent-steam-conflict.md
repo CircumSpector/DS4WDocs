@@ -178,7 +178,7 @@ Still, the few situations where it might be required are:
     === "Part 2"
 
         1. Disable "Swipe Touchpad to Switch Profiles" on the Settings tab
-            - Having this option enabled might cause DS4Windows to accidantly switch profiles depending on how your Steam remappings are customized or how the game you're playing uses the Touchpad
+            - Having this option enabled might cause DS4Windows to accidantly switch profiles when using the touchpad
         2. Check on your Auto Profiles tab if you haven't associated any Steam game to other profile that might disable the "DS4 Total Passthru" profile
             - In case you never messed with anything inside of the Auto Profiles tab then just ignore it 
         
@@ -187,8 +187,8 @@ Still, the few situations where it might be required are:
     === "Part 3"
 
         1. Make sure [DS4Windows is running under a custom ".exe" name](../../guides/ds4w-custom-name/)
-            - If DS4Windows is running under its default "DS4Windows.exe" name Steam will detect it and ignore every PlayStation controller in the system, making it impossible to use the virtual DS4 controller through Steam Input
-            - After changing DS4Windows' ".exe" name Steam needs to be restarted
+            - If DS4Windows is running under its default name of "DS4Windows.exe" then Steam will detect it and ignore every PlayStation controller in the system, making it impossible to use the virtual DS4 controller through Steam Input
+            - Restart Steam after making sure DS4Windows is running under a custom ".exe" name
         1. Open Steam Settings -> controllers section
         1. Select the **General controller Settings** option
         1. Enable the "PlayStation Configuration Support" option
