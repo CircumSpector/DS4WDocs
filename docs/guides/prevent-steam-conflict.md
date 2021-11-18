@@ -276,7 +276,98 @@ Still, the few situations where it might be required are:
                     - Kind overkill since the Touchpad is already set to passthru
                 - Disabled the "idle disconnection timeout" option
                 - Disabled the "Enable Output Data to DS4" option
+### Advanced
 
+??? caution "Using DS4Windows only for non-Steam games, but keep DS4Windows running ("Started") at all times without interfering with Steam"         
+
+    === "Warnings / Info"
+
+        !!! important
+
+            - This is a very specific configuration, only for those that DON'T want to use DS4Windows when playing Steam games, but also don't want to manually Stop/Start DS4Windows everytime they want to use their controller with Steam
+            - Most users are better of just manually stopping DS4Windows if they don't want to use DS4Windows + Steam
+            - This is basically the "Disabling almost every DS4Windows functions" guide on the section above, with a few variations
+
+        !!! caution
+
+            - This configuration can only work if the user is using HidHide for controller hiding
+                - Though the user could manually use the "hide DS4 controllers" option, they would need to do so manually (with mouse and keyboard) and would defeat the purpose of this configuration
+                - Though it's possible to use this configuration without both HidHide and the "hide ds4 controllers" option the user would most likely suffer from double-input issue in non-Steam games
+
+        !!! info "Purpose of this configuration"
+
+            - Keep real controller hidden by HidHide to prevent the double input issue, but allow Steam to have access to hidden real controllers so it can directly pick them
+            - Switch effortlessly between a non-Steam-interfering profile and the usual DS4Windows' profiles used for non-Steam games 
+            - Tweak DS4Windows configurations to prevent accidental profile switching mid-game
+
+    === "Part 1"
+
+        This guides assumes that...
+
+        1. You are NOT using the "Hide DS4 controllers" option in DS4Windows settings
+        1. You are using HidHide for controller hiding and that your real controller is already hidden by it
+            - If you don't know what is HidHide or why it's necessary to hide real controllers when they are being used along DS4Windows then check the ["Preventing the double controller / double input issue in games" guide](../../guides/solving-double-input/)
+       
+        ![HidHideAccessSmall.png](images/HidHideAccessSmall.png){: .glightbox }
+        ![HideDS4OptionDisabled.png](images/HideDS4OptionDisabled.png){: .glightbox }
+
+    === "Part 2"
+
+        1. Add `steam.exe` to HidHide Configuration Client' "Applications" List
+            - This is necessary for Steam to be able to detect hidden controllers
+            - Steam install directory is usually at `C:\Program Files (x86)\Steam`
+        1. Make sure DS4Windows is fully stopped AND closed
+            - If DS4Windows is running at this point Steam will ignore PlayStation controllers in the system, real or virtual
+        1. Close then Start Steam again
+        1. Open Steam Settings -> controllers section, then select the **General controller Settings** option
+        5. Confirm that your controller has been detected
+            - If Steam has not detected your controller, then either:
+                1. You didn't properly added Steam to HidHide's Applications list, or...
+                1. DS4Windows is still running in the background, which makes Steam ignore PlayStation controllers in the system, real or virtual
+
+        ![SteamHidHideAccess.png](images/SteamHidHideAccess.png){: .glightbox }
+
+    === "Part 3"
+
+        1. Follow the "Disabling almost every DS4Windows functions" guide on this page's previous sub-section EXCEPT for its "Part 1"
+            - It's necessary to skip Part 1 since you need your controller to remain hidden by HidHide in order to prevent the double input issue in games not launched through Steam
+        1. Continue here after you are done with the other guide
+
+        ![ProfileDoNothingModeAndHidHide.png](images/ProfileDoNothingModeAndHidHide.png){: .glightbox } 
+
+    === "Part 4"
+
+        If you followed everything correctly, then:
+
+        1. Your real controller is still hidden by HidHide and Steam has access to hidden controllers
+        1. You are running DS4Windows under a custom ".exe" name so Steam does not ignore PlayStation controllers
+        1. You have imported the "Do Nothing Mode" profile into your DS4Windows
+        1. You've tweaked some DS4Windows settings in order to prevent accidental profile switching
+
+        From now on:
+        
+        - When using Steam you must load the "Do Nothing Mode" profile for your controller, which will disable DS4Windows' virtual controller as well as prevent other conflicts.
+        - When playing games not launched through Steam you must switch to a "normal" DS4Windows profile with Xbox or DS4 emulation controller
+
+    === "Final Remarks"
+
+        !!! important "Switch between profiles by setting Special Actions"
+            
+            - Because the major point of this guide is not having to interact with DS4Windows with keyboard/mouse, it's better to set Special Actions in the "Do Nothing Mode" and other used profiles in order to switch between them via Button combo
+                - Just make sure whatever buttom combo you set in the "Do Nothing Mode" profile does not conflict with other Steam configurations
+
+        !!! caution "Beware of options that can cause accidental profile switch"
+
+            - Be careful if you've set automatic profile changes in the "Auto Profiles" tab
+            - Remember to keep the "Swipe Touchpad to Switch Profiles" option disabled on DS4Windows' "Settings" tab
+                - Having this option enabled might cause profile switching when playing games that make use of the Touchpad
+
+        !!! caution "Possible Steam conflicts"
+
+            Steam keeps remapping detected controllers even outside of games depending on your Steam configurations, meaning it may attempt to do controller to keyboard/mouse remapping which might conflict with DS4Windows settings.
+            
+            As such, the the user needs to keep in mind both its Steam _and_ DS4Windows settings if they suffer from unintentional, random actions.  
+        
 
 ## Related links
 
