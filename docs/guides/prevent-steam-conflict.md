@@ -217,13 +217,13 @@ Still, the few situations where it might be required are:
                 - Enable the UDP server
 
 
-??? caution "Using ONLY Steam Input and disabling almost every DS4Windows functions" 
+??? caution "Disabling almost every DS4Windows functions (use real controller directly with Steam Input or other app without interference)" 
 
     === "Info"
     
         !!! info "For who this configuration might apply"
 
-            For those who want to use DS4Windows only to:
+            For those who want to use only Steam Input or are using apps with native support to DS4 controllers, but need DS4Windows to:
 
             - Check the controller's battery life
             - Check the controller's input latency
@@ -233,11 +233,12 @@ Still, the few situations where it might be required are:
 
         !!! info "Purpose of this configuration"
 
-            In this configuration, DS4Windows will try as best as it can to "do nothing" that could interfere with communication between the controller and Steam/whatever other application:
+            In this configuration, DS4Windows will try as best as it can to "do nothing" that could interfere with the communication between the controller and Steam/whatever other application:
 
             - No virtual controller will be spawned
                 - The real controller should then remain visible as normal to applications
             - DS4Windows will not send data back to the controller
+            - Settings that could auto-switch profiles or change settings on button combination/controller action will be disabled
 
     === "Part 1"
 
@@ -248,34 +249,70 @@ Still, the few situations where it might be required are:
         If your controller is not in "X" (Shared Access) mode then:
 
         1. On DS4Windows' Settings tab make sure that the "Hide DS4 controllers" option is DISABLED
-        1. In case you are using HidHide... you probably remember how you hid the controller, so you should know how to un-hide it as well (we have faith in your memory!)
+        2. In case you are using HidHide... you probably remember how you hid the controller, so you should know how to un-hide it as well (we have faith in your memory!)
             - In case you need help with HidHide: [HidHide usage troubleshoot](../../troubleshooting/hidhide-troubleshoot/)
             - It's recommended to reconnect your controller after unhiding it with HidHide
 
     === "Part 2"
 
         1. Verify on DS4Windows' Log tab which version you are using
-        1. Download the following pre-made profile archive accordingly to your DS4Windows version:
-            - For DS4Windows v3.0.18: [Do Nothing Mode](https://github.com/CircumSpector/DS4WDocs/files/7401988/DS4.Total.Passthru.zip)
-        1. Extract the profile file (.xml) from inside the archive to a folder of your choice
-        1. On DS4Windows' profile tab Import the extracted profile
-        1. Select the "DS4 Total Passthru" profile for your controller in the main "controllers" tab
+        2. Download the following pre-made profile archive accordingly to your DS4Windows version:
+            - For DS4Windows v3.0.18: [Do Nothing Mode](https://github.com/CircumSpector/DS4WDocs/files/7566751/Do.Nothing.Mode.-.DS4Windows.3.0.18.profile.zip)
+        3. Extract the profile file (.xml) from inside the archive to a folder of your choice
+        4. On DS4Windows' profile tab Import the extracted profile
+        5. Select the "Do Nothing Mode" profile for your controller in the main "controllers" tab
         
-        ![ProfileDS4TotalPassthru](images/ProfileDS4TotalPassthru.png){: .glightbox } 
+        ![ProfileDoNothingMode](images/ProfileDoNothingMode.png){: .glightbox } 
 
         ??? summary "Extended description on how this profile is configured (click to expand)"
 
             This profile has...:
 
-            - Fully disabled the DS4Windows' virtual controller
-                - Has all possible buttons/axes remappings disabled (kind overkill since the virtual controller is already disabled)
-                - Lightbar/Touchpad/Gyro Modes were set to Passthru to disable them since the virtual controller itself is disabled
-                - Disabled every keyboard/mouse related remapping
-            - On the Profile's Other tab:
-                - Disabled the "Touchpad toogle" in the Other tab
-                    - Kind overkill since the Touchpad is already set to passthru
-                - Disabled the "idle disconnection timeout" option
-                - Disabled the "Enable Output Data to DS4" option
+            - Disabled Virtual Controller creation
+            - Disabled/un-binded every possible remapping function or setting that could affect controller usage
+            - Has set the Lightbar, Touchpad and Gyro Modes to "passthru" in order to "disable" possible remapping functions
+            - Disabled Output Data to the controller
+
+    === "Part 3"
+
+        1. Disable "Swipe Touchpad to Switch Profiles" on the Settings tab
+            - Having this option enabled might cause DS4Windows to accidantly switch profiles when using the touchpad
+        2. Check on your Auto Profiles tab if you haven't associated any Steam game to other profile that might disable the "DS4 Total Passthru" profile
+            - In case you never messed with anything inside of the Auto Profiles tab then just ignore it 
+        
+        ![DS4WSettingsSwipe](images/DS4WSettingsSwipe.png){: .glightbox } 
+
+    === "Part 4"
+
+        1. Make sure [DS4Windows is running under a custom ".exe" name](../../guides/ds4w-custom-name/)
+            - If DS4Windows is running under its default name of "DS4Windows.exe" then Steam will ignore every PlayStation controller in the system, making it impossible to use the virtual DS4 controller through Steam Input
+            - Restart Steam after making sure DS4Windows is running under a custom ".exe" name
+        2. Open Steam Settings -> controllers section
+        3. Select the **General controller Settings** option
+        4. Enable the "PlaysStation/Nintendo Configuration Support" option accordingly to the type controller you are using
+        5. Confirm that your controller has been detected
+            - If Steam has not detected your controller, then either: 1) you are not running DS4Windows under a custom ".exe" name or haven't restarted Steam after changing the name, or 2) your controller is hidden either by Hidhide or by DS4Windows' "Hide DS4 controllers" option 
+
+    === "Final Remarks"
+
+        If everything has been set correctly, then:
+
+        1. Your controller will be present on DS4Windows, but the later won't spawn virtual devices associated to it nor have any setting enabled that could prossibly interfere with other applications while the "Do Nothing Mode" profile is being used
+        2. Your real controller is not being hidden from Steam and other apps and can detected as normal by them 
+
+    === "Customization"
+
+        !!! question "What is safe to customize/use on DS4Windows side?"
+
+            - On the "Do Nothing Mode" profile, you can edit it to:
+                - Tweak the "idle disconnect timeout" option in the "Other" tab
+                - Tweak the DS4 Bluetooth Polling Rate option in the "Other" tab
+                - Set special actions that can be used to disconnect the controller on button combo
+                   - Just remember the chosen button combo in order to not conflict with Steam/other apps settings
+            - On DS4Windows settings you can...
+                - Enable the UDP server 
+                - Set DS4Windows to start with Windows and tweak other DS4Windows specific settings
+
 ### Advanced
 
 ??? caution "Using DS4Windows only for non-Steam games, but keep DS4Windows running ("Started") at all times without interfering with Steam"         
