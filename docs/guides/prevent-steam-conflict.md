@@ -322,7 +322,7 @@ Still, the few situations where it might be required are:
         !!! important
 
             - This is a very specific configuration, only for those that DON'T want to use DS4Windows when playing Steam games, but also don't want to manually Stop/Start DS4Windows everytime they want to use their controller with Steam
-            - Most users are better of just manually stopping DS4Windows if they don't want to use DS4Windows + Steam
+                - Most users are better of just manually stopping DS4Windows if they don't want to use DS4Windows + Steam
             - This is basically the "Disabling almost every DS4Windows functions" guide on the section above, with a few variations
 
         !!! caution
