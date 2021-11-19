@@ -2,7 +2,7 @@
 
 ## General info
 
-There are some aplications and games that behave differently when they detect DS4Windows is running on the users system. The known ones are:
+There are some applications and games that behave differently when they detect DS4Windows is running on the users system. The known ones are:
 
 - Steam Big Picture: cannot interact with the Big Picture interface using DS4 controllers
 - Steam Input: will ignore DS4 controllers, breaking their usage with Steam's `Playstation Configuration Support` 
