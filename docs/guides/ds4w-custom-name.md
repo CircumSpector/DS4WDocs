@@ -4,9 +4,10 @@
 
 There are some applications and games that behave differently when they detect DS4Windows is running on the users system. The known ones are:
 
-- Steam Big Picture: cannot interact with the Big Picture interface using DS4 controllers
-- Steam Input: will ignore DS4 controllers, breaking their usage with Steam's `Playstation Configuration Support` 
-- Sholve Knight: game will ignore DS4 controllers
+- Steam Big Picture: cannot interact with the Big Picture interface using PlayStation controllers (DS4/DualSense)
+- Steam Input: will ignore PlayStation controllers, breaking their usage with Steam's `Playstation Configuration Support`
+- Yuzu/Cemu emulators: will ignore PlayStation controllers
+- Shovel Knight: game will ignore DS4 controllers
 
 This guide will make DS4Windows run under a new process name instead of the standard `DS4Windows.exe` in order to make it run undetectable.
 
