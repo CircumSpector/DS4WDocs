@@ -76,7 +76,7 @@ nav:
       - 'guides/solving-double-input.md'
     - Customization:
       - 'guides/p-editor-axis.md'
-    - Managing DS4W. Installation and User Data:  
+    - Backup and uninstall instructions:  
       - 'guides/managing-user-data.md'
       - 'guides/uninstalling-ds4windows.md'
     - Advanced guides:
