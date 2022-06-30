@@ -83,29 +83,32 @@ HidHide has its own [dedicated setup page](https://vigem.org/projects/HidHide/Si
 
 ### `Hide DS4 Controllers` option (legacy. Not recommended)
 
-!!! important "Though it is written "DS4 Controllers" it applies to any real controller detected by DS4Windows"
 
 !!! note "Note to users of HidHide"
 	If you have HidHide installed and correctly setup then this option is redudant and should be left disabled to prevent issues or confusion.
 
-This option exists on DS4Windows' `Settings` tab. When enabled, DS4Windows will _kindly_ ask Windows for exclusive access to detected devices, meaning the later would only allow DS4Windows to detect the gamepads and preventing the double input issue.
+!!! important "Though it is written "DS4 Controllers" it applies to any real controller detected by DS4Windows"
 
-![ExclusiveAccess](images/ExclusiveAccess.png){: .glightbox } 
+??? abstract "About the legacy "Hide DS4 controllers" option (click to expand)"
 
-The problem with this method is that Windows can deny the exclusive access request when another process already has a open connection to the gamepad. Common reasons for this request to fail are:
+	This option exists on DS4Windows' `Settings` tab. When enabled, DS4Windows will _kindly_ ask Windows for exclusive access to detected devices, meaning the later would only allow DS4Windows to detect the gamepads and preventing the double input issue.
 
-- A game already is running
-- Google chrome/Opera is running (why does it have a connection to the gamepad you ask? A mystery)
-- Nvidia Geforce experience process having a hold of the gamepad
-- Random non-obvious process having a hold of the gamepad
-- etc
+	![ExclusiveAccess](images/ExclusiveAccess.png){: .glightbox } 
 
-Even if it works initially, if your gamepad disconnects in the middle of a game chances are that you'll lose exclusive access upon reconnection, requiring you to close the game to try again.
+	The problem with this method is that Windows can deny the exclusive access request when another process already has a open connection to the gamepad. Common reasons for this request to fail are:
 
-For the reasons explained above, the `Hide DS4 Controllers` option is **NOT RECOMMENDED**, though it remains available to users that need to use it for whatever reason. HidHide is the better option all around for those who can use it.
+	- A game already is running
+	- Google chrome/Opera is running (why does it have a connection to the gamepad you ask? A mystery)
+	- Nvidia Geforce experience process having a hold of the gamepad
+	- Random non-obvious process having a hold of the gamepad
+	- etc
 
-!!! note "Dedicated troubleshooting page"
-	In case you really need to use this option, there is a [dedicated troubleshooting page for the `Hide DS4 controllers` option](../../troubleshooting/hide-ds4-option/) that can be followed to verify why windows is failing to grant the exclusive access request.
+	Even if it works initially, if your gamepad disconnects in the middle of a game chances are that you'll lose exclusive access upon reconnection, requiring you to close the game to try again.
+
+	For the reasons explained above, the `Hide DS4 Controllers` option is **NOT RECOMMENDED**, though it remains available to users that need to use it for whatever reason. HidHide is the better option all around for those who can use it.
+
+	!!! note "Dedicated troubleshooting page"
+		In case you really need to use this option, there is a [dedicated troubleshooting page for the `Hide DS4 controllers` option](../../troubleshooting/hide-ds4-option/) that can be followed to verify why windows is failing to grant the exclusive access request.
 
 ## Related links
 
