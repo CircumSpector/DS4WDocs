@@ -63,6 +63,7 @@ nav:
   - Welcome: index.md
   - About DS4Windows:
     - 'about/index.md'
+    - 'about/latest-version.md'
     - 'about/supported-gamepads.md'
     - 'about/companion-drivers.md'
     - 'about/faq.md'
