@@ -84,7 +84,7 @@ HidHide has its own [dedicated setup page](https://vigem.org/projects/HidHide/Si
 ### `Hide DS4 Controllers` option (legacy. Not recommended)
 
 
-!!! note "Note to users of HidHide"
+!!! warning "Note to users of HidHide"
 	If you have HidHide installed and correctly setup then this option is redudant and should be left disabled to prevent issues or confusion.
 
 !!! important "Though it is written "DS4 Controllers" it applies to any real controller detected by DS4Windows"
