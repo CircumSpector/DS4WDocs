@@ -2,13 +2,13 @@
 
 ## About the double input (controller) issue
 
-DS4Windows does not magically transform your gamepad from one type to another. It creates a **_virtual_** gamepad that is associated to your real one. This means that if you have 1 real gamepad connected then windows will actually detect 2 gamepads. If 2 real then 4 and so on.
+DS4Windows does not magically transform your gamepad from one type to another. It creates a **_virtual_** gamepad that is associated to your real one. This means that if you have 1 real gamepad connected then windows will actually detect 2 gamepads (real + virtual). If 2 real then 4 and so on.
 
 The image below shows how Windows behaves when a DS4v2 (Wireless Controller) is connected to the system while DS4Windows is emulating a Xbox gamepad:
 
 ![SharedJoycpl](images/SharedJoycpl.png){: .glightbox }
 
-If the game detects both the real and the virtual gamepad at the same time then it will receive commands from 2 different devices at every button press and stick movement, which can lead to the infamous double-input issue that can make games unplayable. Check the examples below:
+This situation can make games/apps receive commands from both the real gamepad as well as DS4Windows' virtual controller/keyboard at the same time, which can lead to lots of different issues. Check the examples below:
 
 ??? info "GIF showcasing the double input issue (click to expand)"
 
@@ -33,7 +33,7 @@ If the game detects both the real and the virtual gamepad at the same time then 
 
 ---------------------
 
-__To prevent or fix this issue it's necessary to hide the real controller in order to make only DS4Windows' virtual controller visible to games.__ This can be done in two ways:
+__To prevent or fix this issue it's necessary to hide the real controller in order to make only DS4Windows' virtual controller/keyboard visible to games.__ This can be done in two ways:
 
 - HidHide (recommended)
 - DS4Windows' `Hide DS4 Controllers` option (legacy, non-recommended option)
@@ -42,13 +42,13 @@ __To prevent or fix this issue it's necessary to hide the real controller in ord
 
 ### HidHide (recommended)
 
-HidHide is a driver that acts as a barrier between Windows and game controllers connected to the system. It allows the user to selectively hide gamepads and only allow specific software to still detect them.
+HidHide is a driver that allows the user to selectively hide gamepads in the system and only allow some of them to still detect them even while they are "invisible".
 
 It is the recommended method because once it has been properly setup the double input issue is solved for good for the hidden controller.
 
 In DS4Windows case, the user needs to set HidHide to:
 
-1. Hide the real controllers from the system __once when connected via USB and once when via Bluetooth__
+1. Hide the **REAL** controllers in the system __once when connected via USB and once when via Bluetooth__
 1. Allow DS4Windows to see all hidden devices, otherwise it would think there are no supported gamepads connected
 
 === "HidHide result"
@@ -77,6 +77,7 @@ HidHide has its own [dedicated setup page](https://vigem.org/projects/HidHide/Si
 !!! important "HidHide Configuration Client tips"
 
 	- In order to avoid confusion, make sure DS4Windows is stopped or fully closed __BEFORE__ opening HidHide's Client so only real controllers appear on its devices list
+	- DO NOT HIDE Controllers with the name "Sony **COMPUTER** (...)", as they are virtual DS4 controllers
 	- Remember to close HidHide's Client before re-opening DS4Windows, otherwise the `Ex` check will fail even if the controller is correctly hidden
 
 
