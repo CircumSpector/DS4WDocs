@@ -53,6 +53,7 @@ In DS4Windows case, the user needs to set HidHide to:
 
 === "HidHide result"
 
+	![CheckTabsReminder](images/CheckTabsReminder.png)
 	![HidHideAccess](images/HidHideAccess.png){: .glightbox } 
 
 === "HidHide Configuration Client"
