@@ -18,7 +18,7 @@ DS4Windows is a portable application, meaning it is not actually "installed". To
 
 ## Related drivers
 
-These are companion drivers that are currently used by DS4Windows. If you are looking for more info on what they are and their purpose, check the [_about companion drivers_ page](../../about-ds4windows/companion-drivers/).
+These are companion drivers that are currently used by DS4Windows. If you are looking for more info on what they are and their purpose, check the [_about companion drivers_ page](../../about/companion-drivers/).
 
 ??? info "ViGEmBus (click to expand)"
     !!! important 
