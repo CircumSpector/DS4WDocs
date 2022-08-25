@@ -4,42 +4,11 @@
 
 !!! important "DS4WINDOWS"
 
-    The currently maintained version of DS4Windows is the one from the **CircumSpector Team**. If you are using any DS4Windows version lower than the currently latest version from CircumSpector it's recommended that you update (Check your current version on DS4Windows' Log tab)
+    The currently maintained version of DS4Windows is the one from the **Ryochan7 Developer**. If you are using any DS4Windows version lower than the currently latest version from Ryochan7's DS4Windows it's recommended that you update (Check your current version on DS4Windows' Log tab)
 
-    - [CircumSpector's DS4Windows Github page](https://github.com/CircumSpector/DS4Windows)
-        - Make sure to get the latest NON-BETA version from the Release Page
+    - [Ryochan7's DS4Windows Github page](https://github.com/Ryochan7/DS4Windows)
         - The release page contains the changelog
-        - **CS's DS4Windows does not support auto-update currently**. Check the instructions below on how to manually update it:
 
-    -----------------
-
-    **Manually updating DS4W:**
-    
-    === "Step 1"
-
-        1. Make sure DS4Windows is STOPPED AND FULLY CLOSED
-            - Make sure it's actually closed and not just "hidden" in the traybar (near Windows' clock)
-        1. Download the new version of CS's DS4Windows
-        1. Extract it to a **NEW** folder
-
-    === "Step 2"
-
-        1. Open the folder containing the **OLD** version of DS4Windows
-        1. **IF** they exist (they might not), copy the following files/folders from the **OLD** DS4Windows folder to the one with the **NEW** version folder:
-            - Actions.xml
-            - Auto Profiles.xml
-            - ControllerConfigs.xml
-            - LinkedProfiles.xml
-            - OutputSlots.xml
-            - Profiles.xml
-            - Profiles **folder**
-
-    === "Step 3"
-
-        1. Open the new version of DS4Windows
-            - Make sure to confirm in the Log tab that it's actually the new version
-        1. If everything seems to be working _OK_, delete the folder of the old version
-        1. The end!
 
 ??? info "COMPANION DRIVERS (click to expand)"
 
@@ -57,7 +26,8 @@
 
 ## Current state of the DS4Windows project
 
-- The project is alive, being currently maintained by the CircumSpector Team
-    - The versions currently being released called starting with "v3" are small bug-fixes on top of the latest Ryochan7's version
-    - No major features will be introduced since the whole code is being reworked/modernized. DS4Windows "v4" will have big visual and "under-the-hood" changes once it's released
+- The developer Ryochan7 is currently updating DS4Windows. His version is the one that should be used by users
+- The  CircumSpector Team is also reworking the DS4Windows code in their own branch, but it will take a good while until things are stable
+    - There are no user-ready versions
+    - Those trying to compile from source-code will end-up with something that will probably not work since things are in mid-rework
 
