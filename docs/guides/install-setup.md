@@ -26,7 +26,8 @@
 
 - Open the `Settings` tab and click on the `Device Options` tab
 - Now enable the `DualSense Controller Support` checkbox
-![DS4WControllerSupportDualSense.png](images/DS4WControllerSupportDualSense.png){: .glightbox }
+
+![DS4WControllerSupportDualSense.png](images/DS4WControllerSupportDualSense.png){: .glightbox }  
 
 ## Drivers setup
 
