@@ -21,7 +21,12 @@
 - On first launch DS4Windows may ask you where to save its user data (settings and profiles):
     - __AppData folder (recommended)__: user data is stored outside of the program folder, inside a special folder reserved to your Windows user
     - __Program folder__: user data is stored inside the same folder `DS4Windows.exe` is located
-    
+
+## Enabling DualSense controller support
+
+- Open the `Settings` tab and click on the `Device Options` tab
+- Now enable the `DualSense Controller Support` checkbox
+![DS4WControllerSupportDualSense.png](images/DS4WControllerSupportDualSense.png){: .glightbox }
 
 ## Drivers setup
 
