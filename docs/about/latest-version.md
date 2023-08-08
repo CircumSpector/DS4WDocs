@@ -27,7 +27,5 @@
 ## Current state of the DS4Windows project
 
 - The developer Ryochan7 is currently updating DS4Windows. His version is the one that should be used by users
-- The  CircumSpector Team is also reworking the DS4Windows code in their own branch, but it will take a good while until things are stable
-    - There are no user-ready versions
-    - Those trying to compile from source-code will end-up with something that will probably not work since things are in mid-rework
+
 
