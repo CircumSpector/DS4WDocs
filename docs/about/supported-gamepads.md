@@ -4,31 +4,7 @@ Supported gamepads are the real, physical controllers that can be used with DS4W
 
 ## Complete list
 
-This section is dedicated to list all gamepad that DS4Win will recognise as usable and will work as intended. By now DS4Win works with the following gamepads:
-
-| Gamepad | Supported since DS4Window version... | Comment |
-| :--- | :--- | :--- |
-DS4 v.1 | 1.4.53 | First forked release |
-DS4 v.2	| 1.4.53 | The support was added in the original ds4win by Jay2Kings |
-Sony Wireless Adapter | 1.4.53 | The support was added in the original ds4win by Jay2Kings
-Razer Raiju  | 1.4.99 |
-Hori PS4 Mini controller  | 1.4.119  |	
-PS4 Fun Controller | 1.7.4	 |
-Razer Raiju Tournament Edition | 1.7.8 |	
-Razer Raiju Ultimate | 1.7.9	
-Steel Play Metaltech P4 gamepad (wired) | 1.7.17 |
-Hori Fighting Commander | 1.7.20 |
-Nacon Revolution Unlimited Pro | 1.7.20 |
-Nacon Revolution Pro v3 | 1.7.23 |
-Nacon Revolution Infinite | 1.7.26 |
-Astro C40 | 2.1.4 |
-Specialist PS4 controllers | 2.1.6 | Three Specialist controllers without identification were added in this version|
-SnakeByte Game:Pad | 2.1.8 |
-Switch Pro | 2.1.16 |
-Switch JoyCon | 2.1.17 |
-DualSense | 2.1.17 | Initial support |
-Gioteck VX4 | 2.2.2 |
-DS3 | 	2.2.10 | Needs to be running under [DsHidMini driver](https://github.com/ViGEm/DsHidMini) and in `DS4Windows Mode` | 
+To check the complete list of supported controllers, check the [list of supported gamepads in R7's DS4Windows Wiki](https://github.com/Ryochan7/DS4Windows/wiki/Gamepad-support)
 
 ## More info
 
